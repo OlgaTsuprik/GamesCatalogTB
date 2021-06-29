@@ -38,11 +38,10 @@ class GamesViewModel {
             networkingManager.pageNumber += 1
         }
         networkingManager.fetchGames { (games) in
-            let gamesVM = games.map(GameViewModel.init)
-            //self.gamesVM.append(contentsOf: gamesVM)
+            let  newGames = games.map(GameViewModel.init)
+            self.gamesVM.append(contentsOf: newGames)
             DispatchQueue.main.async {
-                self.gamesVM = gamesVM
-                completion(gamesVM)
+                completion(self.gamesVM)
             }
         }
     }
