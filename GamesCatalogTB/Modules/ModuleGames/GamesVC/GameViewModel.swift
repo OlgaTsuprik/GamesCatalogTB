@@ -39,14 +39,14 @@ class GamesViewModel {
             networkingManager.isLoadingList = false
         }
         if !networkingManager.isLoadingList {
-        networkingManager.fetchGames { (games) in
-            let  newGames = games.map(GameViewModel.init)
-            self.gamesVM.append(contentsOf: newGames)
-            DispatchQueue.main.async {
-                completion(self.gamesVM)
+            networkingManager.fetchGames { (games) in
+                let  newGames = games.map(GameViewModel.init)
+                self.gamesVM.append(contentsOf: newGames)
+                DispatchQueue.main.async {
+                    completion(self.gamesVM)
+                }
             }
-        }
             networkingManager.isLoadingList = true
-    }
+        }
     }
 }
