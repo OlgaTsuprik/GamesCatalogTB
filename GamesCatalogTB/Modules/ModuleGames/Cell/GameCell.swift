@@ -17,7 +17,7 @@ class GameCell: UITableViewCell {
     
     // MARK: Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: "tableViewCell")
+        super.init(style: style, reuseIdentifier: "gameCell")
     }
     
     required init?(coder: NSCoder) {

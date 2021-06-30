@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureTabBar() {
         let vc = GamesViewController()
-  
         let firstVC = UINavigationController(rootViewController: vc)
         firstVC.tabBarItem.title = "Games"
         firstVC.tabBarItem.image = UIImage(systemName: "gamecontroller")
@@ -32,6 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         secondVC.tabBarItem.image = UIImage(systemName: "star")
         
         let tabBarController = UITabBarController()
+        tabBarController.tabBar.barTintColor = UIColor.black
+        tabBarController.tabBar.tintColor = UIColor.white
+        
         tabBarController.viewControllers = [firstVC, secondVC]
         
         window?.rootViewController = tabBarController

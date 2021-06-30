@@ -23,8 +23,8 @@ class GamesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        let nibName = UINib(nibName: "TableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
+        let nibName = UINib(nibName: "GameCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "gameCell")
         loadData()
     }
     
@@ -57,18 +57,19 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? GameCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell
         let games = viewModel.gamesVM[indexPath.row]
         cell?.gameViewModel = games
         cell?.config(model: games)
         cell?.indexLabel.text = String(indexPath.row + 1) + "."
         cell?.selectionStyle = .none
+        cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
         
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("HeaderViewTableViewCell", owner: nil, options: nil)?.first
+        let headerView = Bundle.main.loadNibNamed("HeaderView", owner: nil, options: nil)?.first
         return headerView as? UIView
     }
     
