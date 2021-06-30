@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class GameCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!

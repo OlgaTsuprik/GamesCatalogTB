@@ -16,7 +16,7 @@
 		BE792EC42689E3860007F6C8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EC32689E3860007F6C8 /* SecondViewController.swift */; };
 		BE792EC62689E3940007F6C8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792EC52689E3940007F6C8 /* SecondViewController.xib */; };
 		BE792ECF2689EBB70007F6C8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792ECE2689EBB70007F6C8 /* DetailViewController.xib */; };
-		BE792EFB268AF5640007F6C8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EF9268AF5640007F6C8 /* TableViewCell.swift */; };
+		BE792EFB268AF5640007F6C8 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EF9268AF5640007F6C8 /* GameCell.swift */; };
 		BE792EFC268AF5640007F6C8 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792EFA268AF5640007F6C8 /* TableViewCell.xib */; };
 		BE792EFE268AF8D00007F6C8 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EFD268AF8D00007F6C8 /* GameModel.swift */; };
 		BE792F00268AF91A0007F6C8 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EFF268AF91A0007F6C8 /* NetworkingManager.swift */; };
@@ -37,7 +37,7 @@
 		BE792EC32689E3860007F6C8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BE792EC52689E3940007F6C8 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		BE792ECE2689EBB70007F6C8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		BE792EF9268AF5640007F6C8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BE792EF9268AF5640007F6C8 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		BE792EFA268AF5640007F6C8 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		BE792EFD268AF8D00007F6C8 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		BE792EFF268AF91A0007F6C8 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		BE792EF02689FC890007F6C8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BE792EF9268AF5640007F6C8 /* TableViewCell.swift */,
+				BE792EF9268AF5640007F6C8 /* GameCell.swift */,
 				BE792EFA268AF5640007F6C8 /* TableViewCell.xib */,
 			);
 			path = Cell;
@@ -261,7 +261,7 @@
 				BE792EBA2689E2EB0007F6C8 /* GamesViewController.swift in Sources */,
 				BE792EC12689E3390007F6C8 /* GameViewModel.swift in Sources */,
 				BE792EBD2689E30A0007F6C8 /* DetailViewController.swift in Sources */,
-				BE792EFB268AF5640007F6C8 /* TableViewCell.swift in Sources */,
+				BE792EFB268AF5640007F6C8 /* GameCell.swift in Sources */,
 				BE792EC42689E3860007F6C8 /* SecondViewController.swift in Sources */,
 				BE792F00268AF91A0007F6C8 /* NetworkingManager.swift in Sources */,
 				BE792EFE268AF8D00007F6C8 /* GameModel.swift in Sources */,

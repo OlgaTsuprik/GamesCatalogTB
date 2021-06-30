@@ -13,11 +13,13 @@ class GamesViewController: UIViewController {
     
     // MARK: Properties
     var viewModel = GamesViewModel()
-    var network = NetworkingManager()
+    var indicator = UIActivityIndicatorView()
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator()
+        indicator.startAnimating()
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -27,15 +29,23 @@ class GamesViewController: UIViewController {
     }
     
     // MARK: Methods
+    func activityIndicator() {
+            indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        indicator.style = UIActivityIndicatorView.Style.large
+            indicator.color = .darkGray
+            indicator.center = self.view.center
+            self.view.addSubview(indicator)
+        }
+    
     func loadData() {
         viewModel.loadData { (_) in
             self.tableView.reloadData()
+            self.indicator.stopAnimating()
         }
     }
     
     func loadMoreItems() {
         viewModel.loadMoreData { (_) in
-            self.tableView.reloadData()
         }
     }
 }
@@ -47,7 +57,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? GameCell
         let games = viewModel.gamesVM[indexPath.row]
         cell?.gameViewModel = games
         cell?.indexLabel.text = String(indexPath.row + 1) + "."
@@ -63,13 +73,9 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         loadMoreItems()
-        if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height)
-            && !network.isLoadingList
-        {
+        if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
             loadMoreItems()
             self.tableView.reloadData()
-            print("reload")
-            network.isLoadingList = true
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

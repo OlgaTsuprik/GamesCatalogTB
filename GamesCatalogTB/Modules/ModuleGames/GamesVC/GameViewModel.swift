@@ -34,9 +34,11 @@ class GamesViewModel {
     }
     
     func loadMoreData(completion: @escaping ([GameViewModel]) -> Void) {
-        if networkingManager.isLoadingList == false {
+        if networkingManager.isLoadingList == true {
             networkingManager.pageNumber += 1
+            networkingManager.isLoadingList = false
         }
+        if !networkingManager.isLoadingList {
         networkingManager.fetchGames { (games) in
             let  newGames = games.map(GameViewModel.init)
             self.gamesVM.append(contentsOf: newGames)
@@ -44,5 +46,7 @@ class GamesViewModel {
                 completion(self.gamesVM)
             }
         }
+            networkingManager.isLoadingList = true
+    }
     }
 }
