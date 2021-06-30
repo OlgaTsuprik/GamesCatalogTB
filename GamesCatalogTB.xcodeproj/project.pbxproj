@@ -57,6 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE25AC15268C8C52009B34D3 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		BE792E922689E23B0007F6C8 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +112,7 @@
 		BE792EB42689E2670007F6C8 /* ModuleGames */ = {
 			isa = PBXGroup;
 			children = (
+				BE25AC15268C8C52009B34D3 /* HeaderView */,
 				BE792F04268B367A0007F6C8 /* Header */,
 				BE792EF02689FC890007F6C8 /* Cell */,
 				BE792EB62689E2870007F6C8 /* GamesVC */,

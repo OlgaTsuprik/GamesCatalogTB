@@ -13,12 +13,7 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var nameOfGame: UILabel!
     
-    var gameViewModel: GameViewModel? {
-        didSet {
-            ratingLabel.text = gameViewModel?.rating
-            nameOfGame.text = gameViewModel?.nameGame
-        }
-    }
+    var gameViewModel: GameViewModel?
     
     // MARK: Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -27,5 +22,10 @@ class GameCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    func config(model: GameViewModel?) {
+        self.ratingLabel.text = gameViewModel?.rating
+        self.nameOfGame.text = gameViewModel?.nameGame
     }
 }

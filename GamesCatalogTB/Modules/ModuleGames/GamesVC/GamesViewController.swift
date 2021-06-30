@@ -60,6 +60,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? GameCell
         let games = viewModel.gamesVM[indexPath.row]
         cell?.gameViewModel = games
+        cell?.config(model: games)
         cell?.indexLabel.text = String(indexPath.row + 1) + "."
         cell?.selectionStyle = .none
         
