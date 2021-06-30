@@ -8,66 +8,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderViewTableViewCell" customModule="GamesCatalogTB" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="GamesCatalogTB" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="HeaderViewTableViewCell" customModule="GamesCatalogTB" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+        <view contentMode="scaleToFill" id="DnP-BT-iSi" customClass="HeaderView" customModule="GamesCatalogTB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx6-fV-SgL">
-                        <rect key="frame" x="0.0" y="0.0" width="40" height="64"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="g1g-XP-tqD"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="gd9-qT-n2r">
-                        <rect key="frame" x="45" y="0.0" width="40" height="54"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="DYU-bB-7CG"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Games" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6P-NR-uwZ">
-                        <rect key="frame" x="105" y="0.0" width="215" height="64"/>
-                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                </subviews>
-                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                <constraints>
-                    <constraint firstItem="zx6-fV-SgL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="A26-50-L5I"/>
-                    <constraint firstItem="gd9-qT-n2r" firstAttribute="leading" secondItem="zx6-fV-SgL" secondAttribute="trailing" constant="5" id="Qbm-dp-xxz"/>
-                    <constraint firstItem="gd9-qT-n2r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QoF-U5-al8"/>
-                    <constraint firstAttribute="bottom" secondItem="s6P-NR-uwZ" secondAttribute="bottom" id="SME-GU-bIm"/>
-                    <constraint firstAttribute="trailing" secondItem="s6P-NR-uwZ" secondAttribute="trailing" id="U0f-2Y-nO5"/>
-                    <constraint firstItem="s6P-NR-uwZ" firstAttribute="leading" secondItem="gd9-qT-n2r" secondAttribute="trailing" constant="20" id="UzW-uU-4ML"/>
-                    <constraint firstItem="s6P-NR-uwZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a02-mv-nvE"/>
-                    <constraint firstAttribute="bottom" secondItem="zx6-fV-SgL" secondAttribute="bottom" id="ebW-Py-b3Q"/>
-                    <constraint firstAttribute="bottom" secondItem="gd9-qT-n2r" secondAttribute="bottom" constant="10" id="ehR-1K-k6C"/>
-                    <constraint firstItem="s6P-NR-uwZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jid-ym-i2F"/>
-                    <constraint firstItem="zx6-fV-SgL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pFf-Ct-DpU"/>
-                    <constraint firstItem="zx6-fV-SgL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tM4-AR-2hf"/>
-                </constraints>
-            </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <connections>
-                <outlet property="headerImage" destination="gd9-qT-n2r" id="mBU-B1-dUo"/>
-                <outlet property="headerName" destination="s6P-NR-uwZ" id="TFo-Dh-bq2"/>
-                <outlet property="index" destination="zx6-fV-SgL" id="5X6-GN-OcP"/>
-            </connections>
-            <point key="canvasLocation" x="-71" y="7"/>
-        </tableViewCell>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-c6-Ga9">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="89"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="99A-0T-dXq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-Ho-xzd">
+                    <rect key="frame" x="50" y="22.5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="ByS-he-384"/>
+                        <constraint firstAttribute="width" secondItem="f4L-Ho-xzd" secondAttribute="height" multiplier="1:1" id="jEE-2U-EV1"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
+                    <rect key="frame" x="90" y="0.0" width="312" height="89"/>
+                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="1fx-E3-Qd1"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="eW7-v3-5eY" firstAttribute="top" secondItem="DnP-BT-iSi" secondAttribute="top" id="0vp-uV-DFi"/>
+                <constraint firstItem="1fx-E3-Qd1" firstAttribute="bottom" secondItem="fs5-c6-Ga9" secondAttribute="bottom" id="DeI-Xs-Gf2"/>
+                <constraint firstItem="1fx-E3-Qd1" firstAttribute="trailing" secondItem="eW7-v3-5eY" secondAttribute="trailing" id="E76-eU-gmw"/>
+                <constraint firstItem="eW7-v3-5eY" firstAttribute="centerY" secondItem="DnP-BT-iSi" secondAttribute="centerY" id="LSK-9u-1je"/>
+                <constraint firstItem="fs5-c6-Ga9" firstAttribute="top" secondItem="DnP-BT-iSi" secondAttribute="top" id="OLt-yX-wFA"/>
+                <constraint firstItem="fs5-c6-Ga9" firstAttribute="centerY" secondItem="DnP-BT-iSi" secondAttribute="centerY" id="QKY-UJ-5gh"/>
+                <constraint firstItem="f4L-Ho-xzd" firstAttribute="leading" secondItem="fs5-c6-Ga9" secondAttribute="trailing" id="Ytu-xr-w9K"/>
+                <constraint firstItem="f4L-Ho-xzd" firstAttribute="centerY" secondItem="DnP-BT-iSi" secondAttribute="centerY" constant="-7" id="kmY-ME-zJG"/>
+                <constraint firstItem="eW7-v3-5eY" firstAttribute="leading" secondItem="f4L-Ho-xzd" secondAttribute="trailing" constant="10" id="pfH-SQ-43I"/>
+                <constraint firstItem="1fx-E3-Qd1" firstAttribute="bottom" secondItem="eW7-v3-5eY" secondAttribute="bottom" id="tt1-1A-DWK"/>
+                <constraint firstItem="fs5-c6-Ga9" firstAttribute="leading" secondItem="1fx-E3-Qd1" secondAttribute="leading" id="ykp-13-n2C"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-263.768115942029" y="-224.66517857142856"/>
+        </view>
     </objects>
     <resources>
         <image name="star" width="128" height="128"/>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

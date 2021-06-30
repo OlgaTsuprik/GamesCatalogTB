@@ -83,4 +83,8 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let detailedVC = DetailViewController()
         self.navigationController?.pushViewController(detailedVC, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
 }
