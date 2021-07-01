@@ -7,6 +7,6 @@
 
 import UIKit
 
-class HeaderView: UITableViewCell {
+class HeaderView: UIView {
 
 }
