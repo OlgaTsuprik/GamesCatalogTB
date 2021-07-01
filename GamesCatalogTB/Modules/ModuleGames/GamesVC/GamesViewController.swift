@@ -8,12 +8,14 @@
 import UIKit
 
 class GamesViewController: UIViewController {
-   // MARK: Outlets
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
     var viewModel = GamesViewModel()
     var indicator = UIActivityIndicatorView()
+    
+    var errorCauched2: NetworkError?
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -30,18 +32,35 @@ class GamesViewController: UIViewController {
     
     // MARK: Methods
     func activityIndicator() {
-            indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         indicator.style = UIActivityIndicatorView.Style.large
-            indicator.color = .darkGray
-            indicator.center = self.view.center
-            self.view.addSubview(indicator)
-        }
+        indicator.color = .darkGray
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+    }
     
     func loadData() {
         viewModel.loadData { (_) in
             self.tableView.reloadData()
             self.indicator.stopAnimating()
+        } errorHandler: { (error: NetworkError) in
+            self.handleError(error: self.viewModel.errorCauched!)
         }
+    }
+    
+    func handleError(error: NetworkError) {
+        let title: String = "Error"
+        var message: String = "Something went wrong"
+        switch error {
+        case .networkError:
+            message = "Please, check your Internet connection"
+        case .unknown:
+            message = "Unknown mistake"
+        }
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func loadMoreItems() {
@@ -81,6 +100,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
             self.tableView.reloadData()
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailedVC = DetailViewController()
         self.navigationController?.pushViewController(detailedVC, animated: true)

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct GameViewModel {
     let gameVM: Game
@@ -22,9 +23,11 @@ class GamesViewModel {
     var gamesVM = [GameViewModel]()
     var networkingManager = NetworkingManager()
     var isLoadingListNow: Bool = false
+    var errorCauched: NetworkError?
+    
     
     // MARK: Methods
-    func loadData(completion: @escaping ([GameViewModel]) -> Void) {
+    func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
         networkingManager.fetchGames { (games) in
             self.isLoadingListNow = true
             let gamesVM = games.map(GameViewModel.init)
@@ -32,12 +35,15 @@ class GamesViewModel {
                 self.gamesVM = gamesVM
                 completion(gamesVM)
             }
+        } errorHandler: { (errorI) in
+            self.errorCauched = errorI
+            DispatchQueue.main.async {
+                errorHandler(errorI)
+            }
         }
     }
     
-    
     func loadMoreData(completion: @escaping ([GameViewModel]) -> Void) {
-        //isLoadingListNow = true
         networkingManager.pageNumber += 1
         if isLoadingListNow == true {
             networkingManager.fetchGames { (games) in
@@ -46,6 +52,7 @@ class GamesViewModel {
                 DispatchQueue.main.async {
                     completion(self.gamesVM)
                 }
+            } errorHandler: { (error) in
             }
             isLoadingListNow = false
         }

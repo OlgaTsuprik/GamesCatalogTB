@@ -14,10 +14,106 @@
             filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "GamesViewController"
-            landmarkType = "3">
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5DF9280A-61E5-423E-B00A-BC561DDBEAFD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5DF9280A-61E5-423E-B00A-BC561DDBEAFD - 67f9824ca165abc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.GamesViewController.loadData() -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "5DF9280A-61E5-423E-B00A-BC561DDBEAFD - 3f638b11844e286b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;GamesCatalogTB.GameViewModel&gt;) -&gt; () in GamesCatalogTB.GamesViewController.loadData() -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B737BB1-9EA9-4D09-8FF0-BBE573E4DE73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadData(completion:errorHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B737BB1-9EA9-4D09-8FF0-BBE573E4DE73 - d4656df6bed76fae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;GamesCatalogTB.Game&gt;) -&gt; () in GamesCatalogTB.GamesViewModel.loadData(completion: (Swift.Array&lt;GamesCatalogTB.GameViewModel&gt;) -&gt; (), errorHandler: (GamesCatalogTB.NetworkError) -&gt; ()) -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/GamesVC/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "9B737BB1-9EA9-4D09-8FF0-BBE573E4DE73 - 5d2e9e878fd6c7ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (GamesCatalogTB.NetworkError) -&gt; () in GamesCatalogTB.GamesViewModel.loadData(completion: (Swift.Array&lt;GamesCatalogTB.GameViewModel&gt;) -&gt; (), errorHandler: (GamesCatalogTB.NetworkError) -&gt; ()) -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/GamesVC/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
