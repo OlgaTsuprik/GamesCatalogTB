@@ -21,10 +21,12 @@ class GamesViewModel {
     // MARK: Properties
     var gamesVM = [GameViewModel]()
     var networkingManager = NetworkingManager()
+    var isLoadingListNow: Bool = false
     
     // MARK: Methods
     func loadData(completion: @escaping ([GameViewModel]) -> Void) {
         networkingManager.fetchGames { (games) in
+            self.isLoadingListNow = true
             let gamesVM = games.map(GameViewModel.init)
             DispatchQueue.main.async {
                 self.gamesVM = gamesVM
@@ -33,12 +35,11 @@ class GamesViewModel {
         }
     }
     
+    
     func loadMoreData(completion: @escaping ([GameViewModel]) -> Void) {
-        if networkingManager.isLoadingList == true {
-            networkingManager.pageNumber += 1
-            networkingManager.isLoadingList = false
-        }
-        if !networkingManager.isLoadingList {
+        //isLoadingListNow = true
+        networkingManager.pageNumber += 1
+        if isLoadingListNow == true {
             networkingManager.fetchGames { (games) in
                 let  newGames = games.map(GameViewModel.init)
                 self.gamesVM.append(contentsOf: newGames)
@@ -46,7 +47,7 @@ class GamesViewModel {
                     completion(self.gamesVM)
                 }
             }
-            networkingManager.isLoadingList = true
+            isLoadingListNow = false
         }
     }
 }

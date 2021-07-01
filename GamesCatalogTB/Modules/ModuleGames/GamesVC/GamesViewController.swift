@@ -76,6 +76,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         loadMoreItems()
         if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
+            viewModel.isLoadingListNow = true
             loadMoreItems()
             self.tableView.reloadData()
         }

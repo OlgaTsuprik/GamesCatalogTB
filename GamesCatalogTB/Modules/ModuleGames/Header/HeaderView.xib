@@ -14,43 +14,54 @@
             <rect key="frame" x="0.0" y="0.0" width="402" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-c6-Ga9">
-                    <rect key="frame" x="0.0" y="0.0" width="50" height="89"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="99A-0T-dXq"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
-                    <color key="textColor" systemColor="systemBackgroundColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-Ho-xzd">
-                    <rect key="frame" x="50" y="22.5" width="30" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="30" id="ByS-he-384"/>
-                        <constraint firstAttribute="width" secondItem="f4L-Ho-xzd" secondAttribute="height" multiplier="1:1" id="jEE-2U-EV1"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
-                    <rect key="frame" x="90" y="0.0" width="312" height="89"/>
-                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
-                    <color key="textColor" systemColor="systemBackgroundColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dD1-Zo-SQG">
+                    <rect key="frame" x="0.0" y="0.0" width="402" height="89"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-c6-Ga9">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="89"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="99A-0T-dXq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="95O-iL-RbG">
+                            <rect key="frame" x="50" y="0.0" width="40" height="89"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-Ho-xzd">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="62"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="ByS-he-384"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfB-aa-FSv">
+                                    <rect key="frame" x="0.0" y="59" width="40" height="30"/>
+                                    <state key="normal" title="Sort">
+                                        <color key="titleColor" systemColor="systemPinkColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="sortAction:" destination="-1" eventType="touchUpInside" id="VeP-4b-EXr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Games" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
+                            <rect key="frame" x="100" y="0.0" width="302" height="89"/>
+                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="1fx-E3-Qd1"/>
             <color key="backgroundColor" systemColor="labelColor"/>
             <constraints>
-                <constraint firstItem="eW7-v3-5eY" firstAttribute="top" secondItem="DnP-BT-iSi" secondAttribute="top" id="0vp-uV-DFi"/>
-                <constraint firstItem="1fx-E3-Qd1" firstAttribute="bottom" secondItem="fs5-c6-Ga9" secondAttribute="bottom" id="DeI-Xs-Gf2"/>
-                <constraint firstItem="1fx-E3-Qd1" firstAttribute="trailing" secondItem="eW7-v3-5eY" secondAttribute="trailing" id="E76-eU-gmw"/>
-                <constraint firstItem="eW7-v3-5eY" firstAttribute="centerY" secondItem="DnP-BT-iSi" secondAttribute="centerY" id="LSK-9u-1je"/>
-                <constraint firstItem="fs5-c6-Ga9" firstAttribute="top" secondItem="DnP-BT-iSi" secondAttribute="top" id="OLt-yX-wFA"/>
-                <constraint firstItem="fs5-c6-Ga9" firstAttribute="centerY" secondItem="DnP-BT-iSi" secondAttribute="centerY" id="QKY-UJ-5gh"/>
-                <constraint firstItem="f4L-Ho-xzd" firstAttribute="leading" secondItem="fs5-c6-Ga9" secondAttribute="trailing" id="Ytu-xr-w9K"/>
-                <constraint firstItem="f4L-Ho-xzd" firstAttribute="centerY" secondItem="DnP-BT-iSi" secondAttribute="centerY" constant="-7" id="kmY-ME-zJG"/>
-                <constraint firstItem="eW7-v3-5eY" firstAttribute="leading" secondItem="f4L-Ho-xzd" secondAttribute="trailing" constant="10" id="pfH-SQ-43I"/>
-                <constraint firstItem="1fx-E3-Qd1" firstAttribute="bottom" secondItem="eW7-v3-5eY" secondAttribute="bottom" id="tt1-1A-DWK"/>
-                <constraint firstItem="fs5-c6-Ga9" firstAttribute="leading" secondItem="1fx-E3-Qd1" secondAttribute="leading" id="ykp-13-n2C"/>
+                <constraint firstItem="dD1-Zo-SQG" firstAttribute="top" secondItem="DnP-BT-iSi" secondAttribute="top" id="6O8-Ha-7zT"/>
+                <constraint firstAttribute="trailing" secondItem="dD1-Zo-SQG" secondAttribute="trailing" id="91i-Lt-7h2"/>
+                <constraint firstItem="1fx-E3-Qd1" firstAttribute="bottom" secondItem="dD1-Zo-SQG" secondAttribute="bottom" id="PaU-n2-tYj"/>
+                <constraint firstItem="dD1-Zo-SQG" firstAttribute="leading" secondItem="DnP-BT-iSi" secondAttribute="leading" id="ZBi-mI-Lvf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-263.768115942029" y="-224.66517857142856"/>
@@ -63,6 +74,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
