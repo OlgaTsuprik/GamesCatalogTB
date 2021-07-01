@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMC-Ri-MjC">
-                        <rect key="frame" x="10" y="4" width="338" height="50"/>
+                        <rect key="frame" x="10" y="4" width="338" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cee-4g-rIF">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="AVs-19-3Ok"/>
-                                    <constraint firstAttribute="height" constant="60" id="O8r-QW-mgE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="O8r-QW-mgE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,7 +34,7 @@
                                 <rect key="frame" x="40" y="0.0" width="50" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="91L-8G-Wkv"/>
-                                    <constraint firstAttribute="height" constant="60" id="vH6-JJ-29R"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="vH6-JJ-29R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +43,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameOfGame" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gn8-Lq-D3W">
                                 <rect key="frame" x="90" y="0.0" width="248" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="qNX-wg-hrA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="qNX-wg-hrA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,11 +51,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="cee-4g-rIF" firstAttribute="centerY" secondItem="LMC-Ri-MjC" secondAttribute="centerY" constant="5" id="Sgi-dT-6am"/>
-                            <constraint firstItem="Gn8-Lq-D3W" firstAttribute="centerY" secondItem="LMC-Ri-MjC" secondAttribute="centerY" constant="5" id="Vqr-XC-eys"/>
-                            <constraint firstItem="7V2-zk-0LL" firstAttribute="centerY" secondItem="LMC-Ri-MjC" secondAttribute="centerY" constant="5" id="Vsg-c4-Zbt"/>
-                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <integer key="value" value="15"/>
