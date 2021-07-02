@@ -12,6 +12,7 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var nameOfGame: UILabel!
+    @IBOutlet weak var desingView: UIView!
     
     var gameViewModel: GameViewModel?
     
@@ -23,9 +24,20 @@ class GameCell: UITableViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
+  
     func config(model: GameViewModel?) {
         self.ratingLabel.text = gameViewModel?.rating
         self.nameOfGame.text = gameViewModel?.nameGame
+    }
+}
+
+extension UIView {
+    func addShadow(){
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.init(named: "borderLine")?.cgColor
     }
 }

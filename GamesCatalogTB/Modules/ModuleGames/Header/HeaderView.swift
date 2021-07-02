@@ -13,7 +13,5 @@ class HeaderView: UIView {
     @IBAction func sortAction(_ sender: Any) {
         print("sort")
         self.sort = true
-        
     }
-    
 }

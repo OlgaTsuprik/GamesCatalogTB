@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureTabBar() {
         let vc = GamesViewController()
+        
         let firstVC = UINavigationController(rootViewController: vc)
         firstVC.tabBarItem.title = "Games"
         firstVC.tabBarItem.image = UIImage(systemName: "gamecontroller")

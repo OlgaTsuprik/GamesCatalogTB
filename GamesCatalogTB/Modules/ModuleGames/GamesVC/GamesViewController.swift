@@ -83,6 +83,8 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         cell?.indexLabel.text = String(indexPath.row + 1) + "."
         cell?.selectionStyle = .none
         cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
+        cell?.desingView.addShadow()
+        //cell?.addShadow()
         
         return cell ?? UITableViewCell()
     }
@@ -97,14 +99,12 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
             viewModel.isLoadingListNow = true
             loadMoreItems()
-            //self.tableView.reloadData()
             tableView.beginUpdates()
-            let newIndexes = IndexPath(indexes: (viewModel.gamesVM.count-20)...(viewModel.gamesVM.count-1))
-            
-           //self.tableView.insertRows(at: [newIndexes], with: .bottom)
-    
-           self.tableView.insertRows(at: [IndexPath(row: newIndexes.row, section: 0)], with: .automatic)
-           tableView.endUpdates()
+            let addedIndices = IndexPath(indexes: (viewModel.gamesVM.count-20)...(viewModel.gamesVM.count-1))
+            for i in addedIndices {
+                tableView.insertRows(at: [IndexPath(row: i, section: 0)], with: .automatic)
+            }
+            tableView.endUpdates()
         }
     }
     
