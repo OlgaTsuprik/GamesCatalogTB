@@ -15,8 +15,6 @@ class GamesViewController: UIViewController {
     var viewModel = GamesViewModel()
     var indicator = UIActivityIndicatorView()
     
-    var errorCauched2: NetworkError?
-    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +61,17 @@ class GamesViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    // WEAK SELF
     func loadMoreItems() {
         viewModel.loadMoreData { (_) in
+            self.tableView.beginUpdates()
+            var array: [IndexPath] = []
+            for i in (self.viewModel.gamesVM.count - self.viewModel.pageSize)...(self.viewModel.gamesVM.count - 1) {
+                array.append(IndexPath.init(row: i, section: 0))
+            }
+            self.tableView.insertRows(at: array, with: .automatic)
+            self.tableView.endUpdates()
+            
         }
     }
 }
@@ -78,13 +85,8 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell
         let games = viewModel.gamesVM[indexPath.row]
-        cell?.gameViewModel = games
-        cell?.config(model: games)
-        cell?.indexLabel.text = String(indexPath.row + 1) + "."
-        cell?.selectionStyle = .none
-        cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
+        cell?.config(model: games, index: "\(indexPath.row + 1).")
         cell?.desingView.addShadow()
-        //cell?.addShadow()
         
         return cell ?? UITableViewCell()
     }
@@ -95,17 +97,10 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        loadMoreItems()
         if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
             viewModel.isLoadingListNow = true
             loadMoreItems()
-            tableView.beginUpdates()
-            let addedIndices = IndexPath(indexes: (viewModel.gamesVM.count-20)...(viewModel.gamesVM.count-1))
-            for i in addedIndices {
-                tableView.insertRows(at: [IndexPath(row: i, section: 0)], with: .automatic)
-            }
-            tableView.endUpdates()
-        }
+       }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -16,6 +16,7 @@ struct GameViewModel {
     var rating: String {
         return String(gameVM.rating)
     }
+    
 }
 
 class GamesViewModel {
@@ -24,7 +25,7 @@ class GamesViewModel {
     var networkingManager = NetworkingManager()
     var isLoadingListNow: Bool = false
     var errorCauched: NetworkError?
-    
+    let pageSize: Int = 20
     
     // MARK: Methods
     func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {

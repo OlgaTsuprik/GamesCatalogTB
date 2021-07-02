@@ -14,20 +14,15 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var nameOfGame: UILabel!
     @IBOutlet weak var desingView: UIView!
     
-    var gameViewModel: GameViewModel?
-    
-    // MARK: Initialization
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: "gameCell")
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+        
     }
   
-    func config(model: GameViewModel?) {
-        self.ratingLabel.text = gameViewModel?.rating
-        self.nameOfGame.text = gameViewModel?.nameGame
+    func config(model: GameViewModel?, index: String) {
+        self.ratingLabel.text = model?.rating
+        self.nameOfGame.text = model?.nameGame
+        self.indexLabel.text = index
     }
 }
 
