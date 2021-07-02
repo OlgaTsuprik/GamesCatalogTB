@@ -97,7 +97,14 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
             viewModel.isLoadingListNow = true
             loadMoreItems()
-            self.tableView.reloadData()
+            //self.tableView.reloadData()
+            tableView.beginUpdates()
+            let newIndexes = IndexPath(indexes: (viewModel.gamesVM.count-20)...(viewModel.gamesVM.count-1))
+            
+           //self.tableView.insertRows(at: [newIndexes], with: .bottom)
+    
+           self.tableView.insertRows(at: [IndexPath(row: newIndexes.row, section: 0)], with: .automatic)
+           tableView.endUpdates()
         }
     }
     
