@@ -16,6 +16,9 @@ struct GameViewModel {
     var rating: String {
         return String(gameVM.rating)
     }
+    var urlToImage: String {
+        return gameVM.backgroundImage
+    }
 }
 
 class GamesViewModel {
@@ -48,6 +51,7 @@ class GamesViewModel {
             }
         }
     }
+
     
     func loadMoreData(completion: @escaping ([GameViewModel]) -> Void) {
         networkingManager.pageNumber += 1
