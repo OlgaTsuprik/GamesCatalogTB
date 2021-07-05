@@ -15,6 +15,7 @@ class GamesViewController: UIViewController {
     var viewModel = GamesViewModel()
     var indicator = UIActivityIndicatorView()
     
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +39,11 @@ class GamesViewController: UIViewController {
     }
     
     func loadData() {
-        viewModel.loadData { (_) in
-            self.tableView.reloadData()
-            self.indicator.stopAnimating()
-        } errorHandler: { (error: NetworkError) in
-            self.handleError(error: self.viewModel.errorCauched!)
+        viewModel.loadData { [weak self] (_) in
+            self?.tableView.reloadData()
+            self?.indicator.stopAnimating()
+        } errorHandler: { [weak self] (error: NetworkError) in
+            self?.handleError(error: (self?.viewModel.errorCauched)!)
         }
     }
     
@@ -63,15 +64,14 @@ class GamesViewController: UIViewController {
     
     // WEAK SELF
     func loadMoreItems() {
-        viewModel.loadMoreData { (_) in
-            self.tableView.beginUpdates()
+        viewModel.loadMoreData { [weak self] (_) in
+            self?.tableView.beginUpdates()
             var array: [IndexPath] = []
-            for i in (self.viewModel.gamesVM.count - self.viewModel.pageSize)...(self.viewModel.gamesVM.count - 1) {
+            for i in self?.viewModel.paging ?? (0...0) {
                 array.append(IndexPath.init(row: i, section: 0))
             }
-            self.tableView.insertRows(at: array, with: .automatic)
-            self.tableView.endUpdates()
-            
+            self?.tableView.insertRows(at: array, with: .automatic)
+            self?.tableView.endUpdates()
         }
     }
 }
@@ -86,7 +86,6 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell
         let games = viewModel.gamesVM[indexPath.row]
         cell?.config(model: games, index: "\(indexPath.row + 1).")
-        cell?.desingView.addShadow()
         
         return cell ?? UITableViewCell()
     }

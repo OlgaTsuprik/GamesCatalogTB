@@ -14,9 +14,9 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var nameOfGame: UILabel!
     @IBOutlet weak var desingView: UIView!
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
-        
+        desingView.addShadow()
     }
   
     func config(model: GameViewModel?, index: String) {
