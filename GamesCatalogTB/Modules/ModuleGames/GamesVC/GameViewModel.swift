@@ -19,6 +19,24 @@ struct GameViewModel {
     var urlToImage: String {
         return gameVM.backgroundImage
     }
+    var description: String {
+        return gameVM.description ?? "Desctiption is absent"
+    }
+    var released: String {
+        return gameVM.released
+    }
+
+    var screenShotsOfGame: [String] {
+        return gameVM.screenShots.map { screenShots in
+            screenShots.image
+        }
+    }
+    
+    var genresOfGame: [String] {
+        return gameVM.genres.map { genres in
+            genres.name
+        }
+    }
 }
 
 class GamesViewModel {
@@ -39,6 +57,7 @@ class GamesViewModel {
     func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
         networkingManager.fetchGames { (games) in
             self.isLoadingListNow = true
+            
             let gamesVM = games.map(GameViewModel.init)
             DispatchQueue.main.async {
                 self.gamesVM = gamesVM
@@ -52,7 +71,6 @@ class GamesViewModel {
         }
     }
 
-    
     func loadMoreData(completion: @escaping ([GameViewModel]) -> Void) {
         networkingManager.pageNumber += 1
         if isLoadingListNow == true {

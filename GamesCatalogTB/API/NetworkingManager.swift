@@ -27,6 +27,7 @@ class NetworkingManager {
         guard let urlString =  URL(string: baseURL + "?key=" + Constants.apiKey.rawValue + "&page=" + String(pageNumber)) else {
             return
         }
+        print(urlString)
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: urlString) { data, response, error in
             if error != nil {

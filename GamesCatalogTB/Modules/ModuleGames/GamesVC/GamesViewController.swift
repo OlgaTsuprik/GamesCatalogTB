@@ -105,6 +105,9 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailedVC = DetailViewController()
         self.navigationController?.pushViewController(detailedVC, animated: true)
+        
+        let model = viewModel.gamesVM[indexPath.row]
+        detailedVC.modelDetailed = model
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
