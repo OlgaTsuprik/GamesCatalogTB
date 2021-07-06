@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
     
     //MARK: Properties
     var modelDetailed: GameViewModel?
-    //var modelScreens: [(url: String, image: UIImage?)] = []
     var modelScreens: [String] = []
     
     //MARK: Life cycle
@@ -30,8 +29,6 @@ class DetailViewController: UIViewController {
         screenshortsCollection.dataSource = self
         let nibName = UINib(nibName: "CollectionViewCell", bundle: nil)
         screenshortsCollection.register(nibName, forCellWithReuseIdentifier: "collectionViewCell")
-    
-        self.modelScreens = modelDetailed!.screenShotsOfGame
         showInfo()
     }
     
@@ -49,14 +46,12 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return modelDetailed?.screenShotsOfGame.count ?? 1
+        return modelDetailed?.screenShotsOfGame.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.collectionImage.load2(url: modelScreens[indexPath.row])
+        cell.collectionImage.loadFromStringURL(url: modelDetailed!.screenShotsOfGame[indexPath.row])
         return cell
     }
-    
-    
 }

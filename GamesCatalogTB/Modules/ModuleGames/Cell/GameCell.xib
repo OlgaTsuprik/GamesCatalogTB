@@ -30,9 +30,9 @@
                         <rect key="frame" x="10" y="12" width="340" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cee-4g-rIF">
-                                <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="35" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="AVs-19-3Ok"/>
+                                    <constraint firstAttribute="width" constant="35" id="AVs-19-3Ok"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="O8r-QW-mgE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="16"/>
@@ -40,8 +40,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="qIu-us-gRe">
-                                <rect key="frame" x="35" y="0.0" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.97363885910000003" green="1" blue="0.8235235259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="40" y="0.0" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="VhY-Nu-VG3"/>
                                     <constraint firstAttribute="width" constant="60" id="doz-fl-tPp"/>
@@ -53,7 +53,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameOfGame" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gn8-Lq-D3W">
-                                <rect key="frame" x="100" y="0.0" width="185" height="60"/>
+                                <rect key="frame" x="105" y="0.0" width="180" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="qNX-wg-hrA"/>
                                 </constraints>

@@ -25,6 +25,8 @@
 		BE792F03268AF9A60007F6C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792F02268AF9A60007F6C8 /* Constants.swift */; };
 		BE792F0F268B39710007F6C8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792F0D268B39710007F6C8 /* HeaderView.swift */; };
 		BE792F10268B39710007F6C8 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792F0E268B39710007F6C8 /* HeaderView.xib */; };
+		BE89E1242694763500052A61 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89E1232694763500052A61 /* UIView+Ex.swift */; };
+		BE89E126269476FB00052A61 /* UIImageView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89E125269476FB00052A61 /* UIImageView+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		BE792F02268AF9A60007F6C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE792F0D268B39710007F6C8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BE792F0E268B39710007F6C8 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		BE89E1232694763500052A61 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		BE89E125269476FB00052A61 /* UIImageView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */,
+				BE89E1222694762100052A61 /* Extensions */,
 				BE792F01268AF9950007F6C8 /* Config */,
 				BE792EC82689E4030007F6C8 /* API */,
 				BE792EC72689E3D60007F6C8 /* Support */,
@@ -191,6 +196,15 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		BE89E1222694762100052A61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE89E1232694763500052A61 /* UIView+Ex.swift */,
+				BE89E125269476FB00052A61 /* UIImageView+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,7 +285,9 @@
 				BE792EFB268AF5640007F6C8 /* GameCell.swift in Sources */,
 				BE792EC42689E3860007F6C8 /* SecondViewController.swift in Sources */,
 				BE792F00268AF91A0007F6C8 /* NetworkingManager.swift in Sources */,
+				BE89E126269476FB00052A61 /* UIImageView+Ex.swift in Sources */,
 				BE792EFE268AF8D00007F6C8 /* GameModel.swift in Sources */,
+				BE89E1242694763500052A61 /* UIView+Ex.swift in Sources */,
 				BE792F0F268B39710007F6C8 /* HeaderView.swift in Sources */,
 				BE792E9F2689E23B0007F6C8 /* AppDelegate.swift in Sources */,
 				BE792F03268AF9A60007F6C8 /* Constants.swift in Sources */,

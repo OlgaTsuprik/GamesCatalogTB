@@ -62,7 +62,6 @@ class GamesViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    // WEAK SELF
     func loadMoreItems() {
         viewModel.loadMoreData { [weak self] (_) in
             self?.tableView.beginUpdates()
@@ -70,7 +69,7 @@ class GamesViewController: UIViewController {
             for i in self?.viewModel.paging ?? (0...0) {
                 array.append(IndexPath.init(row: i, section: 0))
             }
-            self?.tableView.insertRows(at: array, with: .automatic)
+            self?.tableView.insertRows(at: array, with: .none)
             self?.tableView.endUpdates()
         }
     }
@@ -95,16 +94,14 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
-            viewModel.isLoadingListNow = true
-            loadMoreItems()
-       }
+        viewModel.isLoadingListNow = true
+        loadMoreItems()
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailedVC = DetailViewController()
         self.navigationController?.pushViewController(detailedVC, animated: true)
-        
         let model = viewModel.gamesVM[indexPath.row]
         detailedVC.modelDetailed = model
     }

@@ -57,7 +57,6 @@ class GamesViewModel {
     func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
         networkingManager.fetchGames { (games) in
             self.isLoadingListNow = true
-            
             let gamesVM = games.map(GameViewModel.init)
             DispatchQueue.main.async {
                 self.gamesVM = gamesVM

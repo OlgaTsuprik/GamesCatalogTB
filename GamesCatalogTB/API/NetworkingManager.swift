@@ -17,8 +17,7 @@ class NetworkingManager {
     let baseURL = "https://api.rawg.io/api/games"
     var pageNumber: Int = 1
     var isLoadingList: Bool = false
-   // let imageCache = NSCache<NSString, NSData>()
-    
+  
     // MARK: Methods
     
     func fetchGames(completion: @escaping (([Game]) -> Void),
