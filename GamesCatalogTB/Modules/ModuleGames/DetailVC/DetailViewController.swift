@@ -16,6 +16,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genresLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     
+    @IBOutlet weak var screenshortsCollection: UICollectionView!
+    
     //MARK: Properties
     var modelDetailed: GameViewModel?
     
@@ -34,4 +36,18 @@ class DetailViewController: UIViewController {
         ratingLabel.text = modelDetailed?.rating
         imageOfGame?.load(url: URL(string: modelDetailed!.urlToImage)!)
     }
+}
+
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        return cell
+    }
+    
+    
 }

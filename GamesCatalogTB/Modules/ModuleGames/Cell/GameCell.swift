@@ -16,7 +16,7 @@ class GameCell: UITableViewCell {
     
     @IBOutlet weak var photoView: UIImageView!
     
-    let network = NetworkingManager()
+    //let network = NetworkingManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
