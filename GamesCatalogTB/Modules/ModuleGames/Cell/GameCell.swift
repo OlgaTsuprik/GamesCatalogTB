@@ -16,7 +16,6 @@ class GameCell: UITableViewCell {
     
     @IBOutlet weak var photoView: UIImageView!
     
-    //let network = NetworkingManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +46,20 @@ extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension UIImageView {
+    func load2(url: String) {
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: URL(string: url)!) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self.image = image

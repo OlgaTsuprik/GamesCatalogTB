@@ -4,11 +4,10 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="GamesCatalogTB" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
             <connections>
                 <outlet property="descriptionLabel" destination="vwE-Vp-8NE" id="zik-ib-AWP"/>
                 <outlet property="genresLabel" destination="UWG-Rq-zhe" id="rvm-re-UUV"/>
@@ -137,8 +136,8 @@
                     </constraints>
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Im9-16-n8k">
-                    <rect key="frame" x="0.0" y="474" width="414" height="388"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <rect key="frame" x="5" y="474" width="404" height="388"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bAL-aR-AdD">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -165,9 +164,9 @@
                 <constraint firstItem="hcg-8N-1Jr" firstAttribute="bottom" secondItem="Im9-16-n8k" secondAttribute="bottom" id="KRN-X2-2Nc"/>
                 <constraint firstItem="ciN-fS-zGr" firstAttribute="leading" secondItem="hcg-8N-1Jr" secondAttribute="leading" id="cJz-C9-YPj"/>
                 <constraint firstItem="Im9-16-n8k" firstAttribute="top" secondItem="u0C-JL-c1S" secondAttribute="bottom" constant="10" id="cuS-FF-573"/>
-                <constraint firstItem="hcg-8N-1Jr" firstAttribute="trailing" secondItem="Im9-16-n8k" secondAttribute="trailing" id="d0E-0C-S6x"/>
+                <constraint firstItem="hcg-8N-1Jr" firstAttribute="trailing" secondItem="Im9-16-n8k" secondAttribute="trailing" constant="5" id="d0E-0C-S6x"/>
                 <constraint firstItem="u0C-JL-c1S" firstAttribute="leading" secondItem="hcg-8N-1Jr" secondAttribute="leading" id="eVW-G7-1Uc"/>
-                <constraint firstItem="Im9-16-n8k" firstAttribute="leading" secondItem="hcg-8N-1Jr" secondAttribute="leading" id="voc-G4-4SI"/>
+                <constraint firstItem="Im9-16-n8k" firstAttribute="leading" secondItem="hcg-8N-1Jr" secondAttribute="leading" constant="5" id="voc-G4-4SI"/>
                 <constraint firstItem="ciN-fS-zGr" firstAttribute="top" secondItem="hcg-8N-1Jr" secondAttribute="top" id="zg5-w2-Vzd"/>
             </constraints>
             <point key="canvasLocation" x="123" y="-154"/>
@@ -175,8 +174,5 @@
     </objects>
     <resources>
         <image name="rating" width="425" height="142"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

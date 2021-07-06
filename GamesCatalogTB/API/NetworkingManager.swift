@@ -27,7 +27,6 @@ class NetworkingManager {
         guard let urlString =  URL(string: baseURL + "?key=" + Constants.apiKey.rawValue + "&page=" + String(pageNumber)) else {
             return
         }
-        print(urlString)
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: urlString) { data, response, error in
             if error != nil {
@@ -46,27 +45,4 @@ class NetworkingManager {
         }
         task.resume()
     }
-//    
-//    func fetchImage(url: String, completion: @escaping (Data?) -> Void) {
-//        self.isLoadingList = false
-//        guard let urlString =  URL(string: baseURL + "?key=" + Constants.apiKey.rawValue + "&page=" + String(pageNumber)) else {
-//                completion(nil)
-//                return
-//            }
-//        if let cachedImage = imageCache.object(forKey: NSString(string: url)) {
-//            completion(cachedImage as Data)
-//        } else {
-//            let session = URLSession(configuration: .default)
-//            let task = session.dataTask(with: urlString) { data, responce, error in
-//                if error != nil {
-//                    completion(nil)
-//                    return
-//                }
-//                if let data = data {
-//                    self.imageCache.setObject(data as NSData, forKey: NSString(string: url))
-//                    completion(data)
-//                }
-//            }.resume()
-//        }
-//    }
 }

@@ -126,8 +126,8 @@
             filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,16 +135,124 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B86BDF41-B7A3-439B-913A-F0C69C60F9E2"
+            uuid = "C2ACB4D4-E03A-41D1-9C7C-865EA0C5ADCD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GamesCatalogTB/API/NetworkingManager.swift"
+            filePath = "GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "fetchImage(url:completion:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C2ACB4D4-E03A-41D1-9C7C-865EA0C5ADCD - 3f141fc386af8510"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.modelDetailed.getter : Swift.Optional&lt;GamesCatalogTB.GameViewModel&gt;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "C2ACB4D4-E03A-41D1-9C7C-865EA0C5ADCD - a9eb30d918ad431c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.modelDetailed.setter : Swift.Optional&lt;GamesCatalogTB.GameViewModel&gt;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "C2ACB4D4-E03A-41D1-9C7C-865EA0C5ADCD - f74ed599acbd06c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.modelDetailed.modify : Swift.Optional&lt;GamesCatalogTB.GameViewModel&gt;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "C2ACB4D4-E03A-41D1-9C7C-865EA0C5ADCD - 62f1af84f56e9fbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.modelDetailed.modify : Swift.Optional&lt;GamesCatalogTB.GameViewModel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "C2ACB4D4-E03A-41D1-9C7C-865EA0C5ADCD - d57eb506e06738e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GamesCatalogTB.DetailViewController"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  uuid = "C2ACB4D4-E03A-41D1-9C7C-865EA0C5ADCD - 41e6827665549e25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GamesCatalogTB.DetailViewController&gt;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02EDFC70-C955-4213-A7C8-FDFDBBAE04E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/ModuleGames/DetailVC/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

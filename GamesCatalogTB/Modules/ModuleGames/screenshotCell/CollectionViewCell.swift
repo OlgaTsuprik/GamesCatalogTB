@@ -13,7 +13,13 @@ class CollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        collectionImage.image = UIImage(named: "star")
     }
+    
+    func config(model: GameViewModel?) {
+        self.collectionImage?.load(url: URL(string: (model!.screenShotsOfGame[2]))!)
 
+    }
+    func set(image: UIImage) {
+        self.collectionImage.image = image
+    }
 }
