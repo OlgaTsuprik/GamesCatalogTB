@@ -26,7 +26,6 @@ class GameCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        //self.photoView.image = nil
         self.photoView.image = UIImage(named: "default")
     }
     
@@ -37,48 +36,3 @@ class GameCell: UITableViewCell {
         self.photoView?.load(url: URL(string: model!.urlToImage)!)
     }
 }
-
-//extension UIView {
-//    func addShadow(){
-//        self.layer.shadowColor = UIColor.darkGray.cgColor
-//        self.layer.shadowOpacity = 1
-//        self.layer.shadowRadius = 5.0
-//        self.layer.shadowOffset = CGSize(width: 0, height: 2)
-//        self.layer.borderWidth = 2
-//        self.layer.borderColor = UIColor.init(named: "borderLine")?.cgColor
-//    }
-//}
-//
-//extension UIView {
-//    func addBorder(){
-//        self.layer.borderWidth = 2
-//        self.layer.borderColor = UIColor.black.cgColor
-//    }
-//}
-//extension UIImageView {
-//    func load(url: URL) {
-//        DispatchQueue.global().async {
-//            if let data = try? Data(contentsOf: url) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self.image = image
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//extension UIImageView {
-//    func load2(url: String) {
-//        DispatchQueue.global().async {
-//            if let data = try? Data(contentsOf: URL(string: url)!) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self.image = image
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
