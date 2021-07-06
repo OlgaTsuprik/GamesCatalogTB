@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         secondVC.tabBarItem.title = "Favorites"
         secondVC.tabBarItem.image = UIImage(systemName: "star")
         
+        vc.navigationController?.navigationBar.barTintColor = UIColor.black
+        vc.navigationController?.navigationBar.tintColor = UIColor.white
         let tabBarController = UITabBarController()
         tabBarController.tabBar.barTintColor = UIColor.black
         tabBarController.tabBar.tintColor = UIColor.white
