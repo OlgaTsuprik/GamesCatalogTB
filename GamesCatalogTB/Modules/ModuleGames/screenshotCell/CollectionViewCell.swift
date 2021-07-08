@@ -8,9 +8,10 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-
+    //MARK: Outlets
     @IBOutlet weak var collectionImage: UIImageView!
     
+    //MARK: Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -36,8 +36,8 @@ class GameCell: UITableViewCell {
        // self.photoView?.load(url: URL(string: model!.urlToImage)!)
     }
     
-    func addImage(image: UIImage) {
-        self.photoView.image = UIImage()
+    func addImage(image: UIImage?) {
+        self.photoView.image = image
     }
     
 }

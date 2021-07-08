@@ -88,11 +88,10 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         cell?.config(model: games, index: "\(indexPath.row + 1).")
         
         viewModel.loadImage(index: indexPath.row) { data in
-            //guard let data = data else { return }
-            if let cellTable = tableView.cellForRow(at: indexPath) as? GameCell {
-                guard let data = data else { return }
-                    DispatchQueue.main.async {
-                        cellTable.addImage(image: UIImage(data: data)!)
+            DispatchQueue.main.async {
+                if let cellTable = tableView.cellForRow(at: indexPath) as? GameCell {
+                    guard let data = data else { return }
+                    cellTable.addImage(image: UIImage(data: data))
                 }
             }
         }

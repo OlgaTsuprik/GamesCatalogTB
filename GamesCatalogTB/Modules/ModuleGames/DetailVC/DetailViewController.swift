@@ -15,8 +15,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var genresLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    
     @IBOutlet weak var screenshortsCollection: UICollectionView!
+    @IBOutlet weak var heightCollection: NSLayoutConstraint!
     
     //MARK: Properties
     var modelDetailed: GameViewModel?
@@ -31,7 +31,11 @@ class DetailViewController: UIViewController {
         screenshortsCollection.register(nibName, forCellWithReuseIdentifier: "collectionViewCell")
         showInfo()
         screenshortsCollection.isScrollEnabled = false
-        screenshortsCollection.contentSize = CGSize(width: self.screenshortsCollection.bounds.width, height: 1000)
+        screenshortsCollection.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        heightCollection.constant = screenshortsCollection.contentSize.height
     }
     
     //MARK: Methods
@@ -54,7 +58,16 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         cell.collectionImage.loadFromStringURL(url: modelDetailed!.screenShotsOfGame[indexPath.row])
+        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ScreenShotVC()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        let model = modelDetailed?.screenShotsOfGame[indexPath.row]
+        vc.imageURLString = model
+     }
 }
 

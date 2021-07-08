@@ -26,7 +26,7 @@ class NetworkingManager {
     func fetchGames(completion: @escaping (([Game]) -> Void),
                     errorHandler: @escaping (NetworkError) -> Void) {
         self.isLoadingList = false
-        guard let urlString =  URL(string: baseURL + "?key=" + Constants.apiKey.rawValue + "&page=" + String(pageNumber)) else {
+        guard let urlString =  URL(string: "\(baseURL)?key=\(Constants.apiKey.rawValue)&page=\(pageNumber)") else {
             return
         }
         let session = URLSession(configuration: .default)
@@ -50,7 +50,7 @@ class NetworkingManager {
     
     func fetchImage(url: String, completion: @escaping ((Data?) -> Void)) {
         self.isLoadingList = false
-        guard let urlString =  URL(string: baseURL + "?key=" + Constants.apiKey.rawValue + "&page=" + String(pageNumber)) else {
+        guard let urlObject =  URL(string: url) else {
             return
         }
         
@@ -58,7 +58,7 @@ class NetworkingManager {
             completion(cachedImage as Data)
         } else {
             let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: urlString) { data, response, error in
+            let task = session.dataTask(with: urlObject) { data, response, error in
                 guard error == nil, let data = data else {
                     completion(nil)
                     return

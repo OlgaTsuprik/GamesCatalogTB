@@ -53,7 +53,6 @@ class GamesViewModel {
         }
     }
     
-    
     // MARK: Methods
     func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
         networkingManager.fetchGames { (games) in
