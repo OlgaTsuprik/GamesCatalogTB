@@ -30,6 +30,8 @@ class DetailViewController: UIViewController {
         let nibName = UINib(nibName: "CollectionViewCell", bundle: nil)
         screenshortsCollection.register(nibName, forCellWithReuseIdentifier: "collectionViewCell")
         showInfo()
+        screenshortsCollection.isScrollEnabled = false
+        screenshortsCollection.contentSize = CGSize(width: self.screenshortsCollection.bounds.width, height: 1000)
     }
     
     //MARK: Methods
@@ -55,3 +57,4 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
 }
+

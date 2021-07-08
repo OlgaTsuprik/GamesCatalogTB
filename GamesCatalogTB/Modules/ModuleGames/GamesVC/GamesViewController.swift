@@ -47,6 +47,7 @@ class GamesViewController: UIViewController {
         }
     }
     
+    
     func handleError(error: NetworkError) {
         let title: String = "Error"
         var message: String = "Something went wrong"
@@ -85,6 +86,16 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell
         let games = viewModel.gamesVM[indexPath.row]
         cell?.config(model: games, index: "\(indexPath.row + 1).")
+        
+        viewModel.loadImage(index: indexPath.row) { data in
+            //guard let data = data else { return }
+            if let cellTable = tableView.cellForRow(at: indexPath) as? GameCell {
+                guard let data = data else { return }
+                    DispatchQueue.main.async {
+                        cellTable.addImage(image: UIImage(data: data)!)
+                }
+            }
+        }
         return cell ?? UITableViewCell()
     }
     
@@ -94,9 +105,10 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        viewModel.isLoadingListNow = true
-        loadMoreItems()
-        
+        if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
+                     viewModel.isLoadingListNow = true
+                     loadMoreItems()
+            }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

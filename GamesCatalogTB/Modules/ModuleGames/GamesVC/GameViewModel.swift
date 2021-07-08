@@ -53,6 +53,7 @@ class GamesViewModel {
         }
     }
     
+    
     // MARK: Methods
     func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
         networkingManager.fetchGames { (games) in
@@ -67,6 +68,13 @@ class GamesViewModel {
             DispatchQueue.main.async {
                 errorHandler(errorI)
             }
+        }
+    }
+    
+    func loadImage(index: Int, completion: @escaping((Data?) -> Void)) {
+        networkingManager.fetchImage(url: gamesVM[index].urlToImage) { data in
+            guard let data = data else { return }
+            completion(data)
         }
     }
 
@@ -84,4 +92,5 @@ class GamesViewModel {
             isLoadingListNow = false
         }
     }
+    
 }

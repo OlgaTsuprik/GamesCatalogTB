@@ -33,6 +33,11 @@ class GameCell: UITableViewCell {
         self.ratingLabel.text = model?.rating
         self.nameOfGame.text = model?.nameGame
         self.indexLabel.text = index
-        self.photoView?.load(url: URL(string: model!.urlToImage)!)
+       // self.photoView?.load(url: URL(string: model!.urlToImage)!)
     }
+    
+    func addImage(image: UIImage) {
+        self.photoView.image = UIImage()
+    }
+    
 }

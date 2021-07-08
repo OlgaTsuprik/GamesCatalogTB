@@ -14,8 +14,8 @@
             filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "GamesViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "loadData(completion:errorHandler:)"
             landmarkType = "7">
             <Locations>
@@ -228,15 +228,127 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ED97C0E6-C0D8-436A-B1F1-1D591972F722"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D90AFBF-D2EA-41C2-B846-BAF53595BBAC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/API/NetworkingManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "fetchImage(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6D90AFBF-D2EA-41C2-B846-BAF53595BBAC - d817a64fa4e1fcf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.NetworkingManager.fetchImage(url: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/API/NetworkingManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1744">
+               </Location>
+               <Location
+                  uuid = "6D90AFBF-D2EA-41C2-B846-BAF53595BBAC - cb11f3a34a0db5d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GamesCatalogTB.NetworkingManager.fetchImage(url: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/API/NetworkingManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "512">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B5D6DC0-48E5-4C94-92CE-54A9776CED29"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/API/NetworkingManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "fetchImage(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B5D6DC0-48E5-4C94-92CE-54A9776CED29 - d817a64fa4e1fd8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.NetworkingManager.fetchImage(url: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/API/NetworkingManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1392">
+               </Location>
+               <Location
+                  uuid = "3B5D6DC0-48E5-4C94-92CE-54A9776CED29 - cb11f3a34a0db48e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GamesCatalogTB.NetworkingManager.fetchImage(url: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/GamesCatalogTB/API/NetworkingManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99236589-8D05-4266-A20A-2E283CC2DB2F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GamesCatalogTB/Modules/ModuleGames/GamesVC/GamesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

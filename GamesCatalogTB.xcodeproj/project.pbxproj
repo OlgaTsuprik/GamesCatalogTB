@@ -27,6 +27,7 @@
 		BE792F10268B39710007F6C8 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792F0E268B39710007F6C8 /* HeaderView.xib */; };
 		BE89E1242694763500052A61 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89E1232694763500052A61 /* UIView+Ex.swift */; };
 		BE89E126269476FB00052A61 /* UIImageView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89E125269476FB00052A61 /* UIImageView+Ex.swift */; };
+		BE89E12A2695D29800052A61 /* Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89E1292695D29800052A61 /* Scroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		BE792F0E268B39710007F6C8 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		BE89E1232694763500052A61 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		BE89E125269476FB00052A61 /* UIImageView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ex.swift"; sourceTree = "<group>"; };
+		BE89E1292695D29800052A61 /* Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				BE792ECE2689EBB70007F6C8 /* DetailViewController.xib */,
 				BE792EBC2689E30A0007F6C8 /* DetailViewController.swift */,
+				BE89E1292695D29800052A61 /* Scroll.swift */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				BE792EBA2689E2EB0007F6C8 /* GamesViewController.swift in Sources */,
 				BE792EC12689E3390007F6C8 /* GameViewModel.swift in Sources */,
+				BE89E12A2695D29800052A61 /* Scroll.swift in Sources */,
 				BE792EBD2689E30A0007F6C8 /* DetailViewController.swift in Sources */,
 				BE792EFB268AF5640007F6C8 /* GameCell.swift in Sources */,
 				BE792EC42689E3860007F6C8 /* SecondViewController.swift in Sources */,
