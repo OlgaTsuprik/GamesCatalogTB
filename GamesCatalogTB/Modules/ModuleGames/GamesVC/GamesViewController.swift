@@ -87,11 +87,10 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let games = viewModel.gamesVM[indexPath.row]
         cell?.config(model: games, index: "\(indexPath.row + 1).")
         
-        viewModel.loadImage(index: indexPath.row) { data in
+        viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
-                if let cellTable = tableView.cellForRow(at: indexPath) as? GameCell {
-                    guard let data = data else { return }
-                    cellTable.addImage(image: UIImage(data: data))
+                if let cellTable = self?.tableView.cellForRow(at: indexPath) as? GameCell {
+                    cellTable.addImage(image: image)
                 }
             }
         }
@@ -105,9 +104,9 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
-                     viewModel.isLoadingListNow = true
-                     loadMoreItems()
-            }
+            viewModel.isLoadingListNow = true
+            loadMoreItems()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

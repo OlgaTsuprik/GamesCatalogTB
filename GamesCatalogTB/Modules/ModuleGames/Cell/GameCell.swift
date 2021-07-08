@@ -13,14 +13,13 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var nameOfGame: UILabel!
     @IBOutlet weak var desingView: UIView!
-    
     @IBOutlet weak var photoView: UIImageView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         desingView.addShadow()
-        photoView.addBorder()
+        desingView.addBorder()
         photoView.image = UIImage(named: "default")
     }
     
@@ -33,11 +32,9 @@ class GameCell: UITableViewCell {
         self.ratingLabel.text = model?.rating
         self.nameOfGame.text = model?.nameGame
         self.indexLabel.text = index
-       // self.photoView?.load(url: URL(string: model!.urlToImage)!)
     }
     
     func addImage(image: UIImage?) {
         self.photoView.image = image
     }
-    
 }
