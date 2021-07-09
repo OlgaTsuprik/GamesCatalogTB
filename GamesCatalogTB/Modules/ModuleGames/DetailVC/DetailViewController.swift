@@ -66,6 +66,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let vc = ScreenShotVC()
         
         self.navigationController?.pushViewController(vc, animated: true)
+        //self.navigationController?.present(vc, animated: true, completion: nil)
         let model = modelDetailed?.screenShotsOfGame[indexPath.row]
         vc.imageURLString = model
      }
