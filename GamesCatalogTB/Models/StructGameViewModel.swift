@@ -36,7 +36,7 @@ struct GameViewModel {
             genres.name
         }
     }
-    func loadImage2(index: Int, completion: @escaping((UIImage?) -> Void)) {
+    func loadScreenshotImage(index: Int, completion: @escaping((UIImage?) -> Void)) {
         NetworkingManager.shared.fetchImage(url: screenShotsOfGame[index]) { image in
             completion(image)
         }

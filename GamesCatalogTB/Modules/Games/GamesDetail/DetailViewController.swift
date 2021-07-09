@@ -58,7 +58,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as? ScreenshotCollectionViewCell
-        modelDetailed?.loadImage2(index: indexPath.row, completion: { screen in
+        modelDetailed?.loadScreenshotImage(index: indexPath.row, completion: { screen in
             DispatchQueue.main.async {
                 if let cell = self.screenshortsCollection.cellForItem(at: indexPath) as? ScreenshotCollectionViewCell {
                     cell.addScreenShot(image: screen)
