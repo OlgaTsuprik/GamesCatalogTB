@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  ScreenshotCollectionViewCell.swift
 //  GamesCatalogTB
 //
 //  Created by Оля on 06.07.2021.
@@ -15,4 +15,8 @@ class ScreenshotCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    func addScreenShot(image: UIImage?) {
+        self.collectionImage.image = image
+    }
+    
 }

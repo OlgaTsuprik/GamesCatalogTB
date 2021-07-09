@@ -5,7 +5,7 @@
 //  Created by Оля on 09.07.2021.
 //
 
-import Foundation
+import UIKit
 
 struct GameViewModel {
     let gameVM: Game
@@ -34,6 +34,11 @@ struct GameViewModel {
     var genresOfGame: [String] {
         return gameVM.genres.map { genres in
             genres.name
+        }
+    }
+    func loadImage2(index: Int, completion: @escaping((UIImage?) -> Void)) {
+        NetworkingManager.shared.fetchImage(url: screenShotsOfGame[index]) { image in
+            completion(image)
         }
     }
 }

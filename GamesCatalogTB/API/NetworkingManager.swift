@@ -15,7 +15,6 @@ enum NetworkError {
 class NetworkingManager {
     // MARK: Properties
     let baseURL = "https://api.rawg.io/api/games"
-    //var isLoadingList: Bool = false
     let imageCache = NSCache<NSString, UIImage>()
     
     //MARK: Static

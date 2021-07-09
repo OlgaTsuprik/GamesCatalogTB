@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     
     //MARK: Properties
     var modelDetailed: GameViewModel?
+    var images = [UIImage()]
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -57,8 +58,13 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as? ScreenshotCollectionViewCell
-        cell?.collectionImage.loadFromStringURL(url: modelDetailed!.screenShotsOfGame[indexPath.row])
-        
+        modelDetailed?.loadImage2(index: indexPath.row, completion: { screen in
+            DispatchQueue.main.async {
+                if let cell = self.screenshortsCollection.cellForItem(at: indexPath) as? ScreenshotCollectionViewCell {
+                    cell.addScreenShot(image: screen)
+                }
+            }
+        })
         return cell ?? UICollectionViewCell()
     }
     

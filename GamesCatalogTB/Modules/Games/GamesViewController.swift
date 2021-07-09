@@ -115,8 +115,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         self.navigationController?.pushViewController(detailedVC, animated: true)
         let model = viewModel.gamesVM[indexPath.row]
         detailedVC.modelDetailed = model
-        detailedVC.navigationController?.title = viewModel.gamesVM[indexPath.row].nameGame
-        detailedVC.navigationController?.navigationBar.topItem?.title = "List Of Games"
+
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

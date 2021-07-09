@@ -117,6 +117,7 @@
 		77AD6E6926984EE300ACE034 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE792EC02689E3390007F6C8 /* GameViewModel.swift */,
 				77AD6E6C269850CC00ACE034 /* StructGameViewModel.swift */,
 			);
 			path = Models;
@@ -168,7 +169,6 @@
 				77AD6E6826984C3B00ACE034 /* GamesList */,
 				BE792EB92689E2EB0007F6C8 /* GamesViewController.swift */,
 				BE792EB72689E2D80007F6C8 /* GamesViewController.xib */,
-				BE792EC02689E3390007F6C8 /* GameViewModel.swift */,
 				BE792EB62689E2870007F6C8 /* GamesDetail */,
 			);
 			path = Games;
