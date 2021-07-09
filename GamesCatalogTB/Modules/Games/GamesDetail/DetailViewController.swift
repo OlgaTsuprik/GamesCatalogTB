@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
     
     //MARK: Properties
     var modelDetailed: GameViewModel?
-    var modelScreens: [String] = []
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -32,6 +31,7 @@ class DetailViewController: UIViewController {
         showInfo()
         screenshortsCollection.isScrollEnabled = false
         screenshortsCollection.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        self.navigationItem.title = modelDetailed?.nameGame
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -56,10 +56,10 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! ScreenshotCollectionViewCell
-        cell.collectionImage.loadFromStringURL(url: modelDetailed!.screenShotsOfGame[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as? ScreenshotCollectionViewCell
+        cell?.collectionImage.loadFromStringURL(url: modelDetailed!.screenShotsOfGame[indexPath.row])
         
-        return cell
+        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

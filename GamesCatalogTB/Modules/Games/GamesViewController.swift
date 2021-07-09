@@ -20,7 +20,7 @@ class GamesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator()
-        indicator.startAnimating()
+        //indicator.startAnimating()
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -39,6 +39,7 @@ class GamesViewController: UIViewController {
     }
     
     func loadData() {
+        indicator.startAnimating()
         viewModel.loadData { [weak self] (_) in
             self?.tableView.reloadData()
             self?.indicator.stopAnimating()
@@ -104,7 +105,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
-            viewModel.isLoadingListNow = true
+            viewModel.isLoadingList = true
             loadMoreItems()
         }
     }
@@ -114,6 +115,8 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         self.navigationController?.pushViewController(detailedVC, animated: true)
         let model = viewModel.gamesVM[indexPath.row]
         detailedVC.modelDetailed = model
+        detailedVC.navigationController?.title = viewModel.gamesVM[indexPath.row].nameGame
+        detailedVC.navigationController?.navigationBar.topItem?.title = "List Of Games"
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

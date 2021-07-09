@@ -30,19 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let secondVC = UINavigationController(rootViewController: SecondViewController())
         secondVC.tabBarItem.title = "Favorites"
         secondVC.tabBarItem.image = UIImage(systemName: "star")
-        
-        //vc.navigationController?.navigationBar.barTintColor = UIColor.black
         vc.navigationController?.navigationBar.tintColor = UIColor.black
         vc.navigationController?.navigationBar.topItem?.title = "List Of Games"
         vc.navigationController?.navigationBar.isTranslucent = true
-        //vc.navigationController?.navigationItem.largeTitleDisplayMode = .always
-        vc.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Rockwell", size: 25) as Any]
-        //vc.navigationController?.navigationBar.prefersLargeTitles = false
-        vc.navigationController?.navigationBar.isHidden
+        vc.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+        vc.navigationController?.navigationBar.backgroundColor = .clear
         let tabBarController = UITabBarController()
         tabBarController.tabBar.barTintColor = UIColor.black
         tabBarController.tabBar.tintColor = UIColor.white
-        
         tabBarController.viewControllers = [firstVC, secondVC]
         
         window?.rootViewController = tabBarController

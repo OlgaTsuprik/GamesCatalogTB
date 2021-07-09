@@ -8,44 +8,14 @@
 import Foundation
 import UIKit
 
-struct GameViewModel {
-    let gameVM: Game
-    var nameGame: String {
-        return gameVM.name
-    }
-    var rating: String {
-        return String(gameVM.rating)
-    }
-    var urlToImage: String {
-        return gameVM.backgroundImage
-    }
-    var description: String {
-        return gameVM.description ?? "Desctiption is absent"
-    }
-    var released: String {
-        return gameVM.released
-    }
-
-    var screenShotsOfGame: [String] {
-        return gameVM.screenShots.map { screenShots in
-            screenShots.image
-        }
-    }
-    
-    var genresOfGame: [String] {
-        return gameVM.genres.map { genres in
-            genres.name
-        }
-    }
-}
-
 class GamesViewModel {
     // MARK: Properties
     var gamesVM = [GameViewModel]()
-    var isLoadingListNow: Bool = false
+    //var isLoadingListNow: Bool = false
     var errorCauched: NetworkError?
     let pageSize: Int = 20
     var pageNumber: Int = 1
+    var isLoadingList: Bool = false
     
     var paging: ClosedRange<Int> {
         get {
@@ -55,8 +25,8 @@ class GamesViewModel {
     
     // MARK: Methods
     func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
-        NetworkingManager.shared.fetchGames(pageNumber: pageNumber){ (games) in
-            self.isLoadingListNow = true
+        NetworkingManager.shared.fetchGames(isLoadingList: isLoadingList, pageNumber: pageNumber){ (games) in
+            self.isLoadingList = true
     
             let gamesVM = games.map(GameViewModel.init)
             DispatchQueue.main.async {
@@ -79,8 +49,8 @@ class GamesViewModel {
 
     func loadMoreData(completion: @escaping ([GameViewModel]) -> Void) {
         pageNumber += 1
-        if isLoadingListNow == true {
-            NetworkingManager.shared.fetchGames(pageNumber: pageNumber) { (games) in
+        if isLoadingList == true {
+            NetworkingManager.shared.fetchGames(isLoadingList: isLoadingList, pageNumber: pageNumber) { (games) in
                 let  newGames = games.map(GameViewModel.init)
                 self.gamesVM.append(contentsOf: newGames)
                 DispatchQueue.main.async {
@@ -88,7 +58,7 @@ class GamesViewModel {
                 }
             } errorHandler: { (error) in
             }
-            isLoadingListNow = false
+            isLoadingList = false
         }
     }
     

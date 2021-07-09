@@ -15,7 +15,7 @@ enum NetworkError {
 class NetworkingManager {
     // MARK: Properties
     let baseURL = "https://api.rawg.io/api/games"
-    var isLoadingList: Bool = false
+    //var isLoadingList: Bool = false
     let imageCache = NSCache<NSString, UIImage>()
     
     //MARK: Static
@@ -25,10 +25,10 @@ class NetworkingManager {
 
     // MARK: Methods
     
-    func fetchGames(pageNumber: Int,
+    func fetchGames(isLoadingList: Bool,
+                    pageNumber: Int,
                     completion: @escaping (([Game]) -> Void),
                     errorHandler: @escaping (NetworkError) -> Void) {
-        self.isLoadingList = false
         guard let urlObj =  URL(string: "\(baseURL)?key=\(Constants.apiKey.rawValue)&page=\(pageNumber)") else {
             return
         }
@@ -52,11 +52,9 @@ class NetworkingManager {
     }
     
     func fetchImage(url: String, completion: @escaping ((UIImage?) -> Void)) {
-        self.isLoadingList = false
         guard let urlObject =  URL(string: url) else {
             return
         }
-        
         if let cachedImage = imageCache.object(forKey: url as NSString) {
             completion(cachedImage)
         } else {
