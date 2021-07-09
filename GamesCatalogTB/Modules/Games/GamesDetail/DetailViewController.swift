@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         screenshortsCollection.delegate = self
         screenshortsCollection.dataSource = self
-        let nibName = UINib(nibName: "CollectionViewCell", bundle: nil)
+        let nibName = UINib(nibName: "ScreenshotCollectionViewCell", bundle: nil)
         screenshortsCollection.register(nibName, forCellWithReuseIdentifier: "collectionViewCell")
         showInfo()
         screenshortsCollection.isScrollEnabled = false
@@ -56,14 +56,14 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! ScreenshotCollectionViewCell
         cell.collectionImage.loadFromStringURL(url: modelDetailed!.screenShotsOfGame[indexPath.row])
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = ScreenShotVC()
+        let vc = FullScreenImageViewController()
         
         self.navigationController?.pushViewController(vc, animated: true)
         //self.navigationController?.present(vc, animated: true, completion: nil)

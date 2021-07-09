@@ -1,5 +1,5 @@
 //
-//  ScreenShotVC.swift
+//  FullScreenImageViewController.swift
 //  GamesCatalogTB
 //
 //  Created by Tsuprik Olga on 8.07.21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScreenShotVC: UIViewController {
+class FullScreenImageViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet weak var screenShotImageView: UIImageView!

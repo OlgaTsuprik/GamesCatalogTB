@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class ScreenshotCollectionViewCell: UICollectionViewCell {
     //MARK: Outlets
     @IBOutlet weak var collectionImage: UIImageView!
     

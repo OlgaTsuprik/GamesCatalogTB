@@ -24,7 +24,7 @@ class GamesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        let nibName = UINib(nibName: "GameCell", bundle: nil)
+        let nibName = UINib(nibName: "GameTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "gameCell")
         loadData()
     }
@@ -83,13 +83,13 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell
         let games = viewModel.gamesVM[indexPath.row]
         cell?.config(model: games, index: "\(indexPath.row + 1).")
         
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
-                if let cellTable = self?.tableView.cellForRow(at: indexPath) as? GameCell {
+                if let cellTable = self?.tableView.cellForRow(at: indexPath) as? GameTableViewCell {
                     cellTable.addImage(image: image)
                 }
             }
@@ -98,7 +98,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("HeaderView", owner: nil, options: nil)?.first
+        let headerView = Bundle.main.loadNibNamed("GamesListTableViewHeader", owner: nil, options: nil)?.first
         return headerView as? UIView
     }
     

@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  GameTableViewCell.swift
 //  GamesCatalogTB
 //
 //  Created by Tsuprik Olga on 29.06.21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameCell: UITableViewCell {
+class GameTableViewCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
