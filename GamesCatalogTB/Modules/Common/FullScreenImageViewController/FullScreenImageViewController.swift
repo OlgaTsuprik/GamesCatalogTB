@@ -13,13 +13,18 @@ class FullScreenImageViewController: UIViewController {
     @IBOutlet weak var screenShotImageView: UIImageView!
     
     //MARK: Properties
-    var image = UIImage()
     var imageURLString: String?
     
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.screenShotImageView.image = image
-        screenShotImageView.loadFromStringURL(url: imageURLString ?? "")
+        
+        NetworkingManager.shared.fetchImage(url: imageURLString ?? "") { screen in
+            DispatchQueue.main.async {
+                guard let screen = screen else { return }
+                self.screenShotImageView.image = screen
+                
+            }
+        }
     }
 }

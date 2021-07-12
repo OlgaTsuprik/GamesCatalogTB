@@ -18,5 +18,4 @@ class ScreenshotCollectionViewCell: UICollectionViewCell {
     func addScreenShot(image: UIImage?) {
         self.collectionImage.image = image
     }
-    
 }

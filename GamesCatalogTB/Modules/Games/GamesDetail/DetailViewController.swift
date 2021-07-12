@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
     
     //MARK: Properties
     var modelDetailed: GameViewModel?
-    var images = [UIImage()]
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -65,16 +64,14 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 }
             }
         })
+        
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = FullScreenImageViewController()
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-        //self.navigationController?.present(vc, animated: true, completion: nil)
         let model = modelDetailed?.screenShotsOfGame[indexPath.row]
         vc.imageURLString = model
-     }
+        self.navigationController?.present(vc, animated: true, completion: nil)
+    }
 }
-
