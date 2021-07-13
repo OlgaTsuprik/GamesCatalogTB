@@ -10,7 +10,7 @@ import UIKit
 
 class GamesViewModel {
     // MARK: Properties
-    var gamesVM = [GameViewModel]()
+    var gamesVM = [Game]()
     //var isLoadingListNow: Bool = false
     var errorCauched: NetworkError?
     let pageSize: Int = 20
@@ -24,11 +24,11 @@ class GamesViewModel {
     }
     
     // MARK: Methods
-    func loadData(completion: @escaping ([GameViewModel]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
+    func loadData(completion: @escaping ([Game]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
         NetworkingManager.shared.fetchGames(isLoadingList: isLoadingList, pageNumber: pageNumber){ (games) in
             self.isLoadingList = true
     
-            let gamesVM = games.map(GameViewModel.init)
+            let gamesVM = games
             DispatchQueue.main.async {
                 self.gamesVM = gamesVM
                 completion(gamesVM)
@@ -42,16 +42,16 @@ class GamesViewModel {
     }
     
     func loadImage(index: Int, completion: @escaping((UIImage?) -> Void)) {
-        NetworkingManager.shared.fetchImage(url: gamesVM[index].urlToImage) { image in
+        NetworkingManager.shared.fetchImage(url: gamesVM[index].backgroundImage) { image in
             completion(image)
         }
     }
 
-    func loadMoreData(completion: @escaping ([GameViewModel]) -> Void) {
+    func loadMoreData(completion: @escaping ([Game]) -> Void) {
         pageNumber += 1
         if isLoadingList == true {
             NetworkingManager.shared.fetchGames(isLoadingList: isLoadingList, pageNumber: pageNumber) { (games) in
-                let  newGames = games.map(GameViewModel.init)
+                let  newGames = games
                 self.gamesVM.append(contentsOf: newGames)
                 DispatchQueue.main.async {
                     completion(self.gamesVM)

@@ -24,7 +24,12 @@ struct Game: Decodable {
     let released: String
     let tba: Bool
     let backgroundImage: String
-    let rating: Double
+    var rating: Double
+    
+    var ratingString: String {
+        return String(rating)
+    }
+    
     let ratingTop: Int
     let screenShots: [ScreenShots]
     let genres: [Genres]

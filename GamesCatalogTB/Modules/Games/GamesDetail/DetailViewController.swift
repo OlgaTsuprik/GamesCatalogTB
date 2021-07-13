@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var heightCollection: NSLayoutConstraint!
     
     //MARK: Properties
-    var modelDetailed: GameViewModel?
+    var gameViewModel: DetailViewModel?
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
         showInfo()
         screenshortsCollection.isScrollEnabled = false
         screenshortsCollection.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
-        self.navigationItem.title = modelDetailed?.nameGame
+        self.navigationItem.title = gameViewModel?.game?.name
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -40,24 +40,32 @@ class DetailViewController: UIViewController {
     
     //MARK: Methods
     func showInfo() {
-        nameLabel.text = modelDetailed?.nameGame
-        releasedLabel.text = modelDetailed?.released
-        descriptionLabel.text = modelDetailed?.description
-        genresLabel.text = modelDetailed?.genresOfGame.joined(separator: ",")
-        ratingLabel.text = modelDetailed?.rating
-        imageOfGame?.load(url: URL(string: modelDetailed!.urlToImage)!)
+        nameLabel.text = gameViewModel?.game?.name
+        releasedLabel.text = gameViewModel?.game?.released
+        descriptionLabel.text = gameViewModel?.game?.description
+        genresLabel.text = gameViewModel?.game?.genres.map{ genres in
+            genres.name
+        }.joined(separator: ", ")
+        ratingLabel.text = gameViewModel?.game?.ratingString
+        
+        gameViewModel?.loadImage(url: gameViewModel?.game?.backgroundImage ?? "", completion: { [weak self] image in
+            DispatchQueue.main.async {
+                self?.imageOfGame.image = image
+            }
+        })
     }
 }
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return modelDetailed?.screenShotsOfGame.count ?? 0
+        return gameViewModel?.game?.screenShots.count ?? 0
+        //screenShotsOfGame.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as? ScreenshotCollectionViewCell
-        modelDetailed?.loadScreenshotImage(index: indexPath.row, completion: { screen in
+        gameViewModel?.loadImage(url: gameViewModel?.game?.screenShots[indexPath.row].image ?? "", completion: { screen in
             DispatchQueue.main.async {
                 if let cell = self.screenshortsCollection.cellForItem(at: indexPath) as? ScreenshotCollectionViewCell {
                     cell.addScreenShot(image: screen)
@@ -70,8 +78,10 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = FullScreenImageViewController()
-        let model = modelDetailed?.screenShotsOfGame[indexPath.row]
-        vc.imageURLString = model
+        let fsModel = FullScreenImageViewModel(biImage: gameViewModel?.game?.screenShots[indexPath.row].image ?? "")
+        //let model = gameViewModel?.game?.screenShots[indexPath.row].image
+        //screenShotsOfGame[indexPath.row]
+        vc.fsModel = fsModel
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
 }

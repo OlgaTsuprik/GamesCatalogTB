@@ -28,9 +28,9 @@ class GameTableViewCell: UITableViewCell {
         self.photoView.image = UIImage(named: "default")
     }
     
-    func config(model: GameViewModel?, index: String) {
-        self.ratingLabel.text = model?.rating
-        self.nameOfGame.text = model?.nameGame
+    func config(model: Game?, index: String) {
+        self.ratingLabel.text = model?.ratingString
+        self.nameOfGame.text = model?.name
         self.indexLabel.text = index
     }
     

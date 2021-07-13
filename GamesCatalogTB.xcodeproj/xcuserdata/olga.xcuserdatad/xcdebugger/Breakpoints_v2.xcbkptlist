@@ -39,63 +39,107 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BAE79CF2-1F05-443A-BE29-92D6CF556E83"
+            uuid = "A4DEBA01-8BBD-4D1D-BD9A-3D0393D9B45D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GamesCatalogTB/Modules/Common/FullScreenImageViewController/FullScreenImageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D68E6F87-1A7C-4159-944C-AAD45DA341C9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GamesCatalogTB/Modules/Common/FullScreenImageViewController/FullScreenImageViewController.swift"
+            filePath = "GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "D68E6F87-1A7C-4159-944C-AAD45DA341C9 - 59f42d64f94d55d5"
+                  uuid = "A4DEBA01-8BBD-4D1D-BD9A-3D0393D9B45D - 8db46a8c91af07fe"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "GamesCatalogTB.FullScreenImageViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "GamesCatalogTB.DetailViewController.gameViewModel.getter : Swift.Optional&lt;GamesCatalogTB.DetailViewModel&gt;"
                   moduleName = "GamesCatalogTB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Common/FullScreenImageViewController/FullScreenImageViewController.swift"
+                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "126">
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "122">
                </Location>
                <Location
-                  uuid = "D68E6F87-1A7C-4159-944C-AAD45DA341C9 - 4b92937dfc1da354"
+                  uuid = "A4DEBA01-8BBD-4D1D-BD9A-3D0393D9B45D - a2801cdeb4656bf2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in GamesCatalogTB.FullScreenImageViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "GamesCatalogTB.DetailViewController.gameViewModel.setter : Swift.Optional&lt;GamesCatalogTB.DetailViewModel&gt;"
                   moduleName = "GamesCatalogTB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Common/FullScreenImageViewController/FullScreenImageViewController.swift"
+                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "158">
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "A4DEBA01-8BBD-4D1D-BD9A-3D0393D9B45D - cfc3338079f29dcd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.gameViewModel.modify : Swift.Optional&lt;GamesCatalogTB.DetailViewModel&gt;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "A4DEBA01-8BBD-4D1D-BD9A-3D0393D9B45D - 8eec714c67719a12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.gameViewModel.modify : Swift.Optional&lt;GamesCatalogTB.DetailViewModel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "A4DEBA01-8BBD-4D1D-BD9A-3D0393D9B45D - 472bd6b9dcea465a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GamesCatalogTB.DetailViewController"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "769">
+               </Location>
+               <Location
+                  uuid = "A4DEBA01-8BBD-4D1D-BD9A-3D0393D9B45D - d3b3e1c959d9e098"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GamesCatalogTB.DetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GamesCatalogTB.DetailViewController&gt;"
+                  moduleName = "GamesCatalogTB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "713">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,16 +147,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "86CE9FB1-3920-4E19-AFD7-E039DE9164E7"
+            uuid = "2E672835-D027-479F-AFF2-EC5E0D03ABA2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GamesCatalogTB/Modules/Common/FullScreenImageViewController/FullScreenImageViewController.swift"
+            filePath = "GamesCatalogTB/Modules/Games/GamesDetail/DetailViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "DetailViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C846596-81AC-4D70-B9F4-283046D8378D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/Games/GamesDetail/DetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "init(game:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5040B7F-9E14-49A4-80B7-153541E5DEF2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/Games/GamesDetail/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "showInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9F23EB3-8012-4D81-A4CF-3901A52A40DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/Games/GamesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
