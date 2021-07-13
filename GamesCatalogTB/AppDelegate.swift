@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         secondVC.tabBarItem.image = UIImage(systemName: "star")
         vc.navigationController?.navigationBar.tintColor = UIColor.black
         vc.navigationController?.navigationBar.topItem?.title = "List Of Games"
+
         vc.navigationController?.navigationBar.isTranslucent = true
         vc.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         vc.navigationController?.navigationBar.backgroundColor = .clear

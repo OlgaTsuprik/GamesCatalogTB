@@ -18,7 +18,7 @@ class FullScreenImageViewController: UIViewController {
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        fsModel?.loadScreenshotImage(url: fsModel?.bigImage ?? "", completion: { screen in
+        fsModel?.loadImage(url: fsModel?.bigImage ?? "", completion: { screen in
             DispatchQueue.main.async {
                 guard let screen = screen else { return }
                 self.screenShotImageView.image = screen

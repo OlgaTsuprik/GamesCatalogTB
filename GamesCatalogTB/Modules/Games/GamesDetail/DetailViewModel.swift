@@ -9,22 +9,15 @@ import UIKit
 
 class DetailViewModel {
     // MARK: Properties
-    //private(set) var game: Game?
-    var game: Game?
+   
+    private(set) var game: Game?
     init(game: Game) {
         self.game = game
     }
-    
-    func loadScreenshotImage(url: String, completion: @escaping((UIImage?) -> Void)) {
-        NetworkingManager.shared.fetchImage(url: url) { image in
-            completion(image)
-        }
-    }
-    
+     
     func loadImage(url: String, completion: @escaping((UIImage?) -> Void)) {
         NetworkingManager.shared.fetchImage(url: url) { image in
             completion(image)
         }
     }
-
 }

@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
         screenshortsCollection.isScrollEnabled = false
         screenshortsCollection.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         self.navigationItem.title = gameViewModel?.game?.name
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back")
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -79,8 +80,6 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = FullScreenImageViewController()
         let fsModel = FullScreenImageViewModel(biImage: gameViewModel?.game?.screenShots[indexPath.row].image ?? "")
-        //let model = gameViewModel?.game?.screenShots[indexPath.row].image
-        //screenShotsOfGame[indexPath.row]
         vc.fsModel = fsModel
         self.navigationController?.present(vc, animated: true, completion: nil)
     }

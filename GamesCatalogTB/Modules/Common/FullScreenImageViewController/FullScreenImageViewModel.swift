@@ -12,7 +12,7 @@ class FullScreenImageViewModel {
         self.bigImage = biImage
     }
     
-    func loadScreenshotImage(url: String, completion: @escaping((UIImage?) -> Void)) {
+    func loadImage(url: String, completion: @escaping((UIImage?) -> Void)) {
         NetworkingManager.shared.fetchImage(url: url) { image in
             completion(image)
         }
