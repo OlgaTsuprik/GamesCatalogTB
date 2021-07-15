@@ -17,8 +17,30 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bi-cn-k7P">
+                    <rect key="frame" x="191.5" y="433" width="31" height="30"/>
+                    <state key="normal" title="read"/>
+                    <connections>
+                        <action selector="readData:" destination="-1" eventType="touchUpInside" id="1el-Wr-qfE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHz-Ql-VP5">
+                    <rect key="frame" x="184" y="513" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="deleteAll:" destination="-1" eventType="touchUpInside" id="Xd3-Aa-hDv"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="6Bi-cn-k7P" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Fcw-f7-Tqg"/>
+                <constraint firstItem="tHz-Ql-VP5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GLN-yZ-AVM"/>
+                <constraint firstItem="tHz-Ql-VP5" firstAttribute="top" secondItem="6Bi-cn-k7P" secondAttribute="bottom" constant="50" id="LMp-iK-VCT"/>
+                <constraint firstItem="6Bi-cn-k7P" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q9g-7U-qZj"/>
+            </constraints>
             <point key="canvasLocation" x="133" y="80"/>
         </view>
     </objects>

@@ -8,6 +8,10 @@
 import UIKit
 import CoreData
 
+protocol GameTableViewDelegate: class {
+    func saveGame(index: Int)
+}
+
 class GameTableViewCell: UITableViewCell {
     
     // MARK: Properties
@@ -21,52 +25,33 @@ class GameTableViewCell: UITableViewCell {
     
     @IBAction func saveGame(_ sender: Any) {
     print("hello")
-        CoreDataManager.shared.writeData(withName: "a", withRating: "Rating", withImageUrl: "image")
-
-
+        guard let index = index else { return}
+        //delegate?.saveGame(index: index)
+        saveAction?()
     }
     
-    func saveingGame(model: Game?) {
-        CoreDataManager.shared.writeData(withName: model?.name ?? "", withRating: model?.ratingString ?? "", withImageUrl: model?.backgroundImage ?? "")
-        
-    }
+    var saveAction: (() -> Void)?
     
-//    private func saveGameToCD(withName name: String, rating: String) {
-//        print("game saved")
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let context = appDelegate.persistentContainer.viewContext
-//        guard let entity = NSEntityDescription.entity(forEntityName: "SavedGame", in: context) else { return }
-//        let gameObject = SavedGame(entity: entity, insertInto: context)
-//        gameObject.nameOfGame = name
-//        gameObject.ratingOfGame = rating
-//
-//        do {
-//
-//            try context.save()
-//            print(gameObject.nameOfGame)
-//            print(gameObject.ratingOfGame)
-//            print("all good")
-//        } catch let error as NSError {
-//            print(error.localizedDescription)
-//        }
-//    }
+    private var index: Int?
+    weak var delegate: GameTableViewDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         desingView.addShadow()
         desingView.addBorder()
         photoView.image = UIImage(named: "default")
-    
-    }
+  }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         self.photoView.image = UIImage(named: "default")
     }
     
-    func config(model: Game?, index: String) {
+    func config(model: Game?, index: String, indexOfCell: Int) {
         self.ratingLabel.text = model?.ratingString
         self.nameOfGame.text = model?.name
         self.indexLabel.text = index
+        self.index = indexOfCell
     }
     
     func addImage(image: UIImage?) {

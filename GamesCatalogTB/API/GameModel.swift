@@ -26,6 +26,10 @@ struct Game: Decodable {
     let backgroundImage: String
     var rating: Double
     
+    var idString: String {
+        return String(id)
+    }
+    
     var ratingString: String {
         return String(rating)
     }

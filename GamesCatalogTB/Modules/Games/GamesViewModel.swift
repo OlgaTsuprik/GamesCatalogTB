@@ -62,6 +62,8 @@ class GamesViewModel {
         }
     }
     
-
-    
+    func saveGame(_ index: Int) {
+        CoreDataManager.shared.writeData2(withName: "SavedGame", with: gamesVM[index])
+//        CoreDataManager.shared.writeData(withName: gamesVM[index].name, withRating: gamesVM[index].ratingString, withImageUrl: gamesVM[index].backgroundImage, withId: gamesVM[index].idString)
+    }
 }

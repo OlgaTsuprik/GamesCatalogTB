@@ -348,23 +348,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
-            landmarkName = "writeData(withName:withRating:withImageUrl:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0071FD5F-9E2E-4975-9583-D19CE2DFA18E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CoreDataManager/CoreDataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "writeData(withName:withRating:withImageUrl:)"
+            landmarkName = "writeData2(withName:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -372,7 +356,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3D657A12-3D43-4A5E-89F6-381D7F6D0B4A"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreDataManager/CoreDataManager.swift"
@@ -380,7 +364,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "writeData(withName:withRating:withImageUrl:)"
+            landmarkName = "writeData2(withName:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -394,9 +378,9 @@
             filePath = "CoreDataManager/CoreDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "writeData(withName:withRating:withImageUrl:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "writeData2(withName:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -461,22 +445,6 @@
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0F96BDE7-B832-44A4-B184-EDE2891C59CE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GamesCatalogTB/Modules/Games/GamesList/Cell/GameTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "GameTableViewCell"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

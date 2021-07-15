@@ -8,6 +8,8 @@
 import UIKit
 
 class GamesViewController: UIViewController {
+ 
+    
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -86,8 +88,12 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell
         let games = viewModel.gamesVM[indexPath.row]
-        cell?.config(model: games, index: "\(indexPath.row + 1).")
-       
+        cell?.config(model: games, index: "\(indexPath.row + 1).", indexOfCell: indexPath.row)
+        //cell?.delegate = self
+        cell?.saveAction = { [weak self] in
+            self?.viewModel.saveGame(indexPath.row)
+        }
+        
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
                 if let cellTable = self?.tableView.cellForRow(at: indexPath) as? GameTableViewCell {
@@ -120,5 +126,12 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
+    }
+}
+
+
+extension GamesViewController: GameTableViewDelegate {
+    func saveGame(index: Int) {
+        viewModel.saveGame(index)
     }
 }
