@@ -95,6 +95,9 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
                 }
             }
         }
+        
+            
+        
         return cell ?? UITableViewCell()
     }
     
@@ -115,6 +118,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let game = viewModel.gamesVM[indexPath.row]
         detailedVC.gameViewModel = DetailViewModel(game: game)
         self.navigationController?.pushViewController(detailedVC, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

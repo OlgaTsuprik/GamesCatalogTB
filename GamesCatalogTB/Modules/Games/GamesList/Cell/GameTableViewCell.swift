@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import CoreData
 
 class GameTableViewCell: UITableViewCell {
+    
     // MARK: Properties
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -15,7 +17,28 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var desingView: UIView!
     @IBOutlet weak var photoView: UIImageView!
     
-    
+    @IBAction func saveGame(_ sender: Any) {
+    print("hello")
+        self.saveGameToCD(withName: nameOfGame.text ?? "n", rating: ratingLabel.text ?? "y")
+
+    }
+    private func saveGameToCD(withName name: String, rating: String) {
+        print("game saved")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        guard let entity = NSEntityDescription.entity(forEntityName: "SavedGame", in: context) else { return }
+        let gameObject = SavedGame(entity: entity, insertInto: context)
+        gameObject.nameOfGame = name
+        gameObject.ratingOfGame = rating
+        
+        do {
+            try context.save()
+            print(gameObject.nameOfGame)
+            print(gameObject.ratingOfGame)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         desingView.addShadow()

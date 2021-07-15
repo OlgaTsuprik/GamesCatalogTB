@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedGame" representedClassName="SavedGame" syncable="YES">
+        <attribute name="nameOfGame" optional="YES" attributeType="String"/>
+        <attribute name="ratingOfGame" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SavedGame" positionX="-63" positionY="-18" width="128" height="59"/>
+    </elements>
+</model>
