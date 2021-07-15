@@ -61,4 +61,7 @@ class GamesViewModel {
             isLoadingList = false
         }
     }
+    
+
+    
 }

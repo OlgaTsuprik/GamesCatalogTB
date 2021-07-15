@@ -18,6 +18,8 @@ extension SavedGame {
 
     @NSManaged public var nameOfGame: String?
     @NSManaged public var ratingOfGame: String?
+    @NSManaged public var imageUrl: String?
+    
 }
 
 extension SavedGame : Identifiable {

@@ -121,6 +121,7 @@
                 <outlet property="nameOfGame" destination="Gn8-Lq-D3W" id="uP4-3e-aDM"/>
                 <outlet property="photoView" destination="qIu-us-gRe" id="zvs-Dx-H3m"/>
                 <outlet property="ratingLabel" destination="7V2-zk-0LL" id="k7C-ks-ZLm"/>
+                <outlet property="saveButton" destination="Kl2-9O-E6w" id="e62-Ad-UjG"/>
             </connections>
             <point key="canvasLocation" x="-63.768115942028992" y="37.834821428571423"/>
         </tableViewCell>

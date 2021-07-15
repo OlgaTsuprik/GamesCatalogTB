@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
-    
+/*
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -90,5 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+     */
 }
+
 

@@ -17,33 +17,45 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var desingView: UIView!
     @IBOutlet weak var photoView: UIImageView!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     @IBAction func saveGame(_ sender: Any) {
     print("hello")
-        self.saveGameToCD(withName: nameOfGame.text ?? "n", rating: ratingLabel.text ?? "y")
+        CoreDataManager.shared.writeData(withName: "a", withRating: "Rating", withImageUrl: "image")
+
 
     }
-    private func saveGameToCD(withName name: String, rating: String) {
-        print("game saved")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        guard let entity = NSEntityDescription.entity(forEntityName: "SavedGame", in: context) else { return }
-        let gameObject = SavedGame(entity: entity, insertInto: context)
-        gameObject.nameOfGame = name
-        gameObject.ratingOfGame = rating
+    
+    func saveingGame(model: Game?) {
+        CoreDataManager.shared.writeData(withName: model?.name ?? "", withRating: model?.ratingString ?? "", withImageUrl: model?.backgroundImage ?? "")
         
-        do {
-            try context.save()
-            print(gameObject.nameOfGame)
-            print(gameObject.ratingOfGame)
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
     }
+    
+//    private func saveGameToCD(withName name: String, rating: String) {
+//        print("game saved")
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//        guard let entity = NSEntityDescription.entity(forEntityName: "SavedGame", in: context) else { return }
+//        let gameObject = SavedGame(entity: entity, insertInto: context)
+//        gameObject.nameOfGame = name
+//        gameObject.ratingOfGame = rating
+//
+//        do {
+//
+//            try context.save()
+//            print(gameObject.nameOfGame)
+//            print(gameObject.ratingOfGame)
+//            print("all good")
+//        } catch let error as NSError {
+//            print(error.localizedDescription)
+//        }
+//    }
     override func awakeFromNib() {
         super.awakeFromNib()
         desingView.addShadow()
         desingView.addBorder()
         photoView.image = UIImage(named: "default")
+    
     }
     
     override func prepareForReuse() {

@@ -14,6 +14,7 @@
 		77A435FE269D9E1B002B023D /* GameCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77A435FC269D9E1B002B023D /* GameCoreData.xcdatamodeld */; };
 		77AD6E6326942ABC00ACE034 /* ScreenshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AD6E6126942ABC00ACE034 /* ScreenshotCollectionViewCell.swift */; };
 		77AD6E6426942ABC00ACE034 /* ScreenshotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77AD6E6226942ABC00ACE034 /* ScreenshotCollectionViewCell.xib */; };
+		BE017B3B26A0312000DB8F39 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE017B3A26A0312000DB8F39 /* CoreDataManager.swift */; };
 		BE792E9F2689E23B0007F6C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */; };
 		BE792EA82689E23C0007F6C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE792EA72689E23C0007F6C8 /* Assets.xcassets */; };
 		BE792EB82689E2D80007F6C8 /* GamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792EB72689E2D80007F6C8 /* GamesViewController.xib */; };
@@ -44,6 +45,7 @@
 		77A435FD269D9E1B002B023D /* Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game.xcdatamodel; sourceTree = "<group>"; };
 		77AD6E6126942ABC00ACE034 /* ScreenshotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCollectionViewCell.swift; sourceTree = "<group>"; };
 		77AD6E6226942ABC00ACE034 /* ScreenshotCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotCollectionViewCell.xib; sourceTree = "<group>"; };
+		BE017B3A26A0312000DB8F39 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BE792E9B2689E23B0007F6C8 /* GamesCatalogTB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesCatalogTB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE792EA72689E23C0007F6C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,9 +124,18 @@
 			path = GamesList;
 			sourceTree = "<group>";
 		};
+		BE017B3926A0310600DB8F39 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				BE017B3A26A0312000DB8F39 /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
 		BE792E922689E23B0007F6C8 = {
 			isa = PBXGroup;
 			children = (
+				BE017B3926A0310600DB8F39 /* CoreDataManager */,
 				77388257269F287A00DF6482 /* SavedGame+CoreDataClass.swift */,
 				77388258269F287A00DF6482 /* SavedGame+CoreDataProperties.swift */,
 				BE792E9D2689E23B0007F6C8 /* GamesCatalogTB */,
@@ -351,6 +362,7 @@
 				BE792E9F2689E23B0007F6C8 /* AppDelegate.swift in Sources */,
 				BE792F03268AF9A60007F6C8 /* Constants.swift in Sources */,
 				77A435FE269D9E1B002B023D /* GameCoreData.xcdatamodeld in Sources */,
+				BE017B3B26A0312000DB8F39 /* CoreDataManager.swift in Sources */,
 				77AD6E6326942ABC00ACE034 /* ScreenshotCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88HQ5QWN39;
 				INFOPLIST_FILE = GamesCatalogTB/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88HQ5QWN39;
 				INFOPLIST_FILE = GamesCatalogTB/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -87,7 +87,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell
         let games = viewModel.gamesVM[indexPath.row]
         cell?.config(model: games, index: "\(indexPath.row + 1).")
-        
+       
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
                 if let cellTable = self?.tableView.cellForRow(at: indexPath) as? GameTableViewCell {
@@ -95,9 +95,6 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
                 }
             }
         }
-        
-            
-        
         return cell ?? UITableViewCell()
     }
     
