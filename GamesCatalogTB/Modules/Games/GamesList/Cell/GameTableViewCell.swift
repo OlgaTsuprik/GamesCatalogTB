@@ -24,7 +24,7 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var saveButton: UIButton!
     
     @IBAction func saveGame(_ sender: Any) {
-    print("hello")
+        
         guard let index = index else { return}
         //delegate?.saveGame(index: index)
         saveAction?()

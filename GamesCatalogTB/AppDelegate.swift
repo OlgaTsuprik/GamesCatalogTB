@@ -28,15 +28,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         firstVC.tabBarItem.title = "Games"
         firstVC.tabBarItem.image = UIImage(systemName: "gamecontroller")
         
-        let secondVC = UINavigationController(rootViewController: SecondViewController())
+        let vc2 = SecondViewController()
+        let secondVC = UINavigationController(rootViewController: vc2)
         secondVC.tabBarItem.title = "Favorites"
         secondVC.tabBarItem.image = UIImage(systemName: "star")
         vc.navigationController?.navigationBar.tintColor = UIColor.black
         vc.navigationController?.navigationBar.topItem?.title = "List Of Games"
-
+        
         vc.navigationController?.navigationBar.isTranslucent = true
         vc.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         vc.navigationController?.navigationBar.backgroundColor = .clear
+        
+        vc2.navigationController?.navigationBar.isTranslucent = true
+        vc2.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+        
+        vc2.navigationController?.navigationBar.tintColor = UIColor.black
+        vc2.navigationController?.navigationBar.topItem?.title = "Favorite Games"
         let tabBarController = UITabBarController()
         tabBarController.tabBar.barTintColor = UIColor.black
         tabBarController.tabBar.tintColor = UIColor.white
