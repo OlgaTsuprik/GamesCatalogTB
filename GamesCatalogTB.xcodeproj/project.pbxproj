@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		77285F0926A18114009C30DD /* FavoriteGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F0726A18114009C30DD /* FavoriteGameTableViewCell.swift */; };
 		77285F0A26A18114009C30DD /* FavoriteGameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77285F0826A18114009C30DD /* FavoriteGameTableViewCell.xib */; };
+		77285F0E26A56CB0009C30DD /* FavoriteHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F0D26A56CAF009C30DD /* FavoriteHeaderView.swift */; };
+		77285F1026A56CCF009C30DD /* FavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77285F0F26A56CCF009C30DD /* FavoriteHeaderView.xib */; };
 		77388259269F287A00DF6482 /* SavedGame+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77388257269F287A00DF6482 /* SavedGame+CoreDataClass.swift */; };
 		7738825A269F287A00DF6482 /* SavedGame+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77388258269F287A00DF6482 /* SavedGame+CoreDataProperties.swift */; };
 		7738826126A16D1100DF6482 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738826026A16D1100DF6482 /* FavoriteViewModel.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		77285F0726A18114009C30DD /* FavoriteGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGameTableViewCell.swift; sourceTree = "<group>"; };
 		77285F0826A18114009C30DD /* FavoriteGameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteGameTableViewCell.xib; sourceTree = "<group>"; };
+		77285F0D26A56CAF009C30DD /* FavoriteHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHeaderView.swift; sourceTree = "<group>"; };
+		77285F0F26A56CCF009C30DD /* FavoriteHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteHeaderView.xib; sourceTree = "<group>"; };
 		77388257269F287A00DF6482 /* SavedGame+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedGame+CoreDataClass.swift"; sourceTree = "<group>"; };
 		77388258269F287A00DF6482 /* SavedGame+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedGame+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7738826026A16D1100DF6482 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -87,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77285F0B26A56C20009C30DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77285F0C26A56C27009C30DD /* Header */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		77285F0C26A56C27009C30DD /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				77285F0D26A56CAF009C30DD /* FavoriteHeaderView.swift */,
+				77285F0F26A56CCF009C30DD /* FavoriteHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		7738825B26A16AEA00DF6482 /* FavoriteCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +146,7 @@
 		77AD6E6726984BB700ACE034 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				77285F0B26A56C20009C30DD /* Views */,
 				7738825B26A16AEA00DF6482 /* FavoriteCell */,
 				BE792EC22689E36A0007F6C8 /* SecondViewController */,
 			);
@@ -348,6 +370,7 @@
 				BE792EFC268AF5640007F6C8 /* GameTableViewCell.xib in Resources */,
 				77285F0A26A18114009C30DD /* FavoriteGameTableViewCell.xib in Resources */,
 				BE792EC62689E3940007F6C8 /* SecondViewController.xib in Resources */,
+				77285F1026A56CCF009C30DD /* FavoriteHeaderView.xib in Resources */,
 				BE792EA82689E23C0007F6C8 /* Assets.xcassets in Resources */,
 				BE792ECF2689EBB70007F6C8 /* DetailViewController.xib in Resources */,
 				BE89E13826973A6000052A61 /* FullScreenImageViewController.xib in Resources */,
@@ -366,6 +389,7 @@
 				77388259269F287A00DF6482 /* SavedGame+CoreDataClass.swift in Sources */,
 				BE792EBA2689E2EB0007F6C8 /* GamesViewController.swift in Sources */,
 				7738825A269F287A00DF6482 /* SavedGame+CoreDataProperties.swift in Sources */,
+				77285F0E26A56CB0009C30DD /* FavoriteHeaderView.swift in Sources */,
 				BE792EC12689E3390007F6C8 /* GamesViewModel.swift in Sources */,
 				BE792EBD2689E30A0007F6C8 /* DetailViewController.swift in Sources */,
 				BE792EFB268AF5640007F6C8 /* GameTableViewCell.swift in Sources */,

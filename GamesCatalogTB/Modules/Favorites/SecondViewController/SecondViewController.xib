@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,28 +20,48 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="925-be-XPO">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <color key="sectionIndexBackgroundColor" red="0.96634352489153685" green="1" blue="0.81875467996754581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                    <color key="backgroundColor" name="backgroundColor"/>
+                    <color key="separatorColor" name="backgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-1M-bA9">
+                    <rect key="frame" x="157" y="772" width="100" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="baj-Ni-5Kk"/>
+                        <constraint firstAttribute="height" constant="40" id="sOh-gq-USG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Delete all">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="deleteAll:" destination="-1" eventType="touchUpInside" id="REA-2X-VFf"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
+                <constraint firstItem="5Ui-1M-bA9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Na5-dt-Jku"/>
                 <constraint firstItem="925-be-XPO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Nmw-JA-kby"/>
                 <constraint firstItem="925-be-XPO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tpp-yi-E8h"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="925-be-XPO" secondAttribute="trailing" id="gEI-53-t89"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="925-be-XPO" secondAttribute="bottom" id="nwa-mC-qVo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="925-be-XPO" secondAttribute="bottom" constant="100" id="nwa-mC-qVo"/>
+                <constraint firstItem="5Ui-1M-bA9" firstAttribute="top" secondItem="925-be-XPO" secondAttribute="bottom" constant="10" id="pSQ-y6-jAb"/>
             </constraints>
             <point key="canvasLocation" x="133" y="80"/>
         </view>
     </objects>
     <resources>
         <namedColor name="backgroundColor">
-            <color red="0.97254901960784312" green="1" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97299998998641968" green="1" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

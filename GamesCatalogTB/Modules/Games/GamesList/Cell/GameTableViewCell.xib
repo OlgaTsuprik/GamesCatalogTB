@@ -123,7 +123,7 @@
                 <outlet property="ratingLabel" destination="7V2-zk-0LL" id="k7C-ks-ZLm"/>
                 <outlet property="saveButton" destination="Kl2-9O-E6w" id="e62-Ad-UjG"/>
             </connections>
-            <point key="canvasLocation" x="-63.768115942028992" y="37.834821428571423"/>
+            <point key="canvasLocation" x="-63.768115942028992" y="37.165178571428569"/>
         </tableViewCell>
     </objects>
     <resources>

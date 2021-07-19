@@ -91,7 +91,8 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         cell?.config(model: games, index: "\(indexPath.row + 1).", indexOfCell: indexPath.row)
         //cell?.delegate = self
         cell?.saveAction = { [weak self] in
-            self?.viewModel.saveGame(indexPath.row)
+            //self?.viewModel.saveGame(indexPath.row)
+            self?.viewModel.saveUniqueGame(indexPath.row, id: self?.viewModel.gamesVM[indexPath.row].idString ?? "" )
         }
         
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
@@ -121,7 +122,6 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let game = viewModel.gamesVM[indexPath.row]
         detailedVC.gameViewModel = DetailViewModel(game: game)
         self.navigationController?.pushViewController(detailedVC, animated: true)
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -129,9 +129,9 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
 }
 
-
-extension GamesViewController: GameTableViewDelegate {
-    func saveGame(index: Int) {
-        viewModel.saveGame(index)
-    }
-}
+// MARK: Extension
+//extension GamesViewController: GameTableViewDelegate {
+//    func saveGame(index: Int) {
+//        viewModel.saveGame(index)
+//    }
+//}

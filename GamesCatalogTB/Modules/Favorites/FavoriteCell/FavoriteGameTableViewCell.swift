@@ -31,5 +31,8 @@ class FavoriteGameTableViewCell: UITableViewCell {
         self.idLabel.text = model?.idString
     }
     
+    func addImage(image: UIImage?) {
+        self.gameImage.image = image ?? UIImage(named: "default")
+    }
     
 }

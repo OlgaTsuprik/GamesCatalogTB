@@ -28,9 +28,11 @@ class GameTableViewCell: UITableViewCell {
         guard let index = index else { return}
         //delegate?.saveGame(index: index)
         saveAction?()
+        
     }
     
     var saveAction: (() -> Void)?
+    
     
     private var index: Int?
     weak var delegate: GameTableViewDelegate?
