@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
     //MARK: Outlets
     @IBOutlet weak var imageOfGame: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -57,11 +58,11 @@ class DetailViewController: UIViewController {
     }
 }
 
+//MARK: Extensions
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return gameViewModel?.game?.screenShots.count ?? 0
-        //screenShotsOfGame.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

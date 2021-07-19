@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="925-be-XPO">
-                    <rect key="frame" x="0.0" y="44" width="414" height="718"/>
-                    <color key="backgroundColor" name="backgroundColor"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <color key="separatorColor" name="backgroundColor"/>
-                    <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-1M-bA9">
-                    <rect key="frame" x="157" y="772" width="100" height="40"/>
+                    <rect key="frame" x="157" y="812" width="100" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="baj-Ni-5Kk"/>
@@ -47,13 +48,13 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" name="backgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
                 <constraint firstItem="5Ui-1M-bA9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Na5-dt-Jku"/>
                 <constraint firstItem="925-be-XPO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Nmw-JA-kby"/>
                 <constraint firstItem="925-be-XPO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tpp-yi-E8h"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="925-be-XPO" secondAttribute="trailing" id="gEI-53-t89"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="925-be-XPO" secondAttribute="bottom" constant="100" id="nwa-mC-qVo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="925-be-XPO" secondAttribute="bottom" constant="60" id="nwa-mC-qVo"/>
                 <constraint firstItem="5Ui-1M-bA9" firstAttribute="top" secondItem="925-be-XPO" secondAttribute="bottom" constant="10" id="pSQ-y6-jAb"/>
             </constraints>
             <point key="canvasLocation" x="133" y="80"/>
@@ -63,5 +64,8 @@
         <namedColor name="backgroundColor">
             <color red="0.97299998998641968" green="1" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

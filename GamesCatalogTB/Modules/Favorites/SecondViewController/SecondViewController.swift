@@ -10,17 +10,17 @@ import CoreData
 
 
 class SecondViewController: UIViewController {
-    
+    //MARK: Properties
     var viewModel = FavoriteViewModel()
     
+    //MARK: IBOutlets
     @IBOutlet weak var favoriteGamesTableView: UITableView!
-    
     @IBAction func deleteAll(_ sender: Any) {
-        print("deleted")
         viewModel.deleteAll()
         favoriteGamesTableView.reloadData()
     }
     
+    //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteGamesTableView.dataSource = self
@@ -38,8 +38,10 @@ class SecondViewController: UIViewController {
     }
 }
 
+//MARK: Extensions
 extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         viewModel.savedObjests.count
     }
     
@@ -56,10 +58,12 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell ?? UITableViewCell()
     }
+    
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
         return .delete
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         favoriteGamesTableView.beginUpdates()
         favoriteGamesTableView.deleteRows(at: [indexPath], with: .automatic)
@@ -71,6 +75,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
         let headerView = Bundle.main.loadNibNamed("FavoriteHeaderView", owner: nil, options: nil)?.first
         return headerView as? UIView
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }

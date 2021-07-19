@@ -8,13 +8,14 @@
 import UIKit
 
 class DetailViewModel {
+    
     // MARK: Properties
-   
     private(set) var game: Game?
     init(game: Game) {
         self.game = game
     }
      
+    //MARK: Methods
     func loadImage(url: String, completion: @escaping((UIImage?) -> Void)) {
         NetworkingManager.shared.fetchImage(url: url) { image in
             completion(image)

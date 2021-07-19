@@ -9,14 +9,12 @@ import UIKit
 
 class GamesViewController: UIViewController {
  
-    
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
     var viewModel = GamesViewModel()
     var indicator = UIActivityIndicatorView()
-    
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -50,7 +48,6 @@ class GamesViewController: UIViewController {
         }
     }
     
-    
     func handleError(error: NetworkError) {
         let title: String = "Error"
         var message: String = "Something went wrong"
@@ -79,6 +76,7 @@ class GamesViewController: UIViewController {
     }
 }
 
+//MARK: Extensions
 extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

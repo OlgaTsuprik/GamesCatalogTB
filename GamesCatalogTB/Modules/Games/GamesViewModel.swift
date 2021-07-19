@@ -11,12 +11,10 @@ import UIKit
 class GamesViewModel {
     // MARK: Properties
     var gamesVM = [Game]()
-    //var isLoadingListNow: Bool = false
     var errorCauched: NetworkError?
     let pageSize: Int = 20
     var pageNumber: Int = 1
     var isLoadingList: Bool = false
-    
     var paging: ClosedRange<Int> {
         get {
             (gamesVM.count - pageSize)...(gamesVM.count - 1)
@@ -27,7 +25,7 @@ class GamesViewModel {
     func loadData(completion: @escaping ([Game]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
         NetworkingManager.shared.fetchGames(isLoadingList: isLoadingList, pageNumber: pageNumber){ (games) in
             self.isLoadingList = true
-    
+            
             let gamesVM = games
             DispatchQueue.main.async {
                 self.gamesVM = gamesVM
@@ -63,12 +61,6 @@ class GamesViewModel {
     }
     
     func saveUniqueGame(_ index: Int, id: String) {
-//        CoreDataManager.shared.objects.forEach() {
-//            if gamesVM[index].idString == $0.idString {
-//            print("Not Possible")
-//        } else {
         CoreDataManager.shared.writeGameWithID(withName: "SavedGame", with: gamesVM[index], id: gamesVM[index].idString)
-        }
-//    }
-//    }
+    }
 }

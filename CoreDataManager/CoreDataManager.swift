@@ -46,6 +46,7 @@ class CoreDataManager {
         gameObject.idString = game.idString
         
         do {
+            context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
             try self.context.save()
             self.objects.append(gameObject)
         }
@@ -60,7 +61,6 @@ class CoreDataManager {
         
         do {
             objects = try context.fetch(fetchRequest)
-            print(objects.count)
         } catch let error as NSError {
             Swift.debugPrint("I couldn't read data. \(error) \(error.localizedDescription)")
         }

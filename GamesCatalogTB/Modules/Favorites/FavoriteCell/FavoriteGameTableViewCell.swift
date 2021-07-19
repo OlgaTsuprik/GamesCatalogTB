@@ -10,12 +10,9 @@ import UIKit
 class FavoriteGameTableViewCell: UITableViewCell {
     @IBOutlet weak var designView: UIView!
     @IBOutlet weak var indexLabel: UILabel!
-    
     @IBOutlet weak var gameImage: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    
     @IBOutlet weak var idLabel: UILabel!
     
     override func awakeFromNib() {
@@ -34,5 +31,4 @@ class FavoriteGameTableViewCell: UITableViewCell {
     func addImage(image: UIImage?) {
         self.gameImage.image = image ?? UIImage(named: "default")
     }
-    
 }

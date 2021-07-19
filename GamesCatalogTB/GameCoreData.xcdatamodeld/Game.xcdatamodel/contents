@@ -5,6 +5,11 @@
         <attribute name="imageUrl" optional="YES" attributeType="String"/>
         <attribute name="nameOfGame" optional="YES" attributeType="String"/>
         <attribute name="ratingOfGame" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="idString"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="SavedGame" positionX="-63" positionY="-18" width="128" height="89"/>
