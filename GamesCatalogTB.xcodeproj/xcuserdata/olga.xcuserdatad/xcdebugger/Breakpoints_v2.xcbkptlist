@@ -222,38 +222,22 @@
             endingLineNumber = "64"
             landmarkName = "saveUniqueGame(_:id:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3B52D00A-20D1-480E-AACC-C8E7C5796E7F - 584c4f03032ce6f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GamesCatalogTB.GamesViewModel.saveUniqueGame(_: Swift.Int, id: Swift.String) -&gt; ()"
-                  moduleName = "GamesCatalogTB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "66">
-               </Location>
-               <Location
-                  uuid = "3B52D00A-20D1-480E-AACC-C8E7C5796E7F - 253c2b9a46955eb7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (GamesCatalogTB.SavedGame) -&gt; () in GamesCatalogTB.GamesViewModel.saveUniqueGame(_: Swift.Int, id: Swift.String) -&gt; ()"
-                  moduleName = "GamesCatalogTB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olga/GamesCatalogTB/GamesCatalogTB/Modules/Games/GamesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "172">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC7A1A0B-1182-4922-8C5A-B3414F416AFC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataManager/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "removeOne(withName:id1:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

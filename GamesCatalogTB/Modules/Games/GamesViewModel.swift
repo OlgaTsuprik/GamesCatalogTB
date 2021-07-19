@@ -60,7 +60,7 @@ class GamesViewModel {
         }
     }
     
-    func saveUniqueGame(_ index: Int, id: String) {
-        CoreDataManager.shared.writeGameWithID(withName: "SavedGame", with: gamesVM[index], id: gamesVM[index].idString)
+    func saveUniqueGame(_ index: Int, id: Int64) {
+        CoreDataManager.shared.writeGameWithID(withName: "SavedGame", with: gamesVM[index], id: Int64(gamesVM[index].id))
     }
 }

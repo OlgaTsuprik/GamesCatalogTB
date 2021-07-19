@@ -90,7 +90,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         //cell?.delegate = self
         cell?.saveAction = { [weak self] in
             //self?.viewModel.saveGame(indexPath.row)
-            self?.viewModel.saveUniqueGame(indexPath.row, id: self?.viewModel.gamesVM[indexPath.row].idString ?? "" )
+            self?.viewModel.saveUniqueGame(indexPath.row, id: Int64(self?.viewModel.gamesVM[indexPath.row].id ?? 0))
          
             let alert = UIAlertController(title: "Game saved", message: "Success", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))

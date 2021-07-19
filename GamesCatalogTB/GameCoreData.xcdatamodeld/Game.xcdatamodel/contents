@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SavedGame" representedClassName="SavedGame" syncable="YES">
-        <attribute name="idString" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0"/>
         <attribute name="imageUrl" optional="YES" attributeType="String"/>
         <attribute name="nameOfGame" optional="YES" attributeType="String"/>
         <attribute name="ratingOfGame" optional="YES" attributeType="String"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
-                <constraint value="idString"/>
+                <constraint value="id"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="SavedGame" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="SavedGame" positionX="-450.2085571289062" positionY="-96.8648681640625" width="427.1491088867188" height="103"/>
     </elements>
 </model>

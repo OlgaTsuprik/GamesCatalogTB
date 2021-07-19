@@ -28,7 +28,7 @@ class FavoriteViewModel {
     }
     
     func deleteItem(index: Int) {
-        CoreDataManager.shared.removeOne(withName: "SavedGame", id: savedObjests[index].idString ?? "")
+        CoreDataManager.shared.removeOne(withName: "SavedGame", id1: savedObjests[index].id)
         savedObjests.remove(at: index)
     }
     

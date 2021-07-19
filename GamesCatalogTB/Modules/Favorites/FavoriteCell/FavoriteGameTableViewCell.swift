@@ -25,7 +25,8 @@ class FavoriteGameTableViewCell: UITableViewCell {
         self.ratingLabel.text = model?.ratingOfGame
         self.nameLabel.text = model?.nameOfGame
         self.indexLabel.text = index
-        self.idLabel.text = model?.idString
+        self.idLabel.text = String(Int(model?.id ?? 0))
+       
     }
     
     func addImage(image: UIImage?) {

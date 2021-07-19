@@ -38,12 +38,12 @@ class CoreDataManager {
     
     // MARK: Methods
     
-    func writeGameWithID(withName name: String, with game: Game, id: String) {
+    func writeGameWithID(withName name: String, with game: Game, id: Int64) {
         let gameObject = SavedGame(context: self.context)
         gameObject.nameOfGame = game.name
         gameObject.ratingOfGame = game.ratingString
         gameObject.imageUrl = game.backgroundImage
-        gameObject.idString = game.idString
+        gameObject.id = Int64(game.id)
         
         do {
             context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
@@ -80,14 +80,14 @@ class CoreDataManager {
         }
     }
     
-    func removeOne(withName: String, id: String) {
+    func removeOne(withName: String, id1: Int64) {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SavedGame")
         fetchRequest.returnsObjectsAsFaults = false
         
         do {
             let result = try self.context.fetch(fetchRequest)
             result.forEach {
-                if let idString = $0.value(forKey: "idString") as? String, idString == id {
+                if let id = $0.value(forKey: "id") as? Int64, id == id1 {
                     self.context.delete($0)
                 }
             }
