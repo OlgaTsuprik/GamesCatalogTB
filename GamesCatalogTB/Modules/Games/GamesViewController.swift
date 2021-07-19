@@ -93,6 +93,10 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         cell?.saveAction = { [weak self] in
             //self?.viewModel.saveGame(indexPath.row)
             self?.viewModel.saveUniqueGame(indexPath.row, id: self?.viewModel.gamesVM[indexPath.row].idString ?? "" )
+         
+            let alert = UIAlertController(title: "Game saved", message: "Success", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self?.present(alert, animated: true)
         }
         
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
