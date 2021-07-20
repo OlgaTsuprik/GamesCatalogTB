@@ -20,6 +20,7 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var nameOfGame: UILabel!
     @IBOutlet weak var desingView: UIView!
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var idLabel: UILabel!
     
     @IBOutlet weak var saveButton: UIButton!
     
@@ -52,6 +53,7 @@ class GameTableViewCell: UITableViewCell {
     func config(model: Game?, index: String, indexOfCell: Int) {
         self.ratingLabel.text = model?.ratingString
         self.nameOfGame.text = model?.name
+        self.idLabel.text = String(Int(model?.id ?? 0))
         self.indexLabel.text = index
         self.index = indexOfCell
     }

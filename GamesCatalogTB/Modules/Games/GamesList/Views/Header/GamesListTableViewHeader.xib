@@ -36,16 +36,25 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
-                            <rect key="frame" x="115" y="0.0" width="197" height="89"/>
+                            <rect key="frame" x="115" y="0.0" width="117" height="89"/>
                             <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-0S-8S9">
+                            <rect key="frame" x="242" y="0.0" width="40" height="89"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Gtq-9R-Hr4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-rs-2Zs">
-                            <rect key="frame" x="322" y="0.0" width="80" height="89"/>
+                            <rect key="frame" x="292" y="0.0" width="110" height="89"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-Ho-xzd">
-                                    <rect key="frame" x="10" y="10" width="60" height="59"/>
+                                    <rect key="frame" x="0.0" y="10" width="60" height="59"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="6RE-mX-ktY"/>
                                     </constraints>
@@ -54,9 +63,9 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="f4L-Ho-xzd" firstAttribute="top" secondItem="Eqz-rs-2Zs" secondAttribute="top" constant="10" id="HzB-Rj-Iwb"/>
-                                <constraint firstAttribute="trailing" secondItem="f4L-Ho-xzd" secondAttribute="trailing" constant="10" id="Y9o-Hz-5fG"/>
+                                <constraint firstAttribute="trailing" secondItem="f4L-Ho-xzd" secondAttribute="trailing" constant="50" id="Y9o-Hz-5fG"/>
                                 <constraint firstAttribute="bottom" secondItem="f4L-Ho-xzd" secondAttribute="bottom" constant="20" id="rf2-fm-BdD"/>
-                                <constraint firstAttribute="width" constant="80" id="wy5-Mz-EMs"/>
+                                <constraint firstAttribute="width" constant="110" id="wy5-Mz-EMs"/>
                             </constraints>
                         </view>
                     </subviews>

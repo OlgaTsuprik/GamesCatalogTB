@@ -20,6 +20,7 @@
 		77AD6E6326942ABC00ACE034 /* ScreenshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AD6E6126942ABC00ACE034 /* ScreenshotCollectionViewCell.swift */; };
 		77AD6E6426942ABC00ACE034 /* ScreenshotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77AD6E6226942ABC00ACE034 /* ScreenshotCollectionViewCell.xib */; };
 		BE017B3B26A0312000DB8F39 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE017B3A26A0312000DB8F39 /* CoreDataManager.swift */; };
+		BE017B3F26A6FAF700DB8F39 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE017B3E26A6FAF700DB8F39 /* AlertHelper.swift */; };
 		BE792E9F2689E23B0007F6C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */; };
 		BE792EA82689E23C0007F6C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE792EA72689E23C0007F6C8 /* Assets.xcassets */; };
 		BE792EB82689E2D80007F6C8 /* GamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792EB72689E2D80007F6C8 /* GamesViewController.xib */; };
@@ -56,6 +57,7 @@
 		77AD6E6126942ABC00ACE034 /* ScreenshotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCollectionViewCell.swift; sourceTree = "<group>"; };
 		77AD6E6226942ABC00ACE034 /* ScreenshotCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotCollectionViewCell.xib; sourceTree = "<group>"; };
 		BE017B3A26A0312000DB8F39 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BE017B3E26A6FAF700DB8F39 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		BE792E9B2689E23B0007F6C8 /* GamesCatalogTB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesCatalogTB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE792EA72689E23C0007F6C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,12 +172,30 @@
 			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
-		BE792E922689E23B0007F6C8 = {
+		BE017B4026A701E900DB8F39 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				BE017B3926A0310600DB8F39 /* CoreDataManager */,
+				BE792EC82689E4030007F6C8 /* API */,
+				BE017B3E26A6FAF700DB8F39 /* AlertHelper.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BE017B4126A702C000DB8F39 /* CoreDataFiles */ = {
+			isa = PBXGroup;
+			children = (
 				77388257269F287A00DF6482 /* SavedGame+CoreDataClass.swift */,
 				77388258269F287A00DF6482 /* SavedGame+CoreDataProperties.swift */,
+				77A435FC269D9E1B002B023D /* GameCoreData.xcdatamodeld */,
+			);
+			path = CoreDataFiles;
+			sourceTree = "<group>";
+		};
+		BE792E922689E23B0007F6C8 = {
+			isa = PBXGroup;
+			children = (
+				BE017B4126A702C000DB8F39 /* CoreDataFiles */,
 				BE792E9D2689E23B0007F6C8 /* GamesCatalogTB */,
 				BE792E9C2689E23B0007F6C8 /* Products */,
 			);
@@ -194,11 +214,10 @@
 			children = (
 				BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */,
 				BE89E1222694762100052A61 /* Extensions */,
+				BE017B4026A701E900DB8F39 /* Managers */,
 				BE792F01268AF9950007F6C8 /* Config */,
-				BE792EC82689E4030007F6C8 /* API */,
 				BE792EC72689E3D60007F6C8 /* Support */,
 				BE792EB32689E25B0007F6C8 /* Modules */,
-				77A435FC269D9E1B002B023D /* GameCoreData.xcdatamodeld */,
 			);
 			path = GamesCatalogTB;
 			sourceTree = "<group>";
@@ -397,6 +416,7 @@
 				BE792F00268AF91A0007F6C8 /* NetworkingManager.swift in Sources */,
 				BE89E126269476FB00052A61 /* UIImageView+Ex.swift in Sources */,
 				7738826126A16D1100DF6482 /* FavoriteViewModel.swift in Sources */,
+				BE017B3F26A6FAF700DB8F39 /* AlertHelper.swift in Sources */,
 				BE792EFE268AF8D00007F6C8 /* GameModel.swift in Sources */,
 				BE89E13726973A6000052A61 /* FullScreenImageViewController.swift in Sources */,
 				77285F0926A18114009C30DD /* FavoriteGameTableViewCell.swift in Sources */,

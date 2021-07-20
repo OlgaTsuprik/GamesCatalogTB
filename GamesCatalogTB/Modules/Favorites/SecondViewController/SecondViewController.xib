@@ -24,38 +24,50 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="758"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <color key="separatorColor" name="backgroundColor"/>
-                    <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
+                    <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-1M-bA9">
-                    <rect key="frame" x="157" y="812" width="100" height="40"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXo-tI-Irb">
+                    <rect key="frame" x="0.0" y="802" width="414" height="94"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-1M-bA9">
+                            <rect key="frame" x="157" y="10" width="100" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="baj-Ni-5Kk"/>
+                                <constraint firstAttribute="height" constant="40" id="sOh-gq-USG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="Delete all">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="deleteAll:" destination="-1" eventType="touchUpInside" id="REA-2X-VFf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="baj-Ni-5Kk"/>
-                        <constraint firstAttribute="height" constant="40" id="sOh-gq-USG"/>
+                        <constraint firstItem="5Ui-1M-bA9" firstAttribute="top" secondItem="QXo-tI-Irb" secondAttribute="top" constant="10" id="d4p-Cj-Tbv"/>
+                        <constraint firstItem="5Ui-1M-bA9" firstAttribute="centerX" secondItem="QXo-tI-Irb" secondAttribute="centerX" id="oey-tI-VuC"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <state key="normal" title="Delete all">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <integer key="value" value="15"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="deleteAll:" destination="-1" eventType="touchUpInside" id="REA-2X-VFf"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="5Ui-1M-bA9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Na5-dt-Jku"/>
                 <constraint firstItem="925-be-XPO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Nmw-JA-kby"/>
+                <constraint firstAttribute="bottom" secondItem="QXo-tI-Irb" secondAttribute="bottom" id="REg-gF-sPo"/>
                 <constraint firstItem="925-be-XPO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tpp-yi-E8h"/>
+                <constraint firstItem="QXo-tI-Irb" firstAttribute="top" secondItem="925-be-XPO" secondAttribute="bottom" id="ZPL-zE-aod"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="925-be-XPO" secondAttribute="trailing" id="gEI-53-t89"/>
+                <constraint firstItem="QXo-tI-Irb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="n1a-I5-nGT"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="925-be-XPO" secondAttribute="bottom" constant="60" id="nwa-mC-qVo"/>
-                <constraint firstItem="5Ui-1M-bA9" firstAttribute="top" secondItem="925-be-XPO" secondAttribute="bottom" constant="10" id="pSQ-y6-jAb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QXo-tI-Irb" secondAttribute="trailing" id="vMR-gk-NIT"/>
             </constraints>
             <point key="canvasLocation" x="133" y="80"/>
         </view>

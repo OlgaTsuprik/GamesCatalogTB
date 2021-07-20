@@ -12,6 +12,9 @@ class DetailViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var imageOfGame: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var idLabel: UILabel!
+    
     @IBOutlet weak var releasedLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var genresLabel: UILabel!
@@ -49,6 +52,7 @@ class DetailViewController: UIViewController {
             genres.name
         }.joined(separator: ", ")
         ratingLabel.text = gameViewModel?.game?.ratingString
+        idLabel.text = String(Int(gameViewModel?.game?.id ?? 0))
         
         gameViewModel?.loadImage(url: gameViewModel?.game?.backgroundImage ?? "", completion: { [weak self] image in
             DispatchQueue.main.async {

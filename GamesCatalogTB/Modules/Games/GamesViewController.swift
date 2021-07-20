@@ -57,10 +57,11 @@ class GamesViewController: UIViewController {
         case .unknown:
             message = "Unknown mistake"
         }
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        self.present(alert, animated: true)
+        let alert = AlertHelper.shared
+        alert.show(for: self, title: title, message: message, leftButtonTitle: nil, rightButtonTitle: "OK", leftButtonAction: nil, rightButtonAction: nil)
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+//        self.present(alert, animated: true)
     }
     
     func loadMoreItems() {
@@ -91,10 +92,8 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         cell?.saveAction = { [weak self] in
             //self?.viewModel.saveGame(indexPath.row)
             self?.viewModel.saveUniqueGame(indexPath.row, id: Int64(self?.viewModel.gamesVM[indexPath.row].id ?? 0))
-         
-            let alert = UIAlertController(title: "Game saved", message: "Success", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self?.present(alert, animated: true)
+        let alert = AlertHelper.shared
+        alert.show(for: self, title: "Succes", message: "Game was saved", leftButtonTitle: nil, rightButtonTitle: "OK", leftButtonAction: nil, rightButtonAction: nil)
         }
         
         viewModel.loadImage(index: indexPath.row) { [weak self] image in

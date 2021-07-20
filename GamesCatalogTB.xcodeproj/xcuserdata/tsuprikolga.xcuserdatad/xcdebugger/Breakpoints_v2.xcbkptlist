@@ -252,8 +252,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-            landmarkName = "fetchImage(url:completion:)"
-            landmarkType = "7">
+            landmarkName = "NetworkingManager"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "6D90AFBF-D2EA-41C2-B846-BAF53595BBAC - d817a64fa4e1fcf1"
@@ -348,7 +348,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
-            landmarkName = "writeData2(withName:with:)"
+            landmarkName = "writeGameWithID(withName:with:id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -364,8 +364,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "writeData2(withName:with:)"
-            landmarkType = "7">
+            landmarkName = "CoreDataManager"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -380,7 +380,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "writeData2(withName:with:)"
+            landmarkName = "writeGameWithID(withName:with:id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -396,8 +396,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "persistantContainer"
-            landmarkType = "24">
+            landmarkName = "CoreDataManager"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "4A1362BD-3433-4BD2-955C-CB5D6C49B3D1 - 22f53c99946e9a5b"
