@@ -31,8 +31,14 @@ class FavoriteGamesViewController: UIViewController {
         favoriteGamesTableView.dataSource = self
         favoriteGamesTableView.delegate = self
         
-        let nibName = UINib(nibName: "FavoriteGameTableViewCell", bundle: nil)
-        favoriteGamesTableView.register(nibName, forCellReuseIdentifier: "favoriteGameCell")
+//        let nibName = UINib(nibName: "FavoriteGameTableViewCell", bundle: nil)
+//        favoriteGamesTableView.register(nibName, forCellReuseIdentifier: "favoriteGameCell")
+//
+//
+        
+        let nibName = UINib(nibName: "GameTableViewCell", bundle: nil)
+        favoriteGamesTableView.register(nibName, forCellReuseIdentifier: "gameCell")
+       // loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,11 +61,12 @@ extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteGameCell", for: indexPath) as? FavoriteGameTableViewCell
-        cell?.config(model: viewModel.savedObjests[indexPath.row], index: "\(indexPath.row + 1).")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell
+        cell?.configFavoriteGame(model: viewModel.savedObjests[indexPath.row], indexOfCell: indexPath.row)
+//        cell?.config(model: viewModel.savedObjests[indexPath.row], index: indexPath.row)
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
-                if let cellTable = self?.favoriteGamesTableView.cellForRow(at: indexPath) as? FavoriteGameTableViewCell {
+                if let cellTable = self?.favoriteGamesTableView.cellForRow(at: indexPath) as? GameTableViewCell {
                     cellTable.addImage(image: image)
                 }
             }

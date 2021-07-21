@@ -24,8 +24,9 @@ class GameTableViewCell: UITableViewCell {
     
     @IBOutlet weak var saveButton: UIButton!
     
-    @IBAction func saveGame(_ sender: Any) {
+    @IBAction func saveAction(_ sender: Any) {
         saveAction?()
+       
     }
     
     var saveAction: (() -> Void)?
@@ -49,6 +50,14 @@ class GameTableViewCell: UITableViewCell {
         self.idLabel.text = String(model?.id ?? 0)
         self.indexLabel.text = String(indexOfCell + 1)
         self.index = indexOfCell
+    }
+    
+    func configFavoriteGame(model: SavedGame?, indexOfCell: Int) {
+        self.ratingLabel.text = model?.ratingOfGame
+        self.nameOfGame.text = model?.nameOfGame
+        self.indexLabel.text = String(indexOfCell + 1)
+        self.idLabel.text = String(Int(model?.id ?? 0))
+        self.saveButton.isHidden = true
     }
     
     func addImage(image: UIImage?) {
