@@ -12,9 +12,6 @@ import CoreData
 class FavoriteViewModel {
     // MARK: Properties
     var savedObjests: [SavedGame] = []
-    
-    var type: [Game] = []
-    
    
     // MARK: Methods
     func loadImage(index: Int, completion: @escaping((UIImage?) -> Void)) {

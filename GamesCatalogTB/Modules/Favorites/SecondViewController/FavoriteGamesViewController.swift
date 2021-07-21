@@ -63,7 +63,7 @@ extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell
         cell?.configFavoriteGame(model: viewModel.savedObjests[indexPath.row], indexOfCell: indexPath.row)
-//        cell?.config(model: viewModel.savedObjests[indexPath.row], index: indexPath.row)
+
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
                 if let cellTable = self?.favoriteGamesTableView.cellForRow(at: indexPath) as? GameTableViewCell {

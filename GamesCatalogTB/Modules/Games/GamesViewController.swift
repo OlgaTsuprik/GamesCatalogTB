@@ -111,11 +111,6 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         return cell ?? UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("GamesListTableViewHeader", owner: nil, options: nil)?.first
-        return headerView as? UIView
-    }
-    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
             viewModel.isLoadingList = true
@@ -130,6 +125,11 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         self.navigationController?.pushViewController(detailedVC, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("GamesListTableViewHeader", owner: nil, options: nil)?.first
+        return headerView as? UIView
+    }
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }

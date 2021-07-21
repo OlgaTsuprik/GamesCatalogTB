@@ -8,10 +8,6 @@
 import UIKit
 import CoreData
 
-protocol GameTableViewDelegate: class {
-    func saveGame(index: Int)
-}
-
 class GameTableViewCell: UITableViewCell {
     
     // MARK: Properties
