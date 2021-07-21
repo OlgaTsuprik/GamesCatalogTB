@@ -17,7 +17,7 @@ class AlertHelper {
     // MARK: - Methods
     func show(for controller: UIViewController?,
               title: String = "",
-              message: String = "",
+              message: String?,
               leftButtonTitle: String? = nil,
               rightButtonTitle: String,
               leftButtonAction: (() -> Void)? = nil,

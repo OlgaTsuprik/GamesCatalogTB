@@ -8,7 +8,6 @@
 import UIKit
 import CoreData
 
-
 class FavoriteGamesViewController: UIViewController {
     //MARK: Properties
     var viewModel = FavoriteViewModel()
@@ -16,8 +15,14 @@ class FavoriteGamesViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var favoriteGamesTableView: UITableView!
     @IBAction func deleteAll(_ sender: Any) {
-        viewModel.deleteAll()
-        favoriteGamesTableView.reloadData()
+        if viewModel.savedObjests == [] {
+            showMessage(title: "You dont have saved games", message: nil, leftButtonTitle: nil, rightButtonTitle: "Ok", leftButtonAction: nil)
+        } else {
+            showMessage(title: "Are you sure you want delete all games?",message: nil, leftButtonTitle: "YES", rightButtonTitle: "No") {
+                self.viewModel.deleteAll()
+                self.favoriteGamesTableView.reloadData()
+            }
+        }
     }
     
     //MARK: Life cycle
@@ -34,6 +39,11 @@ class FavoriteGamesViewController: UIViewController {
         viewModel.loadData { [weak self] (_) in
             self?.favoriteGamesTableView.reloadData()
         }
+    }
+    
+    private func showMessage(title: String, message: String?, leftButtonTitle: String?, rightButtonTitle: String, leftButtonAction: (() -> Void)?) {
+        let alert = AlertHelper.shared
+        alert.show(for: self, title: title, message: message, leftButtonTitle: leftButtonTitle, rightButtonTitle: rightButtonTitle, leftButtonAction: leftButtonAction, rightButtonAction: nil)
     }
 }
 
@@ -64,10 +74,12 @@ extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        favoriteGamesTableView.beginUpdates()
-        viewModel.deleteItem(index: indexPath.row)
-        favoriteGamesTableView.deleteRows(at: [indexPath], with: .automatic)
-        favoriteGamesTableView.endUpdates()
+        showMessage(title: "Are you sure you want delete this game?", message: nil, leftButtonTitle: "YES", rightButtonTitle: "NO") {
+            self.favoriteGamesTableView.beginUpdates()
+            self.viewModel.deleteItem(index: indexPath.row)
+            self.favoriteGamesTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.favoriteGamesTableView.endUpdates()
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -79,3 +91,4 @@ extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSourc
         return 60
     }
 }
+
