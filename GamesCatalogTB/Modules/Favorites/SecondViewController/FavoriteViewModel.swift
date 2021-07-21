@@ -21,19 +21,17 @@ class FavoriteViewModel {
     }
     
     func loadData(completion: @escaping ([SavedGame]) -> Void) {
-        savedObjests = CoreDataManager.shared.objects
-        CoreDataManager.shared.getData()
-       self.savedObjests = CoreDataManager.shared.objects
+        savedObjests = CoreDataManager.shared.getData()
         completion(savedObjests)
     }
     
     func deleteItem(index: Int) {
-        CoreDataManager.shared.removeOne(withName: "SavedGame", id1: savedObjests[index].id)
+        CoreDataManager.shared.removeOne(id1: savedObjests[index].id)
         savedObjests.remove(at: index)
     }
     
     func deleteAll() {
-        CoreDataManager.shared.removeAll(withName: "SavedGame")
+        CoreDataManager.shared.removeAll()
         savedObjests = []
     }
 }

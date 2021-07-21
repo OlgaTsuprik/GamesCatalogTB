@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 
-class SecondViewController: UIViewController {
+class FavoriteGamesViewController: UIViewController {
     //MARK: Properties
     var viewModel = FavoriteViewModel()
     
@@ -34,12 +34,11 @@ class SecondViewController: UIViewController {
         viewModel.loadData { [weak self] (_) in
             self?.favoriteGamesTableView.reloadData()
         }
-        favoriteGamesTableView.reloadData()
     }
 }
 
 //MARK: Extensions
-extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
+extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         viewModel.savedObjests.count
@@ -66,8 +65,8 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         favoriteGamesTableView.beginUpdates()
-        favoriteGamesTableView.deleteRows(at: [indexPath], with: .automatic)
         viewModel.deleteItem(index: indexPath.row)
+        favoriteGamesTableView.deleteRows(at: [indexPath], with: .automatic)
         favoriteGamesTableView.endUpdates()
     }
     

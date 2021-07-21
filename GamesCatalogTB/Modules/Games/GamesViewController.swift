@@ -75,6 +75,14 @@ class GamesViewController: UIViewController {
             self?.tableView.endUpdates()
         }
     }
+    private func showMessage(title: String, message: String) {
+        let alert = AlertHelper.shared
+        alert.show(for: self, title: title,
+                   message: message,
+                   leftButtonTitle: nil,
+                   rightButtonTitle: "OK",
+                   leftButtonAction: nil,
+                   rightButtonAction: nil)    }
 }
 
 //MARK: Extensions
@@ -87,13 +95,10 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell
         let games = viewModel.gamesVM[indexPath.row]
-        cell?.config(model: games, index: "\(indexPath.row + 1).", indexOfCell: indexPath.row)
-        //cell?.delegate = self
+        cell?.config(model: games, indexOfCell: indexPath.row)
         cell?.saveAction = { [weak self] in
-            //self?.viewModel.saveGame(indexPath.row)
-            self?.viewModel.saveUniqueGame(indexPath.row, id: Int64(self?.viewModel.gamesVM[indexPath.row].id ?? 0))
-        let alert = AlertHelper.shared
-        alert.show(for: self, title: "Succes", message: "Game was saved", leftButtonTitle: nil, rightButtonTitle: "OK", leftButtonAction: nil, rightButtonAction: nil)
+        self?.viewModel.saveUniqueGame(indexPath.row)
+        self?.showMessage(title: "Success", message: "Game saved")
         }
         
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
@@ -129,10 +134,3 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         return 60
     }
 }
-
-// MARK: Extension
-//extension GamesViewController: GameTableViewDelegate {
-//    func saveGame(index: Int) {
-//        viewModel.saveGame(index)
-//    }
-//}

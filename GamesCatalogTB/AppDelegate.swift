@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         firstVC.tabBarItem.title = "Games"
         firstVC.tabBarItem.image = UIImage(systemName: "gamecontroller")
         
-        let vc2 = SecondViewController()
+        let vc2 = FavoriteGamesViewController()
         let secondVC = UINavigationController(rootViewController: vc2)
         secondVC.tabBarItem.title = "Favorites"
         secondVC.tabBarItem.image = UIImage(systemName: "star")

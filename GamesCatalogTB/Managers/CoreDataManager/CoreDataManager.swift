@@ -13,8 +13,6 @@ class CoreDataManager {
     static let entityName: String = "GameCoreData"
     static let shared = CoreDataManager()
     
-    var objects: [SavedGame] = []
-    
     //MARK: Init
     private init() {
     }
@@ -38,7 +36,7 @@ class CoreDataManager {
     
     // MARK: Methods
     
-    func writeGameWithID(withName name: String, with game: Game, id: Int64) {
+    func writeGameWithID(with game: Game) {
         let gameObject = SavedGame(context: self.context)
         gameObject.nameOfGame = game.name
         gameObject.ratingOfGame = game.ratingString
@@ -48,25 +46,25 @@ class CoreDataManager {
         do {
             context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
             try self.context.save()
-            self.objects.append(gameObject)
-        }
-        
-        catch let error as NSError {
+            
+        } catch let error as NSError {
             Swift.debugPrint("I couldn't save data. \(error) \(error.localizedDescription)")
         }
     }
     
-    func getData() {
+    func getData() -> [SavedGame] {
         let fetchRequest: NSFetchRequest<SavedGame> = SavedGame.fetchRequest()
         
         do {
-            objects = try context.fetch(fetchRequest)
+            let objects = try context.fetch(fetchRequest)
+            return objects
         } catch let error as NSError {
             Swift.debugPrint("I couldn't read data. \(error) \(error.localizedDescription)")
+            return []
         }
     }
     
-    func removeAll(withName: String) {
+    func removeAll() {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SavedGame")
         fetchRequest.returnsObjectsAsFaults = false
         
@@ -80,7 +78,7 @@ class CoreDataManager {
         }
     }
     
-    func removeOne(withName: String, id1: Int64) {
+    func removeOne(id1: Int64) {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SavedGame")
         fetchRequest.returnsObjectsAsFaults = false
         

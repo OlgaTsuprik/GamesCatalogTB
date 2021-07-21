@@ -25,18 +25,11 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var saveButton: UIButton!
     
     @IBAction func saveGame(_ sender: Any) {
-        
-        guard let index = index else { return}
-        //delegate?.saveGame(index: index)
         saveAction?()
-        
     }
     
     var saveAction: (() -> Void)?
-    
-    
     private var index: Int?
-    weak var delegate: GameTableViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,11 +43,11 @@ class GameTableViewCell: UITableViewCell {
         self.photoView.image = UIImage(named: "default")
     }
     
-    func config(model: Game?, index: String, indexOfCell: Int) {
+    func config(model: Game?, indexOfCell: Int) {
         self.ratingLabel.text = model?.ratingString
         self.nameOfGame.text = model?.name
-        self.idLabel.text = String(Int(model?.id ?? 0))
-        self.indexLabel.text = index
+        self.idLabel.text = String(model?.id ?? 0)
+        self.indexLabel.text = String(indexOfCell + 1)
         self.index = indexOfCell
     }
     
