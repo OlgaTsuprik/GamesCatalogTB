@@ -42,16 +42,13 @@ class CoreDataManager {
         gameObject.ratingOfGame = game.ratingString
         gameObject.imageUrl = game.backgroundImage
         gameObject.id = Int64(game.id)
-        gameObject.isSaved = false
         
         do {
             context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
             try self.context.save()
-            gameObject.isSaved = true
             
         } catch let error as NSError {
             Swift.debugPrint("I couldn't save data. \(error) \(error.localizedDescription)")
-            gameObject.isSaved = false
         }
     }
     
@@ -68,26 +65,8 @@ class CoreDataManager {
         }
     }
     
-    func isFavorite(id: Int) -> Bool {
-        let fetchRequest: NSFetchRequest<SavedGame> = SavedGame.fetchRequest()
-        var favorite = Bool()
-        do {
-            let objects = try context.fetch(fetchRequest)
-            for i in 0..<objects.count {
-                if id == objects[i].id {
-                    favorite = true
-                    objects[i].isSaved = true
-                }
-            }
-            
-        } catch let error as NSError {
-            Swift.debugPrint("\(error) \(error.localizedDescription)")
-        }
-       return favorite
-    }
-    
     func removeAll() {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.entityName)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.entityName.rawValue)
         fetchRequest.returnsObjectsAsFaults = false
         
         do {
@@ -103,7 +82,7 @@ class CoreDataManager {
     }
     
     func removeOne(id1: Int64) {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.entityName)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.entityName.rawValue)
         fetchRequest.returnsObjectsAsFaults = false
         
         do {

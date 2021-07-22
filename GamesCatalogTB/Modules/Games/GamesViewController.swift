@@ -49,6 +49,7 @@ class GamesViewController: UIViewController {
         } errorHandler: { [weak self] (error: NetworkError) in
             self?.handleError(error: (self?.viewModel.errorCauched)!)
         }
+        viewModel.loadDataFromCD()
     }
     
     func handleError(error: NetworkError) {
@@ -100,7 +101,6 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         cell?.saveAction = { [weak self] in
             self?.viewModel.saveUniqueGame(indexPath.row)
             self?.showMessage(title: "Game saved", message: nil)
-            return true
         }
         
         if viewModel.checkIsFavorite(id: games.id) == true {

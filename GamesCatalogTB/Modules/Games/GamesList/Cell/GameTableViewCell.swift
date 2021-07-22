@@ -21,12 +21,11 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var isFavorite: UIView!
     
     @IBAction func saveAction(_ sender: Any) {
-        if saveAction?() == true {
-            configIsFavorite()
-        }
+        saveAction?()
+        configIsFavorite()
     }
    
-    var saveAction: (() -> Bool)?
+    var saveAction: (() -> Void)?
     private var index: Int?
     
     override func awakeFromNib() {

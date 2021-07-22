@@ -31,14 +31,8 @@ class FavoriteGamesViewController: UIViewController {
         favoriteGamesTableView.dataSource = self
         favoriteGamesTableView.delegate = self
         
-//        let nibName = UINib(nibName: "FavoriteGameTableViewCell", bundle: nil)
-//        favoriteGamesTableView.register(nibName, forCellReuseIdentifier: "favoriteGameCell")
-//
-//
-        
         let nibName = UINib(nibName: "GameTableViewCell", bundle: nil)
         favoriteGamesTableView.register(nibName, forCellReuseIdentifier: "gameCell")
-       // loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {

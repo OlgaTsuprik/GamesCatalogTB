@@ -398,53 +398,38 @@
             endingLineNumber = "22"
             landmarkName = "CoreDataManager"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "4A1362BD-3433-4BD2-955C-CB5D6C49B3D1 - 22f53c99946e9a5b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GamesCatalogTB.CoreDataManager.persistantContainer.getter : __C.NSPersistentContainer"
-                  moduleName = "GamesCatalogTB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/CoreDataManager/CoreDataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "4A1362BD-3433-4BD2-955C-CB5D6C49B3D1 - 6b6013a83eac06af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GamesCatalogTB.CoreDataManager.persistantContainer.setter : __C.NSPersistentContainer"
-                  moduleName = "GamesCatalogTB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/CoreDataManager/CoreDataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  uuid = "4A1362BD-3433-4BD2-955C-CB5D6C49B3D1 - 9128082485c777e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; __C.NSPersistentContainer in GamesCatalogTB.CoreDataManager.persistantContainer.getter : __C.NSPersistentContainer"
-                  moduleName = "GamesCatalogTB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tsuprikolga/GamesCatalogTB/CoreDataManager/CoreDataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6BCD7E5-4865-4C50-A8BE-29B83E20E413"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/Games/GamesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3E10237-FC18-4DC7-A2D2-A30774FA9A76"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GamesCatalogTB/Modules/Games/GamesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loadDataFromCD()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
