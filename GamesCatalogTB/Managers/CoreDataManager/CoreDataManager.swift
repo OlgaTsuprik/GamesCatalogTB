@@ -87,7 +87,7 @@ class CoreDataManager {
     }
     
     func removeAll() {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SavedGame")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.entityName)
         fetchRequest.returnsObjectsAsFaults = false
         
         do {
@@ -103,7 +103,7 @@ class CoreDataManager {
     }
     
     func removeOne(id1: Int64) {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SavedGame")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.entityName)
         fetchRequest.returnsObjectsAsFaults = false
         
         do {

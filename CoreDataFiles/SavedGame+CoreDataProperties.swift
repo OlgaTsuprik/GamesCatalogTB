@@ -12,7 +12,7 @@ import CoreData
 extension SavedGame {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SavedGame> {
-        return NSFetchRequest<SavedGame>(entityName: "SavedGame")
+        return NSFetchRequest<SavedGame>(entityName: Constants.entityName)
     }
 
     @NSManaged public var nameOfGame: String?

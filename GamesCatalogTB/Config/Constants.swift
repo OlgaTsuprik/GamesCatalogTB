@@ -9,4 +9,5 @@ import Foundation
 
 enum Constants: String {
     case apiKey = "9e53c63be9cf468082491efa0d612adc"
+    case entityName = "SavedGame"
 }
