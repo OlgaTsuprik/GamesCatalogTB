@@ -53,7 +53,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gn8-Lq-D3W">
-                                <rect key="frame" x="99" y="0.0" width="105" height="60"/>
+                                <rect key="frame" x="99" y="0.0" width="53" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="qNX-wg-hrA"/>
                                 </constraints>
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDs-ZD-qWR">
-                                <rect key="frame" x="206" y="0.0" width="45" height="60"/>
+                                <rect key="frame" x="154" y="0.0" width="45" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="Z7Y-oy-P8V"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V2-zk-0LL">
-                                <rect key="frame" x="253" y="0.0" width="35" height="60"/>
+                                <rect key="frame" x="201" y="0.0" width="35" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="91L-8G-Wkv"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="vH6-JJ-29R"/>
@@ -81,7 +81,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="clip" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kl2-9O-E6w">
-                                <rect key="frame" x="290" y="0.0" width="50" height="60"/>
+                                <rect key="frame" x="238" y="0.0" width="50" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="OLx-OF-Oym"/>
                                     <constraint firstAttribute="width" constant="50" id="vXO-f8-T9u"/>
@@ -102,6 +102,25 @@
                                     <action selector="saveAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="txl-Bx-NyW"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUm-1V-aEi">
+                                <rect key="frame" x="290" y="0.0" width="50" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="WZ7-IS-HP9">
+                                        <rect key="frame" x="10" y="15" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WZ7-IS-HP9" secondAttribute="height" multiplier="1:1" id="A31-NF-eby"/>
+                                            <constraint firstAttribute="width" constant="25" id="vXX-fL-Yia"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WZ7-IS-HP9" firstAttribute="leading" secondItem="zUm-1V-aEi" secondAttribute="leading" constant="10" id="Yux-Tf-o3h"/>
+                                    <constraint firstAttribute="width" constant="50" id="gX0-4s-O6t"/>
+                                    <constraint firstItem="WZ7-IS-HP9" firstAttribute="top" secondItem="zUm-1V-aEi" secondAttribute="top" constant="15" id="m0y-as-GIj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="qWM-8O-8ha"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
@@ -128,6 +147,7 @@
                 <outlet property="desingView" destination="UJH-WQ-LBE" id="nCk-WP-2Mu"/>
                 <outlet property="idLabel" destination="KDs-ZD-qWR" id="L51-Bt-Dt6"/>
                 <outlet property="indexLabel" destination="cee-4g-rIF" id="9wi-kZ-XMd"/>
+                <outlet property="isFavorite" destination="zUm-1V-aEi" id="bSv-Z8-8iH"/>
                 <outlet property="nameOfGame" destination="Gn8-Lq-D3W" id="uP4-3e-aDM"/>
                 <outlet property="photoView" destination="qIu-us-gRe" id="zvs-Dx-H3m"/>
                 <outlet property="ratingLabel" destination="7V2-zk-0LL" id="k7C-ks-ZLm"/>
@@ -137,6 +157,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="heart" width="256" height="256"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

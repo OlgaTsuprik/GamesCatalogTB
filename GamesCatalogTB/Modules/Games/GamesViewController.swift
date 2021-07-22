@@ -20,13 +20,16 @@ class GamesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator()
-        //indicator.startAnimating()
         tableView.dataSource = self
         tableView.delegate = self
         
         let nibName = UINib(nibName: "GameTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "gameCell")
         loadData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
     
     // MARK: Methods
@@ -59,9 +62,6 @@ class GamesViewController: UIViewController {
         }
         let alert = AlertHelper.shared
         alert.show(for: self, title: title, message: message, leftButtonTitle: nil, rightButtonTitle: "OK", leftButtonAction: nil, rightButtonAction: nil)
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//        self.present(alert, animated: true)
     }
     
     func loadMoreItems() {
@@ -75,7 +75,8 @@ class GamesViewController: UIViewController {
             self?.tableView.endUpdates()
         }
     }
-    private func showMessage(title: String, message: String) {
+    
+    private func showMessage(title: String, message: String?) {
         let alert = AlertHelper.shared
         alert.show(for: self, title: title,
                    message: message,
@@ -97,10 +98,17 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         let games = viewModel.gamesVM[indexPath.row]
         cell?.config(model: games, indexOfCell: indexPath.row)
         cell?.saveAction = { [weak self] in
-        self?.viewModel.saveUniqueGame(indexPath.row)
-        self?.showMessage(title: "Success", message: "Game saved")
+            self?.viewModel.saveUniqueGame(indexPath.row)
+            self?.showMessage(title: "Game saved", message: nil)
+            return true
         }
         
+        if viewModel.checkIsFavorite(id: games.id) == true {
+            cell?.configIsFavorite()
+        } else {
+            cell?.configIsNotFavorite()
+        }
+    
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
                 if let cellTable = self?.tableView.cellForRow(at: indexPath) as? GameTableViewCell {
@@ -108,6 +116,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
                 }
             }
         }
+        
         return cell ?? UITableViewCell()
     }
     

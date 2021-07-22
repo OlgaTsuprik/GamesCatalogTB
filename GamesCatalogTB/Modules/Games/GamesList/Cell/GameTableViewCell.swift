@@ -17,15 +17,16 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var desingView: UIView!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
-    
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var isFavorite: UIView!
     
     @IBAction func saveAction(_ sender: Any) {
-        saveAction?()
-       
+        if saveAction?() == true {
+            configIsFavorite()
+        }
     }
-    
-    var saveAction: (() -> Void)?
+   
+    var saveAction: (() -> Bool)?
     private var index: Int?
     
     override func awakeFromNib() {
@@ -54,6 +55,17 @@ class GameTableViewCell: UITableViewCell {
         self.indexLabel.text = String(indexOfCell + 1)
         self.idLabel.text = String(Int(model?.id ?? 0))
         self.saveButton.isHidden = true
+        self.isFavorite.isHidden = true
+    }
+    
+    func configIsFavorite() {
+        isFavorite.isHidden = false
+        saveButton.isHidden = true
+    }
+    
+    func configIsNotFavorite() {
+        isFavorite.isHidden = true
+        saveButton.isHidden = false
     }
     
     func addImage(image: UIImage?) {

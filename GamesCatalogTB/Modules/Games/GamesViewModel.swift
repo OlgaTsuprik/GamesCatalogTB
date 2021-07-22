@@ -62,5 +62,11 @@ class GamesViewModel {
     
     func saveUniqueGame(_ index: Int) {
         CoreDataManager.shared.writeGameWithID(with: gamesVM[index])
+     }
+    
+    func checkIsFavorite(id: Int) -> Bool {
+        let checkFavorite = CoreDataManager.shared.isFavorite(id: id)
+        
+        return checkFavorite
     }
 }

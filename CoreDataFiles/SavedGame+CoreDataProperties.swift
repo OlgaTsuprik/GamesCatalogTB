@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension SavedGame {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SavedGame> {
@@ -20,6 +19,8 @@ extension SavedGame {
     @NSManaged public var ratingOfGame: String?
     @NSManaged public var imageUrl: String?
     @NSManaged public var id: Int64
+    @NSManaged public var isSaved: Bool
+    
 }
 
 extension SavedGame : Identifiable {

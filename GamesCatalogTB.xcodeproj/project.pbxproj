@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				77285F0B26A56C20009C30DD /* Views */,
-				BE792EC22689E36A0007F6C8 /* SecondViewController */,
+				BE792EC22689E36A0007F6C8 /* FavoriteGames */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -249,14 +249,14 @@
 			path = GamesDetail;
 			sourceTree = "<group>";
 		};
-		BE792EC22689E36A0007F6C8 /* SecondViewController */ = {
+		BE792EC22689E36A0007F6C8 /* FavoriteGames */ = {
 			isa = PBXGroup;
 			children = (
 				BE792EC32689E3860007F6C8 /* FavoriteGamesViewController.swift */,
 				BE792EC52689E3940007F6C8 /* FavoriteGamesViewController.xib */,
 				7738826026A16D1100DF6482 /* FavoriteViewModel.swift */,
 			);
-			path = SecondViewController;
+			path = FavoriteGames;
 			sourceTree = "<group>";
 		};
 		BE792EC72689E3D60007F6C8 /* Support */ = {
