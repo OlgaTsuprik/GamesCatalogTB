@@ -20,6 +20,7 @@ class GamesViewModel {
             (gamesVM.count - pageSize)...(gamesVM.count - 1)
         }
     }
+    var savedToCDGames = [SavedGame]()
     
     // MARK: Methods
     func loadData(completion: @escaping ([Game]) -> Void, errorHandler: @escaping (NetworkError) -> Void ) {
@@ -38,6 +39,10 @@ class GamesViewModel {
             }
         }
     }
+    
+    func loadDataFromCD() {
+        savedToCDGames = CoreDataManager.shared.getData()
+     }
     
     func loadImage(index: Int, completion: @escaping((UIImage?) -> Void)) {
         NetworkingManager.shared.fetchImage(url: gamesVM[index].backgroundImage) { image in
@@ -62,11 +67,20 @@ class GamesViewModel {
     
     func saveUniqueGame(_ index: Int) {
         CoreDataManager.shared.writeGameWithID(with: gamesVM[index])
-     }
+        if CoreDataManager.shared.getData().last != nil {
+            savedToCDGames.append(CoreDataManager.shared.getData().last!)
+        } else {
+            return
+        }
+    }
     
     func checkIsFavorite(id: Int) -> Bool {
-        let checkFavorite = CoreDataManager.shared.isFavorite(id: id)
-        
+        var checkFavorite = Bool()
+        for i in 0..<savedToCDGames.count {
+            if id == savedToCDGames[i].id {
+                checkFavorite = true
+            }
+        }
         return checkFavorite
     }
 }
