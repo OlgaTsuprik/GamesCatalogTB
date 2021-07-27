@@ -15,6 +15,8 @@ enum NetworkError {
 class NetworkingManager {
     // MARK: Properties
     let baseURL = "https://api.rawg.io/api/games"
+    let developersURL = "https://api.rawg.io/api/developers"
+    
     let imageCache = NSCache<NSString, UIImage>()
     
     //MARK: Static
@@ -67,5 +69,31 @@ class NetworkingManager {
                 }
             }.resume()
         }
+    }
+    
+    func fetchDevelopers(isLoadingList: Bool,
+                    pageNumber: Int,
+                    completion: @escaping (([Developer]) -> Void),
+                    errorHandler: @escaping (NetworkError) -> Void) {
+        guard let urlObj =  URL(string: "\(developersURL)?key=\(Constants.apiKey.rawValue)&page=\(pageNumber)") else {
+            return
+        }
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: urlObj) { data, response, error in
+            if error != nil {
+                errorHandler(NetworkError.networkError)
+            }
+            if let data = data {
+                let decoder = JSONDecoder()
+                do {
+                    let developersData = try decoder.decode(ListOfDevelopers.self, from: data)
+                    completion(developersData.results)
+                }
+                catch _ as NSError {
+                    errorHandler(.unknown)
+                }
+            }
+        }
+        task.resume()
     }
 }

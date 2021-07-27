@@ -1,38 +1,33 @@
 //
-//  GamesViewController.swift
+//  DevelopersViewController.swift
 //  GamesCatalogTB
 //
-//  Created by Tsuprik Olga on 28.06.21.
+//  Created by Оля on 27.07.2021.
 //
 
 import UIKit
 
-class GamesViewController: UIViewController {
- 
-    // MARK: Outlets
-    @IBOutlet weak var tableView: UITableView!
+class DevelopersViewController: UIViewController {
+    
+   //MARK: Outlets
+    @IBOutlet weak var developersTableView: UITableView!
     
     // MARK: Properties
-    var viewModel = GamesViewModel()
+    var viewModel = DevelopersViewModel()
     var indicator = UIActivityIndicatorView()
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator()
-        tableView.dataSource = self
-        tableView.delegate = self
+        developersTableView.dataSource = self
+        developersTableView.delegate = self
         
-        let nibName = UINib(nibName: "GameTableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "gameCell")
+        let nibName = UINib(nibName: "DeveloperTableViewCell", bundle: nil)
+        developersTableView.register(nibName, forCellReuseIdentifier: "developerCell")
         loadData()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        tableView.reloadData()
-    }
     
-    // MARK: Methods
     func activityIndicator() {
         indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         indicator.style = UIActivityIndicatorView.Style.large
@@ -44,11 +39,13 @@ class GamesViewController: UIViewController {
     func loadData() {
         indicator.startAnimating()
         viewModel.loadData { [weak self] (_) in
-            self?.tableView.reloadData()
+            self?.developersTableView.reloadData()
             self?.indicator.stopAnimating()
+            
         } errorHandler: { [weak self] (error: NetworkError) in
-            self?.handleError(error: (self?.viewModel.errorCauched)!)
+            self?.handleError(error: (self?.viewModel.errorCauched) as! NetworkError)
         }
+
     }
     
     func handleError(error: NetworkError) {
@@ -66,13 +63,13 @@ class GamesViewController: UIViewController {
     
     func loadMoreItems() {
         viewModel.loadMoreData { [weak self] (_) in
-            self?.tableView.beginUpdates()
+            self?.developersTableView.beginUpdates()
             var array: [IndexPath] = []
             for i in self?.viewModel.paging ?? (0...0) {
                 array.append(IndexPath.init(row: i, section: 0))
             }
-            self?.tableView.insertRows(at: array, with: .none)
-            self?.tableView.endUpdates()
+            self?.developersTableView.insertRows(at: array, with: .none)
+            self?.developersTableView.endUpdates()
         }
     }
     
@@ -87,32 +84,20 @@ class GamesViewController: UIViewController {
     }
 }
 
-//MARK: Extensions
-extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
-    
+extension DevelopersViewController:  UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.gamesVM.count
+        
+        return viewModel.developersVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell
-        let games = viewModel.gamesVM[indexPath.row]
-        cell?.config(model: games, indexOfCell: indexPath.row)
-        cell?.saveAction = { [weak self] in
-            self?.viewModel.saveUniqueGame(indexPath.row)
-            self?.showMessage(title: "Game saved", message: nil)
-            return true
-        }
+        let cell = developersTableView.dequeueReusableCell(withIdentifier: "developerCell", for: indexPath) as? DeveloperTableViewCell
+        let developers = viewModel.developersVM[indexPath.row]
+        cell?.config(model: developers, index: indexPath.row)
         
-        if viewModel.checkIsFavorite(id: games.id) == true {
-            cell?.configIsFavorite()
-        } else {
-            cell?.configIsNotFavorite()
-        }
-    
         viewModel.loadImage(index: indexPath.row) { [weak self] image in
             DispatchQueue.main.async {
-                if let cellTable = self?.tableView.cellForRow(at: indexPath) as? GameTableViewCell {
+                if let cellTable = self?.developersTableView.cellForRow(at: indexPath) as? DeveloperTableViewCell {
                     cellTable.addImage(image: image)
                 }
             }
@@ -122,25 +107,23 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
+        if ((developersTableView.contentOffset.y + developersTableView.frame.size.height) >= developersTableView.contentSize.height) {
             viewModel.isLoadingList = true
             loadMoreItems()
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailedVC = DetailViewController()
-        let game = viewModel.gamesVM[indexPath.row]
-        detailedVC.gameViewModel = DetailViewModel(game: game)
-        self.navigationController?.pushViewController(detailedVC, animated: true)
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("GamesListTableViewHeader", owner: nil, options: nil)?.first
+        let headerView = Bundle.main.loadNibNamed("DevelopersHeaderView", owner: nil, options: nil)?.first
         return headerView as? UIView
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DeveloperDetailViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -25,6 +25,7 @@ struct Game: Decodable {
     let tba: Bool
     let backgroundImage: String
     var rating: Double
+    var added: Int
     
     var ratingString: String {
         return String(rating)
@@ -43,6 +44,7 @@ struct Game: Decodable {
         case tba
         case backgroundImage = "background_image"
         case rating
+        case added
         case ratingTop = "rating_top"
         case screenShots = "short_screenshots"
         case genres

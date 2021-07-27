@@ -32,22 +32,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let secondVC = UINavigationController(rootViewController: vc2)
         secondVC.tabBarItem.title = "Favorites"
         secondVC.tabBarItem.image = UIImage(systemName: "star")
+        
+        let vc3 = DevelopersViewController()
+        let thirdVC = UINavigationController(rootViewController: vc3)
+        thirdVC.tabBarItem.title = "Developers"
+        thirdVC.tabBarItem.image = UIImage(systemName: "rectangle.stack.person.crop")
+        
         vc.navigationController?.navigationBar.tintColor = UIColor.black
         vc.navigationController?.navigationBar.topItem?.title = "List Of Games"
-        
         vc.navigationController?.navigationBar.isTranslucent = true
         vc.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         vc.navigationController?.navigationBar.backgroundColor = .clear
         
         vc2.navigationController?.navigationBar.isTranslucent = true
         vc2.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
-        
         vc2.navigationController?.navigationBar.tintColor = UIColor.black
         vc2.navigationController?.navigationBar.topItem?.title = "Favorite Games"
+        
+        vc3.navigationController?.navigationBar.isTranslucent = true
+        vc3.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+        vc3.navigationController?.navigationBar.tintColor = UIColor.black
+        vc3.navigationController?.navigationBar.topItem?.title = "Developers"
+        
         let tabBarController = UITabBarController()
         tabBarController.tabBar.barTintColor = UIColor.black
         tabBarController.tabBar.tintColor = UIColor.white
-        tabBarController.viewControllers = [firstVC, secondVC]
+        tabBarController.viewControllers = [firstVC, secondVC, thirdVC]
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
