@@ -18,11 +18,9 @@ struct ListOfGames: Decodable {
 // MARK: - Game
 struct Game: Decodable {
     let id: Int
-    let slug: String
     let name: String
     let description: String?
     let released: String
-    let tba: Bool
     let backgroundImage: String
     var rating: Double
     var added: Int
@@ -30,22 +28,18 @@ struct Game: Decodable {
     var ratingString: String {
         return String(rating)
     }
-    
-    let ratingTop: Int
+
     let screenShots: [ScreenShots]
     let genres: [Genres]
 
     enum CodingKeys: String, CodingKey {
         case id
-        case slug
         case name
         case description
         case released
-        case tba
         case backgroundImage = "background_image"
         case rating
         case added
-        case ratingTop = "rating_top"
         case screenShots = "short_screenshots"
         case genres
     }

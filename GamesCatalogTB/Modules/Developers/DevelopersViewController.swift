@@ -28,6 +28,7 @@ class DevelopersViewController: UIViewController {
         loadData()
     }
     
+    //MARK: Methods
     func activityIndicator() {
         indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         indicator.style = UIActivityIndicatorView.Style.large
@@ -43,9 +44,8 @@ class DevelopersViewController: UIViewController {
             self?.indicator.stopAnimating()
             
         } errorHandler: { [weak self] (error: NetworkError) in
-            self?.handleError(error: (self?.viewModel.errorCauched) as! NetworkError)
+            self?.handleError(error: (self?.viewModel.errorCauched)!)
         }
-
     }
     
     func handleError(error: NetworkError) {
@@ -124,6 +124,8 @@ extension DevelopersViewController:  UITableViewDataSource, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DeveloperDetailViewController()
+        let developer = viewModel.developersVM[indexPath.row]
+        vc.developerViewModel = DeveloperDetailViewModel(developer: developer)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

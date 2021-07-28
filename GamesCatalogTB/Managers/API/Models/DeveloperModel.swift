@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 // MARK: - ListOfDevelopers
 struct ListOfDevelopers: Decodable {
     let count: Int
@@ -13,7 +14,6 @@ struct ListOfDevelopers: Decodable {
     let previous: String?
     let results: [Developer]
 }
-
 
 // MARK: - Developer
 struct Developer: Decodable {
@@ -39,7 +39,6 @@ struct GameOfDeveloper: Decodable {
     let id: Int
     let slug: String
     let name: String
-   
     var added: Int
 
     enum CodingKeys: String, CodingKey {
@@ -47,7 +46,6 @@ struct GameOfDeveloper: Decodable {
         case slug
         case name
         case added
-     
     }
 }
 

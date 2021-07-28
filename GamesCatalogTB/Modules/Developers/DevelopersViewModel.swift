@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class DevelopersViewModel {
+    
     //MARK: Properties
     var developersVM = [Developer]()
     var errorCauched: NetworkError?
@@ -59,5 +60,4 @@ class DevelopersViewModel {
             isLoadingList = false
         }
     }
-    
 }

@@ -8,28 +8,29 @@
 import UIKit
 
 class DeveloperTableViewCell: UITableViewCell {
-
+    
+    //MARK: Outlets
     @IBOutlet weak var designView: UIView!
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var backgroundImage: UIImageView!
-    
     @IBOutlet weak var gamesCountLabel: UILabel!
     
+    //MARK: Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         designView.addShadow()
         designView.addBorder()
-        backgroundImage.image = UIImage(named: "default")
+        backgroundImage.image = UIImage(named: "avatar")
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.backgroundImage.image = UIImage(named: "default")
+        self.backgroundImage.image = UIImage(named: "avatar")
     }
     
+    //MARK: Methods
     func config(model: Developer?, index: Int) {
         self.indexLabel.text = String(index + 1)
         self.nameLabel.text = model?.name
@@ -40,5 +41,4 @@ class DeveloperTableViewCell: UITableViewCell {
     func addImage(image: UIImage?) {
         self.backgroundImage.image = image
     }
-    
 }

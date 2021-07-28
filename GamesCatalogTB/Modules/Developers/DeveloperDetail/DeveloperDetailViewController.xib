@@ -3,13 +3,18 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeveloperDetailViewController" customModule="GamesCatalogTB" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImage" destination="0cb-jg-dJk" id="uci-Tp-06X"/>
+                <outlet property="gamesCountLabel" destination="V0D-37-58b" id="X7D-mS-8h3"/>
+                <outlet property="gamesLabel" destination="xIL-Gj-pV5" id="IjG-xr-wYM"/>
+                <outlet property="idLabel" destination="kXF-XS-lvF" id="ZQf-70-yVn"/>
+                <outlet property="nameLabel" destination="56W-yo-ci2" id="OJ6-tW-hhq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +22,134 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OU5-b2-8sN">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-jg-dJk">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="250" id="cUI-qL-zu2"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-yE-ssH">
+                            <rect key="frame" x="10" y="270" width="394" height="135.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIM-7a-sC8">
+                                    <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i19-0R-74B">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="gyU-Bw-9jx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXF-XS-lvF">
+                                            <rect key="frame" x="150" y="0.0" width="244" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Zqc-Tr-NMw"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="4zw-NY-0G8">
+                                    <rect key="frame" x="0.0" y="36" width="394" height="21.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-HQ-Fgo">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="46w-xk-270"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56W-yo-ci2">
+                                            <rect key="frame" x="150" y="0.0" width="244" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXq-c2-T4c">
+                                    <rect key="frame" x="0.0" y="63.5" width="394" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ch-Rv-R5p">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="Vw1-oy-0rN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0D-37-58b">
+                                            <rect key="frame" x="150" y="0.0" width="244" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Ryn-7T-SM0"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDy-RW-bIf">
+                                    <rect key="frame" x="0.0" y="99.5" width="394" height="36"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Games Examples" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-cL-Uap">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="3WO-4w-y0h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-Gj-pV5">
+                                            <rect key="frame" x="150" y="0.0" width="244" height="36"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="backgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0cb-jg-dJk" secondAttribute="trailing" id="5bA-Wl-Ut4"/>
+                        <constraint firstItem="0cb-jg-dJk" firstAttribute="top" secondItem="OU5-b2-8sN" secondAttribute="top" id="J6i-xv-W3P"/>
+                        <constraint firstItem="0cb-jg-dJk" firstAttribute="leading" secondItem="OU5-b2-8sN" secondAttribute="leading" id="cRh-MN-nMS"/>
+                        <constraint firstItem="aFL-yE-ssH" firstAttribute="leading" secondItem="OU5-b2-8sN" secondAttribute="leading" constant="10" id="lnp-1A-GDR"/>
+                        <constraint firstItem="aFL-yE-ssH" firstAttribute="top" secondItem="0cb-jg-dJk" secondAttribute="bottom" constant="20" id="scq-O8-7SW"/>
+                        <constraint firstAttribute="trailing" secondItem="aFL-yE-ssH" secondAttribute="trailing" constant="10" id="uoh-ye-3km"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemIndigoColor"/>
-            <point key="canvasLocation" x="128" y="48"/>
+            <color key="backgroundColor" name="backgroundColor"/>
+            <constraints>
+                <constraint firstItem="OU5-b2-8sN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UPe-gp-Ndt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OU5-b2-8sN" secondAttribute="bottom" id="V6h-cA-j1k"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OU5-b2-8sN" secondAttribute="trailing" id="mF4-Zg-D88"/>
+                <constraint firstItem="OU5-b2-8sN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nEk-T5-XB7"/>
+            </constraints>
+            <point key="canvasLocation" x="127.53623188405798" y="47.544642857142854"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="backgroundColor">
+            <color red="0.97299998998641968" green="1" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

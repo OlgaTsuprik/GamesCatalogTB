@@ -10,7 +10,7 @@ import CoreData
 
 class GameTableViewCell: UITableViewCell {
     
-    // MARK: Properties
+    // MARK: Outlets
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var nameOfGame: UILabel!
@@ -20,14 +20,17 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var isFavorite: UIView!
     
+    //MARK: IBAction
     @IBAction func saveAction(_ sender: Any) {
         saveAction?()
         configIsFavorite()
     }
    
+    // MARK: Properties
     var saveAction: (() -> Void)?
     private var index: Int?
     
+    //MARK: Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         desingView.addShadow()
@@ -40,6 +43,7 @@ class GameTableViewCell: UITableViewCell {
         self.photoView.image = UIImage(named: "default")
     }
     
+    //MARK: Methods
     func config(model: Game?, indexOfCell: Int) {
         self.ratingLabel.text = model?.ratingString
         self.nameOfGame.text = model?.name
