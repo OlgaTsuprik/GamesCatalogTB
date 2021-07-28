@@ -93,9 +93,8 @@
 		BE017BA026B1A61100DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavoriteGamesViewController.xib; sourceTree = "<group>"; };
 		BE017BA326B1A62700DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FavoriteGamesViewController.strings; sourceTree = "<group>"; };
 		BE017BA526B1A62800DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FavoriteGamesViewController.strings; sourceTree = "<group>"; };
-		BE017BA726B1A67700DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GameTableViewCell.xib; sourceTree = "<group>"; };
-		BE017BAA26B1A67C00DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GameTableViewCell.strings; sourceTree = "<group>"; };
-		BE017BAC26B1A67D00DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/GameTableViewCell.strings; sourceTree = "<group>"; };
+		BE017BAD26B1A77700DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameTableViewCell.xib; sourceTree = "<group>"; };
+		BE017BAE26B1A77700DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GameTableViewCell.xib; sourceTree = "<group>"; };
 		BE792E9B2689E23B0007F6C8 /* GamesCatalogTB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesCatalogTB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE792EA72689E23C0007F6C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -602,9 +601,8 @@
 		BE017BA826B1A67700DB8F39 /* GameTableViewCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BE017BA726B1A67700DB8F39 /* Base */,
-				BE017BAA26B1A67C00DB8F39 /* en */,
-				BE017BAC26B1A67D00DB8F39 /* ru */,
+				BE017BAD26B1A77700DB8F39 /* en */,
+				BE017BAE26B1A77700DB8F39 /* ru */,
 			);
 			name = GameTableViewCell.xib;
 			sourceTree = "<group>";
