@@ -45,7 +45,7 @@ class GameTableViewCell: UITableViewCell {
     
     //MARK: Methods
     func config(model: Game?, indexOfCell: Int) {
-        self.ratingLabel.text = model?.ratingString
+        self.ratingLabel.text = String(model?.rating ?? 0)
         self.nameOfGame.text = model?.name
         self.idLabel.text = String(model?.id ?? 0)
         self.indexLabel.text = String(indexOfCell + 1)
@@ -53,10 +53,10 @@ class GameTableViewCell: UITableViewCell {
     }
     
     func configFavoriteGame(model: SavedGame?, indexOfCell: Int) {
-        self.ratingLabel.text = model?.ratingOfGame
+        self.ratingLabel.text = String(model?.rating ?? 0)
         self.nameOfGame.text = model?.nameOfGame
         self.indexLabel.text = String(indexOfCell + 1)
-        self.idLabel.text = String(Int(model?.id ?? 0))
+        self.idLabel.text = String(model?.id ?? 0)
         self.saveButton.isHidden = true
         self.isFavorite.isHidden = true
     }

@@ -51,7 +51,7 @@ class DetailViewController: UIViewController {
         genresLabel.text = gameViewModel?.game?.genres.map{ genres in
             genres.name
         }.joined(separator: ", ")
-        ratingLabel.text = gameViewModel?.game?.ratingString
+        ratingLabel.text = String(gameViewModel?.game?.rating ?? 0)
         idLabel.text = String(Int(gameViewModel?.game?.id ?? 0))
         
         gameViewModel?.loadImage(url: gameViewModel?.game?.backgroundImage ?? "", completion: { [weak self] image in

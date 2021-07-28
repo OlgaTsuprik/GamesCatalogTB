@@ -16,7 +16,7 @@ extension SavedGame {
     }
 
     @NSManaged public var nameOfGame: String?
-    @NSManaged public var ratingOfGame: String?
+    @NSManaged public var rating: Double
     @NSManaged public var imageUrl: String?
     @NSManaged public var id: Int64
     

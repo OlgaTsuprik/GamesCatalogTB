@@ -39,7 +39,7 @@ class CoreDataManager {
     func writeGameWithID(with game: Game) {
         let gameObject = SavedGame(context: self.context)
         gameObject.nameOfGame = game.name
-        gameObject.ratingOfGame = game.ratingString
+        gameObject.rating = game.rating
         gameObject.imageUrl = game.backgroundImage
         gameObject.id = Int64(game.id)
         

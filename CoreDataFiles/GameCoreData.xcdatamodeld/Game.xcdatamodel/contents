@@ -4,7 +4,7 @@
         <attribute name="id" attributeType="Integer 64" defaultValueString="0"/>
         <attribute name="imageUrl" optional="YES" attributeType="String"/>
         <attribute name="nameOfGame" optional="YES" attributeType="String"/>
-        <attribute name="ratingOfGame" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
