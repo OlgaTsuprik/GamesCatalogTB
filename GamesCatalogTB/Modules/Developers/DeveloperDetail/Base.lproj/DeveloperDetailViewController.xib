@@ -33,22 +33,22 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-yE-ssH">
-                            <rect key="frame" x="10" y="270" width="394" height="135.5"/>
+                            <rect key="frame" x="10" y="270" width="394" height="133.5"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIM-7a-sC8">
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BIM-7a-sC8">
                                     <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i19-0R-74B">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i19-0R-74B">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="gyU-Bw-9jx"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXF-XS-lvF">
-                                            <rect key="frame" x="150" y="0.0" width="244" height="30"/>
+                                            <rect key="frame" x="155" y="0.0" width="239" height="30"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -58,40 +58,40 @@
                                         <constraint firstAttribute="height" constant="30" id="Zqc-Tr-NMw"/>
                                     </constraints>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="4zw-NY-0G8">
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4zw-NY-0G8">
                                     <rect key="frame" x="0.0" y="36" width="394" height="21.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-HQ-Fgo">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-HQ-Fgo">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="46w-xk-270"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56W-yo-ci2">
-                                            <rect key="frame" x="150" y="0.0" width="244" height="21.5"/>
+                                            <rect key="frame" x="155" y="0.0" width="239" height="21.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXq-c2-T4c">
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IXq-c2-T4c">
                                     <rect key="frame" x="0.0" y="63.5" width="394" height="30"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ch-Rv-R5p">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Games Count" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ch-Rv-R5p">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="Vw1-oy-0rN"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0D-37-58b">
-                                            <rect key="frame" x="150" y="0.0" width="244" height="30"/>
+                                            <rect key="frame" x="155" y="0.0" width="239" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -101,20 +101,20 @@
                                         <constraint firstAttribute="height" constant="30" id="Ryn-7T-SM0"/>
                                     </constraints>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDy-RW-bIf">
-                                    <rect key="frame" x="0.0" y="99.5" width="394" height="36"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WDy-RW-bIf">
+                                    <rect key="frame" x="0.0" y="99.5" width="394" height="34"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Games Examples" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-cL-Uap">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Games Examples" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-cL-Uap">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="3WO-4w-y0h"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-Gj-pV5">
-                                            <rect key="frame" x="150" y="0.0" width="244" height="36"/>
+                                            <rect key="frame" x="155" y="0.0" width="239" height="34"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>

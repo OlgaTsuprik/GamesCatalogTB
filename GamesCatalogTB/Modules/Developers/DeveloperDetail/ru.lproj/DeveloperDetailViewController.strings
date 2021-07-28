@@ -1,21 +1,21 @@
 
 /* Class = "UILabel"; text = "Games Count"; ObjectID = "3Ch-Rv-R5p"; */
-"3Ch-Rv-R5p.text" = "Games Count";
+"3Ch-Rv-R5p.text" = "Количество игр";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "56W-yo-ci2"; */
 "56W-yo-ci2.text" = "Label";
 
 /* Class = "UILabel"; text = "Games Examples"; ObjectID = "QsK-cL-Uap"; */
-"QsK-cL-Uap.text" = "Games Examples";
+"QsK-cL-Uap.text" = "Разработанные игры";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "V0D-37-58b"; */
 "V0D-37-58b.text" = "Label";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "Zby-HQ-Fgo"; */
-"Zby-HQ-Fgo.text" = "Name";
+"Zby-HQ-Fgo.text" = "Имя";
 
 /* Class = "UILabel"; text = "ID"; ObjectID = "i19-0R-74B"; */
-"i19-0R-74B.text" = "ID";
+"i19-0R-74B.text" = "Идентификатор";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "kXF-XS-lvF"; */
 "kXF-XS-lvF.text" = "Label";

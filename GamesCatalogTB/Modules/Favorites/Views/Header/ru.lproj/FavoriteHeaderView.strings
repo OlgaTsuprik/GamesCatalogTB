@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "CYb-Zi-HRe"; */
+"CYb-Zi-HRe.text" = "ID";
+
+/* Class = "UILabel"; text = "Game"; ObjectID = "GrC-Qc-eIQ"; */
+"GrC-Qc-eIQ.text" = "Игра";
+
+/* Class = "UILabel"; text = "№"; ObjectID = "eaV-Ri-ehj"; */
+"eaV-Ri-ehj.text" = "№";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wFb-sr-UdD"; */
+"wFb-sr-UdD.text" = "Label";

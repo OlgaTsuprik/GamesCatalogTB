@@ -30,10 +30,10 @@
                     <rect key="frame" x="0.0" y="802" width="414" height="94"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-1M-bA9">
-                            <rect key="frame" x="157" y="10" width="100" height="40"/>
+                            <rect key="frame" x="132" y="10" width="150" height="40"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="baj-Ni-5Kk"/>
+                                <constraint firstAttribute="width" constant="150" id="baj-Ni-5Kk"/>
                                 <constraint firstAttribute="height" constant="40" id="sOh-gq-USG"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
