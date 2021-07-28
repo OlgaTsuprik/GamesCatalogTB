@@ -53,13 +53,13 @@ class GamesViewController: UIViewController {
     }
     
     func handleError(error: NetworkError) {
-        let title: String = "Error"
-        var message: String = "Something went wrong"
+        let title: String = "Error".localized
+        var message: String = "Something went wrong".localized
         switch error {
         case .networkError:
-            message = "Please, check your Internet connection"
+            message = "Please, check your Internet connection".localized
         case .unknown:
-            message = "Unknown mistake"
+            message = "Unknown mistake".localized
         }
         let alert = AlertHelper.shared
         alert.show(for: self, title: title, message: message, leftButtonTitle: nil, rightButtonTitle: "OK", leftButtonAction: nil, rightButtonAction: nil)
@@ -101,7 +101,7 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
         cell?.config(model: games, indexOfCell: indexPath.row)
         cell?.saveAction = { [weak self] in
             self?.viewModel.saveUniqueGame(indexPath.row)
-            self?.showMessage(title: "Game saved", message: nil)
+            self?.showMessage(title: "Game saved".localized, message: nil)
         }
         
         if viewModel.checkIsFavorite(id: games.id) == true {

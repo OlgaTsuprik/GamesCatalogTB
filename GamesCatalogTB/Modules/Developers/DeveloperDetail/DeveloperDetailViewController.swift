@@ -24,7 +24,7 @@ class DeveloperDetailViewController: UIViewController {
         super.viewDidLoad()
         showInfo()
         self.navigationItem.title = developerViewModel?.developer?.name
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back")
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back".localized)
    }
     
     func showInfo() {

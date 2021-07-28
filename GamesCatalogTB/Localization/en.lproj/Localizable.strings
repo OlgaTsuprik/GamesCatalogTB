@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  GamesCatalogTB
+
+  Created by Tsuprik Olga on 28.07.21.
+  
+*/
+"Game saved" = "Game saved";
+"Error" = "Error";
+"Something went wrong" = "Something went wrong";
+"Please, check your Internet connection" = "Please, check your Internet connection";
+"Unknown mistake" = "Unknown mistake";
+"Back" = "Back";
+"You dont have saved games" = "You dont have saved games";
+"Are you sure you want delete all games?" = "Are you sure you want delete all games?";
+"YES" = "YES";
+"No" = "No";
+"Are you sure you want delete this game?" = "Are you sure you want delete this game?";
+"Games" = "Games";
+"Favorites" = "Favorites";
+"Developers" = "Developers";
+"List Of Games" = "List Of Games";
+"Favorite Games" = "Favorite Games";

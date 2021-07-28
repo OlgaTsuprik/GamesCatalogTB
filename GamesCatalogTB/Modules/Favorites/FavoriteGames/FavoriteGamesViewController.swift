@@ -16,9 +16,9 @@ class FavoriteGamesViewController: UIViewController {
     @IBOutlet weak var favoriteGamesTableView: UITableView!
     @IBAction func deleteAll(_ sender: Any) {
         if viewModel.savedObjests == [] {
-            showMessage(title: "You dont have saved games", message: nil, leftButtonTitle: nil, rightButtonTitle: "Ok", leftButtonAction: nil)
+            showMessage(title: "You dont have saved games".localized, message: nil, leftButtonTitle: nil, rightButtonTitle: "Ok", leftButtonAction: nil)
         } else {
-            showMessage(title: "Are you sure you want delete all games?",message: nil, leftButtonTitle: "YES", rightButtonTitle: "No") {
+            showMessage(title: "Are you sure you want delete all games?".localized, message: nil, leftButtonTitle: "YES".localized, rightButtonTitle: "NO".localized) {
                 self.viewModel.deleteAll()
                 self.favoriteGamesTableView.reloadData()
             }
@@ -75,7 +75,7 @@ extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        showMessage(title: "Are you sure you want delete this game?", message: nil, leftButtonTitle: "YES", rightButtonTitle: "NO") {
+        showMessage(title: "Are you sure you want delete this game?".localized, message: nil, leftButtonTitle: "YES".localized, rightButtonTitle: "NO".localized) {
             self.favoriteGamesTableView.beginUpdates()
             self.viewModel.deleteItem(index: indexPath.row)
             self.favoriteGamesTableView.deleteRows(at: [indexPath], with: .automatic)

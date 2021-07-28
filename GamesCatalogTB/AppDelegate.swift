@@ -25,21 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc = GamesViewController()
         
         let firstVC = UINavigationController(rootViewController: vc)
-        firstVC.tabBarItem.title = "Games"
+        firstVC.tabBarItem.title = "Games".localized
         firstVC.tabBarItem.image = UIImage(systemName: "gamecontroller")
         
         let vc2 = FavoriteGamesViewController()
         let secondVC = UINavigationController(rootViewController: vc2)
-        secondVC.tabBarItem.title = "Favorites"
+        secondVC.tabBarItem.title = "Favorites".localized
         secondVC.tabBarItem.image = UIImage(systemName: "star")
         
         let vc3 = DevelopersViewController()
         let thirdVC = UINavigationController(rootViewController: vc3)
-        thirdVC.tabBarItem.title = "Developers"
+        thirdVC.tabBarItem.title = "Developers".localized
         thirdVC.tabBarItem.image = UIImage(systemName: "rectangle.stack.person.crop")
         
         vc.navigationController?.navigationBar.tintColor = UIColor.black
-        vc.navigationController?.navigationBar.topItem?.title = "List Of Games"
+        vc.navigationController?.navigationBar.topItem?.title = "List Of Games".localized
         vc.navigationController?.navigationBar.isTranslucent = true
         vc.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         vc.navigationController?.navigationBar.backgroundColor = .clear
@@ -47,12 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc2.navigationController?.navigationBar.isTranslucent = true
         vc2.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         vc2.navigationController?.navigationBar.tintColor = UIColor.black
-        vc2.navigationController?.navigationBar.topItem?.title = "Favorite Games"
+        vc2.navigationController?.navigationBar.topItem?.title = "Favorite Games".localized
         
         vc3.navigationController?.navigationBar.isTranslucent = true
         vc3.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         vc3.navigationController?.navigationBar.tintColor = UIColor.black
-        vc3.navigationController?.navigationBar.topItem?.title = "Developers"
+        vc3.navigationController?.navigationBar.topItem?.title = "Developers".localized
         
         let tabBarController = UITabBarController()
         tabBarController.tabBar.barTintColor = UIColor.black

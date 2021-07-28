@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
         screenshortsCollection.isScrollEnabled = false
         screenshortsCollection.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         self.navigationItem.title = gameViewModel?.game?.name
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back")
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back".localized)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
