@@ -26,17 +26,14 @@
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3En-9b-kWL">
-                            <rect key="frame" x="70" y="0.0" width="35" height="89"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="35" id="6hK-us-3WO"/>
-                            </constraints>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3En-9b-kWL">
+                            <rect key="frame" x="70" y="0.0" width="41.5" height="89"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
-                            <rect key="frame" x="115" y="0.0" width="117" height="89"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
+                            <rect key="frame" x="121.5" y="0.0" width="110.5" height="89"/>
                             <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
@@ -44,7 +41,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-0S-8S9">
                             <rect key="frame" x="242" y="0.0" width="40" height="89"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="Gtq-9R-Hr4"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Gtq-9R-Hr4"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

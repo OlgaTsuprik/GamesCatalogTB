@@ -33,7 +33,7 @@
                             <rect key="frame" x="132" y="10" width="150" height="40"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="150" id="baj-Ni-5Kk"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="baj-Ni-5Kk"/>
                                 <constraint firstAttribute="height" constant="40" id="sOh-gq-USG"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>

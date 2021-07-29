@@ -114,7 +114,7 @@ extension DevelopersViewController:  UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("DevelopersHeaderView", owner: nil, options: nil)?.first
+        let headerView = Bundle.main.loadNibNamed("DevelopersTableViewHeader", owner: nil, options: nil)?.first
         return headerView as? UIView
     }
 

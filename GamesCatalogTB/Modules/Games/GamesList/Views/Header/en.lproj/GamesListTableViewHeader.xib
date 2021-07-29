@@ -26,29 +26,32 @@
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3En-9b-kWL">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3En-9b-kWL">
                             <rect key="frame" x="70" y="0.0" width="30" height="89"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="GIF-Zx-kcV"/>
+                                <constraint firstAttribute="width" constant="30" id="iXA-yf-oQT"/>
                             </constraints>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Название" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
-                            <rect key="frame" x="110" y="0.0" width="124" height="89"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-v3-5eY">
+                            <rect key="frame" x="110" y="0.0" width="122" height="89"/>
                             <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-0S-8S9">
-                            <rect key="frame" x="244" y="0.0" width="23" height="89"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-0S-8S9">
+                            <rect key="frame" x="242" y="0.0" width="40" height="89"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Gtq-9R-Hr4"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-rs-2Zs">
-                            <rect key="frame" x="277" y="0.0" width="125" height="89"/>
+                            <rect key="frame" x="292" y="0.0" width="110" height="89"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-Ho-xzd">
                                     <rect key="frame" x="0.0" y="10" width="60" height="59"/>
@@ -60,9 +63,9 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="f4L-Ho-xzd" firstAttribute="top" secondItem="Eqz-rs-2Zs" secondAttribute="top" constant="10" id="HzB-Rj-Iwb"/>
-                                <constraint firstAttribute="leading" secondItem="f4L-Ho-xzd" secondAttribute="leading" id="Y9o-Hz-5fG"/>
+                                <constraint firstAttribute="trailing" secondItem="f4L-Ho-xzd" secondAttribute="trailing" constant="50" id="Y9o-Hz-5fG"/>
                                 <constraint firstAttribute="bottom" secondItem="f4L-Ho-xzd" secondAttribute="bottom" constant="20" id="rf2-fm-BdD"/>
-                                <constraint firstAttribute="width" constant="125" id="wy5-Mz-EMs"/>
+                                <constraint firstAttribute="width" constant="110" id="wy5-Mz-EMs"/>
                             </constraints>
                         </view>
                     </subviews>

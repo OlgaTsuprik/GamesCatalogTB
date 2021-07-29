@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Genres"; ObjectID = "4zP-WE-Jbh"; */
+"4zP-WE-Jbh.text" = "Genres";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Ac2-A2-XTe"; */
+"Ac2-A2-XTe.text" = "Name";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "Akh-Ak-wMF"; */
+"Akh-Ak-wMF.text" = "Rating";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "Ayx-fb-4rX"; */
+"Ayx-fb-4rX.text" = "ID";
+
+/* Class = "UILabel"; text = "Id"; ObjectID = "KA0-2F-voO"; */
+"KA0-2F-voO.text" = "Id";
+
+/* Class = "UILabel"; text = "Released"; ObjectID = "Sjd-oQ-Bku"; */
+"Sjd-oQ-Bku.text" = "Released";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "SpM-RU-fPa"; */
+"SpM-RU-fPa.text" = "Description";
+
+/* Class = "UILabel"; text = "Genres"; ObjectID = "UWG-Rq-zhe"; */
+"UWG-Rq-zhe.text" = "Genres";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Z3x-LH-T9c"; */
+"Z3x-LH-T9c.text" = "Name";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "cMM-T6-Foc"; */
+"cMM-T6-Foc.text" = "Rating";
+
+/* Class = "UILabel"; text = "ScreenShots"; ObjectID = "u0C-JL-c1S"; */
+"u0C-JL-c1S.text" = "ScreenShots";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vwE-Vp-8NE"; */
+"vwE-Vp-8NE.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wcH-ok-JxZ"; */
+"wcH-ok-JxZ.text" = "Label";

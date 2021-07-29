@@ -30,25 +30,19 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-sr-UdD">
-                                    <rect key="frame" x="70" y="0.0" width="30" height="69"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="hHT-KL-Ttj"/>
-                                    </constraints>
+                                    <rect key="frame" x="70" y="0.0" width="41.5" height="69"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrC-Qc-eIQ">
-                                    <rect key="frame" x="110" y="0.0" width="167" height="69"/>
+                                    <rect key="frame" x="121.5" y="0.0" width="71" height="69"/>
                                     <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYb-Zi-HRe">
-                                    <rect key="frame" x="287" y="0.0" width="50" height="69"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="6dh-yc-xmh"/>
-                                    </constraints>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYb-Zi-HRe">
+                                    <rect key="frame" x="202.5" y="0.0" width="134.5" height="69"/>
                                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>

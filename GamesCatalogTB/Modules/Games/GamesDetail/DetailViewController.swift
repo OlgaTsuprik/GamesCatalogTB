@@ -47,7 +47,7 @@ class DetailViewController: UIViewController {
     func showInfo() {
         nameLabel.text = gameViewModel?.game?.name
         releasedLabel.text = gameViewModel?.game?.released
-        descriptionLabel.text = gameViewModel?.game?.description
+        descriptionLabel.text = gameViewModel?.game?.description ?? "Absent".localized
         genresLabel.text = gameViewModel?.game?.genres.map{ genres in
             genres.name
         }.joined(separator: ", ")

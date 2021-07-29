@@ -12,7 +12,7 @@
 		77285F2326AFEA90009C30DD /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F2226AFEA90009C30DD /* DeveloperModel.swift */; };
 		77285F2826AFF414009C30DD /* DeveloperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F2626AFF414009C30DD /* DeveloperTableViewCell.swift */; };
 		77285F2926AFF414009C30DD /* DeveloperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77285F2726AFF414009C30DD /* DeveloperTableViewCell.xib */; };
-		77285F2B26B01553009C30DD /* DevelopersHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F2A26B01552009C30DD /* DevelopersHeaderView.swift */; };
+		77285F2B26B01553009C30DD /* DevelopersTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F2A26B01552009C30DD /* DevelopersTableViewHeader.swift */; };
 		77285F3126B02866009C30DD /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F2E26B02472009C30DD /* DevelopersViewController.swift */; };
 		77285F3226B02A5B009C30DD /* DevelopersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77285F3026B02488009C30DD /* DevelopersViewController.xib */; };
 		77285F3926B02BD1009C30DD /* DeveloperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77285F3726B02BD1009C30DD /* DeveloperDetailViewController.swift */; };
@@ -30,11 +30,12 @@
 		BE017B7E26B18FCF00DB8F39 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE017B7D26B18FCF00DB8F39 /* String+Ex.swift */; };
 		BE017B7F26B1906D00DB8F39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE017B8126B1906D00DB8F39 /* Localizable.strings */; };
 		BE017B8326B1984100DB8F39 /* DeveloperDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017B8526B1984100DB8F39 /* DeveloperDetailViewController.xib */; };
-		BE017B8A26B19E9C00DB8F39 /* DevelopersHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017B8C26B19E9C00DB8F39 /* DevelopersHeaderView.xib */; };
+		BE017B8A26B19E9C00DB8F39 /* DevelopersTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017B8C26B19E9C00DB8F39 /* DevelopersTableViewHeader.xib */; };
 		BE017B9126B1A12D00DB8F39 /* GamesListTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017B9326B1A12D00DB8F39 /* GamesListTableViewHeader.xib */; };
 		BE017B9826B1A1BA00DB8F39 /* FavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017B9A26B1A1BA00DB8F39 /* FavoriteHeaderView.xib */; };
 		BE017B9F26B1A61100DB8F39 /* FavoriteGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017BA126B1A61100DB8F39 /* FavoriteGamesViewController.xib */; };
 		BE017BA626B1A67700DB8F39 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017BA826B1A67700DB8F39 /* GameTableViewCell.xib */; };
+		BE017BB026B28A1A00DB8F39 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE017BB226B28A1A00DB8F39 /* DetailViewController.xib */; };
 		BE792E9F2689E23B0007F6C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */; };
 		BE792EA82689E23C0007F6C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE792EA72689E23C0007F6C8 /* Assets.xcassets */; };
 		BE792EB82689E2D80007F6C8 /* GamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792EB72689E2D80007F6C8 /* GamesViewController.xib */; };
@@ -42,7 +43,6 @@
 		BE792EBD2689E30A0007F6C8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EBC2689E30A0007F6C8 /* DetailViewController.swift */; };
 		BE792EC12689E3390007F6C8 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EC02689E3390007F6C8 /* GamesViewModel.swift */; };
 		BE792EC42689E3860007F6C8 /* FavoriteGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EC32689E3860007F6C8 /* FavoriteGamesViewController.swift */; };
-		BE792ECF2689EBB70007F6C8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE792ECE2689EBB70007F6C8 /* DetailViewController.xib */; };
 		BE792EFB268AF5640007F6C8 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EF9268AF5640007F6C8 /* GameTableViewCell.swift */; };
 		BE792EFE268AF8D00007F6C8 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EFD268AF8D00007F6C8 /* GameModel.swift */; };
 		BE792F00268AF91A0007F6C8 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE792EFF268AF91A0007F6C8 /* NetworkingManager.swift */; };
@@ -60,7 +60,7 @@
 		77285F2226AFEA90009C30DD /* DeveloperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperModel.swift; sourceTree = "<group>"; };
 		77285F2626AFF414009C30DD /* DeveloperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperTableViewCell.swift; sourceTree = "<group>"; };
 		77285F2726AFF414009C30DD /* DeveloperTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeveloperTableViewCell.xib; sourceTree = "<group>"; };
-		77285F2A26B01552009C30DD /* DevelopersHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersHeaderView.swift; sourceTree = "<group>"; };
+		77285F2A26B01552009C30DD /* DevelopersTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersTableViewHeader.swift; sourceTree = "<group>"; };
 		77285F2E26B02472009C30DD /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		77285F3026B02488009C30DD /* DevelopersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevelopersViewController.xib; sourceTree = "<group>"; };
 		77285F3726B02BD1009C30DD /* DeveloperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDetailViewController.swift; sourceTree = "<group>"; };
@@ -79,13 +79,10 @@
 		BE017B8026B1906D00DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BE017B8226B1907E00DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BE017B8626B1984500DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DeveloperDetailViewController.xib; sourceTree = "<group>"; };
-		BE017B8826B1984600DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DeveloperDetailViewController.strings; sourceTree = "<group>"; };
-		BE017B8926B1986800DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/DeveloperDetailViewController.strings; sourceTree = "<group>"; };
-		BE017B8B26B19E9C00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DevelopersHeaderView.xib; sourceTree = "<group>"; };
-		BE017B8E26B19EA300DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DevelopersHeaderView.strings; sourceTree = "<group>"; };
-		BE017B9026B19EA400DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/DevelopersHeaderView.strings; sourceTree = "<group>"; };
+		BE017B8B26B19E9C00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DevelopersTableViewHeader.xib; sourceTree = "<group>"; };
+		BE017B8E26B19EA300DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DevelopersTableViewHeader.strings; sourceTree = "<group>"; };
+		BE017B9026B19EA400DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/DevelopersTableViewHeader.strings; sourceTree = "<group>"; };
 		BE017B9226B1A12D00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GamesListTableViewHeader.xib; sourceTree = "<group>"; };
-		BE017B9526B1A13100DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GamesListTableViewHeader.strings; sourceTree = "<group>"; };
 		BE017B9926B1A1BA00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavoriteHeaderView.xib; sourceTree = "<group>"; };
 		BE017B9C26B1A1BF00DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FavoriteHeaderView.strings; sourceTree = "<group>"; };
 		BE017B9E26B1A1C000DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FavoriteHeaderView.strings; sourceTree = "<group>"; };
@@ -95,6 +92,11 @@
 		BE017BAD26B1A77700DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameTableViewCell.xib; sourceTree = "<group>"; };
 		BE017BAE26B1A77700DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GameTableViewCell.xib; sourceTree = "<group>"; };
 		BE017BAF26B282A100DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GamesListTableViewHeader.xib; sourceTree = "<group>"; };
+		BE017BB126B28A1A00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		BE017BB926B28B3900DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/DeveloperDetailViewController.xib; sourceTree = "<group>"; };
+		BE017BBA26B28E3000DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DeveloperDetailViewController.xib; sourceTree = "<group>"; };
+		BE017BBD26B2933F00DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/DetailViewController.strings; sourceTree = "<group>"; };
+		BE017BBE26B2935300DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DetailViewController.strings; sourceTree = "<group>"; };
 		BE792E9B2689E23B0007F6C8 /* GamesCatalogTB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesCatalogTB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE792EA72689E23C0007F6C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,7 +106,6 @@
 		BE792EBC2689E30A0007F6C8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BE792EC02689E3390007F6C8 /* GamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
 		BE792EC32689E3860007F6C8 /* FavoriteGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesViewController.swift; sourceTree = "<group>"; };
-		BE792ECE2689EBB70007F6C8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		BE792EF9268AF5640007F6C8 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		BE792EFD268AF8D00007F6C8 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		BE792EFF268AF91A0007F6C8 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		BE89E125269476FB00052A61 /* UIImageView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ex.swift"; sourceTree = "<group>"; };
 		BE89E13526973A6000052A61 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		BE89E13626973A6000052A61 /* FullScreenImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenImageViewController.xib; sourceTree = "<group>"; };
+		BED5407126B29A050035B30D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GamesListTableViewHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +189,7 @@
 		77285F2426AFF3CD009C30DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				77285F2A26B01552009C30DD /* DevelopersHeaderView.swift */,
-				BE017B8C26B19E9C00DB8F39 /* DevelopersHeaderView.xib */,
+				BED5407226B29B250035B30D /* Header */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,7 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				77AD6E6026942A7700ACE034 /* screenshotCell */,
-				BE792ECE2689EBB70007F6C8 /* DetailViewController.xib */,
+				BE017BB226B28A1A00DB8F39 /* DetailViewController.xib */,
 				BE792EBC2689E30A0007F6C8 /* DetailViewController.swift */,
 				77A435FA269C75A3002B023D /* DetailViewModel.swift */,
 			);
@@ -420,6 +421,15 @@
 			path = FullScreenImageViewController;
 			sourceTree = "<group>";
 		};
+		BED5407226B29B250035B30D /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				77285F2A26B01552009C30DD /* DevelopersTableViewHeader.swift */,
+				BE017B8C26B19E9C00DB8F39 /* DevelopersTableViewHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,14 +492,14 @@
 				BE792EB82689E2D80007F6C8 /* GamesViewController.xib in Resources */,
 				77AD6E6426942ABC00ACE034 /* ScreenshotCollectionViewCell.xib in Resources */,
 				BE017B7F26B1906D00DB8F39 /* Localizable.strings in Resources */,
-				BE017B8A26B19E9C00DB8F39 /* DevelopersHeaderView.xib in Resources */,
+				BE017B8A26B19E9C00DB8F39 /* DevelopersTableViewHeader.xib in Resources */,
 				BE017BA626B1A67700DB8F39 /* GameTableViewCell.xib in Resources */,
 				BE017B9F26B1A61100DB8F39 /* FavoriteGamesViewController.xib in Resources */,
 				BE017B9826B1A1BA00DB8F39 /* FavoriteHeaderView.xib in Resources */,
 				77285F2926AFF414009C30DD /* DeveloperTableViewCell.xib in Resources */,
 				BE792EA82689E23C0007F6C8 /* Assets.xcassets in Resources */,
 				BE017B8326B1984100DB8F39 /* DeveloperDetailViewController.xib in Resources */,
-				BE792ECF2689EBB70007F6C8 /* DetailViewController.xib in Resources */,
+				BE017BB026B28A1A00DB8F39 /* DetailViewController.xib in Resources */,
 				BE89E13826973A6000052A61 /* FullScreenImageViewController.xib in Resources */,
 				BE017B9126B1A12D00DB8F39 /* GamesListTableViewHeader.xib in Resources */,
 			);
@@ -527,7 +537,7 @@
 				BE792F0F268B39710007F6C8 /* GamesListTableViewHeader.swift in Sources */,
 				77A435F9269C73DD002B023D /* FullScreenImageViewModel.swift in Sources */,
 				BE792E9F2689E23B0007F6C8 /* AppDelegate.swift in Sources */,
-				77285F2B26B01553009C30DD /* DevelopersHeaderView.swift in Sources */,
+				77285F2B26B01553009C30DD /* DevelopersTableViewHeader.swift in Sources */,
 				BE792F03268AF9A60007F6C8 /* Constants.swift in Sources */,
 				77A435FE269D9E1B002B023D /* GameCoreData.xcdatamodeld in Sources */,
 				BE017B3B26A0312000DB8F39 /* CoreDataManager.swift in Sources */,
@@ -552,28 +562,28 @@
 			isa = PBXVariantGroup;
 			children = (
 				BE017B8626B1984500DB8F39 /* Base */,
-				BE017B8826B1984600DB8F39 /* en */,
-				BE017B8926B1986800DB8F39 /* ru */,
+				BE017BB926B28B3900DB8F39 /* ru */,
+				BE017BBA26B28E3000DB8F39 /* en */,
 			);
 			name = DeveloperDetailViewController.xib;
 			sourceTree = "<group>";
 		};
-		BE017B8C26B19E9C00DB8F39 /* DevelopersHeaderView.xib */ = {
+		BE017B8C26B19E9C00DB8F39 /* DevelopersTableViewHeader.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BE017B8B26B19E9C00DB8F39 /* Base */,
 				BE017B8E26B19EA300DB8F39 /* en */,
 				BE017B9026B19EA400DB8F39 /* ru */,
 			);
-			name = DevelopersHeaderView.xib;
+			name = DevelopersTableViewHeader.xib;
 			sourceTree = "<group>";
 		};
 		BE017B9326B1A12D00DB8F39 /* GamesListTableViewHeader.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BE017B9226B1A12D00DB8F39 /* Base */,
-				BE017B9526B1A13100DB8F39 /* en */,
 				BE017BAF26B282A100DB8F39 /* ru */,
+				BED5407126B29A050035B30D /* en */,
 			);
 			name = GamesListTableViewHeader.xib;
 			sourceTree = "<group>";
@@ -605,6 +615,16 @@
 				BE017BAE26B1A77700DB8F39 /* ru */,
 			);
 			name = GameTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		BE017BB226B28A1A00DB8F39 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE017BB126B28A1A00DB8F39 /* Base */,
+				BE017BBD26B2933F00DB8F39 /* ru */,
+				BE017BBE26B2935300DB8F39 /* en */,
+			);
+			name = DetailViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
