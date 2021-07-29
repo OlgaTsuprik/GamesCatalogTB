@@ -12,10 +12,10 @@
 "Unknown mistake" = "Неизвестная ошибка";
 "Back" = "Назад";
 "You dont have saved games" = "У вас нет избранных игр";
-"Are you sure you want delete all games?" = "Вы уверены что хотите удалить игры из закладок?";
+"Are you sure you want delete all games?" = "Вы уверены, что хотите удалить игры из избранного?";
 "YES" = "ДА";
 "NO" = "НЕТ";
-"Are you sure you want delete this game?" = "Вы уверены что хотите удалить игру из закладок?";
+"Are you sure you want delete this game?" = "Вы уверены, что хотите удалить игру из избранного?";
 "Games" = "Игры";
 "Favorites" = "Избранное";
 "Developers" = "Разработчики";

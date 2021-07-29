@@ -84,8 +84,6 @@
 		BE017B9026B19EA400DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/DevelopersTableViewHeader.strings; sourceTree = "<group>"; };
 		BE017B9226B1A12D00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GamesListTableViewHeader.xib; sourceTree = "<group>"; };
 		BE017B9926B1A1BA00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavoriteHeaderView.xib; sourceTree = "<group>"; };
-		BE017B9C26B1A1BF00DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FavoriteHeaderView.strings; sourceTree = "<group>"; };
-		BE017B9E26B1A1C000DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FavoriteHeaderView.strings; sourceTree = "<group>"; };
 		BE017BA026B1A61100DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavoriteGamesViewController.xib; sourceTree = "<group>"; };
 		BE017BA326B1A62700DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FavoriteGamesViewController.strings; sourceTree = "<group>"; };
 		BE017BA526B1A62800DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FavoriteGamesViewController.strings; sourceTree = "<group>"; };
@@ -116,6 +114,8 @@
 		BE89E13526973A6000052A61 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		BE89E13626973A6000052A61 /* FullScreenImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenImageViewController.xib; sourceTree = "<group>"; };
 		BED5407126B29A050035B30D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GamesListTableViewHeader.xib; sourceTree = "<group>"; };
+		BED5407326B29EF10035B30D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FavoriteHeaderView.xib; sourceTree = "<group>"; };
+		BED5407426B29F190035B30D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/FavoriteHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,8 +592,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				BE017B9926B1A1BA00DB8F39 /* Base */,
-				BE017B9C26B1A1BF00DB8F39 /* en */,
-				BE017B9E26B1A1C000DB8F39 /* ru */,
+				BED5407326B29EF10035B30D /* en */,
+				BED5407426B29F190035B30D /* ru */,
 			);
 			name = FavoriteHeaderView.xib;
 			sourceTree = "<group>";
