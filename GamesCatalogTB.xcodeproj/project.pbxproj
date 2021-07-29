@@ -86,7 +86,6 @@
 		BE017B9026B19EA400DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/DevelopersHeaderView.strings; sourceTree = "<group>"; };
 		BE017B9226B1A12D00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GamesListTableViewHeader.xib; sourceTree = "<group>"; };
 		BE017B9526B1A13100DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GamesListTableViewHeader.strings; sourceTree = "<group>"; };
-		BE017B9726B1A13700DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/GamesListTableViewHeader.strings; sourceTree = "<group>"; };
 		BE017B9926B1A1BA00DB8F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavoriteHeaderView.xib; sourceTree = "<group>"; };
 		BE017B9C26B1A1BF00DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FavoriteHeaderView.strings; sourceTree = "<group>"; };
 		BE017B9E26B1A1C000DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FavoriteHeaderView.strings; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		BE017BA526B1A62800DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FavoriteGamesViewController.strings; sourceTree = "<group>"; };
 		BE017BAD26B1A77700DB8F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameTableViewCell.xib; sourceTree = "<group>"; };
 		BE017BAE26B1A77700DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GameTableViewCell.xib; sourceTree = "<group>"; };
+		BE017BAF26B282A100DB8F39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GamesListTableViewHeader.xib; sourceTree = "<group>"; };
 		BE792E9B2689E23B0007F6C8 /* GamesCatalogTB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesCatalogTB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE792E9E2689E23B0007F6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE792EA72689E23C0007F6C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 		BE017B4126A702C000DB8F39 /* CoreDataFiles */ = {
 			isa = PBXGroup;
 			children = (
-				77388257269F287A00DF6482 /* SavedGame+CoreDataClass.swift */,
 				77388258269F287A00DF6482 /* SavedGame+CoreDataProperties.swift */,
+				77388257269F287A00DF6482 /* SavedGame+CoreDataClass.swift */,
 				77A435FC269D9E1B002B023D /* GameCoreData.xcdatamodeld */,
 			);
 			path = CoreDataFiles;
@@ -573,7 +573,7 @@
 			children = (
 				BE017B9226B1A12D00DB8F39 /* Base */,
 				BE017B9526B1A13100DB8F39 /* en */,
-				BE017B9726B1A13700DB8F39 /* ru */,
+				BE017BAF26B282A100DB8F39 /* ru */,
 			);
 			name = GamesListTableViewHeader.xib;
 			sourceTree = "<group>";

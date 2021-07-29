@@ -3,7 +3,7 @@
 "CYb-Zi-HRe.text" = "ID";
 
 /* Class = "UILabel"; text = "Game"; ObjectID = "GrC-Qc-eIQ"; */
-"GrC-Qc-eIQ.text" = "Игра";
+"GrC-Qc-eIQ.text" = "Название";
 
 /* Class = "UILabel"; text = "№"; ObjectID = "eaV-Ri-ehj"; */
 "eaV-Ri-ehj.text" = "№";
