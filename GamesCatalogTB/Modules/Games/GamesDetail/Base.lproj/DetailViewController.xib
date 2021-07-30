@@ -32,8 +32,8 @@
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="922-S1-wmw">
                             <rect key="frame" x="0.0" y="0.0" width="500" height="1022"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="rxM-ZY-occ">
-                                    <rect key="frame" x="0.0" y="0.0" width="500" height="1089"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rxM-ZY-occ">
+                                    <rect key="frame" x="0.0" y="0.0" width="500" height="1050"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-fS-zGr">
                                             <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
@@ -42,7 +42,7 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1BA-tK-BQ7">
-                                            <rect key="frame" x="0.0" y="233" width="500" height="160"/>
+                                            <rect key="frame" x="0.0" y="220" width="500" height="160"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uao-DC-Ccl">
                                                     <rect key="frame" x="0.0" y="0.0" width="500" height="26.5"/>
@@ -170,13 +170,13 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScreenShots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0C-JL-c1S">
-                                            <rect key="frame" x="0.0" y="426" width="500" height="30"/>
+                                            <rect key="frame" x="0.0" y="400" width="500" height="30"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Im9-16-n8k">
-                                            <rect key="frame" x="0.0" y="489" width="500" height="600"/>
+                                            <rect key="frame" x="0.0" y="450" width="500" height="600"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="600" id="vWc-Q4-auW"/>

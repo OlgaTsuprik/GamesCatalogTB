@@ -10,6 +10,7 @@ import CoreData
 
 class FavoriteGamesViewController: UIViewController {
     //MARK: Properties
+    var headerSize: CGFloat = 40
     var viewModel = FavoriteViewModel()
     
     //MARK: IBOutlets
@@ -90,7 +91,7 @@ extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
        
-        return 40
+        return headerSize
     }
 }
 

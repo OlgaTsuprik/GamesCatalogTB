@@ -13,6 +13,7 @@ class GamesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
+    var headerSize: CGFloat = 40
     var viewModel = GamesViewModel()
     var indicator = UIActivityIndicatorView()
     
@@ -137,10 +138,12 @@ extension GamesViewController: UITableViewDelegate, UITableViewDataSource, UIScr
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = Bundle.main.loadNibNamed("GamesListTableViewHeader", owner: nil, options: nil)?.first
+        
         return headerView as? UIView
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
+       
+        return headerSize
     }
 }

@@ -23,6 +23,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var heightCollection: NSLayoutConstraint!
     
     //MARK: Properties
+    var collectionInset: CGFloat = 7
+    var itemsPerRow = 2
     var gameViewModel: DetailViewModel?
     
     //MARK: Life cycle
@@ -84,21 +86,22 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let items = 2
-        let availibleWidth = (Int(collectionView.frame.width) - (10 * (items + 1))) / items
+        let availibleWidth = (Int(collectionView.frame.width) - (Int(collectionInset) * (itemsPerRow + 1))) / itemsPerRow
         return CGSize(width: availibleWidth, height: availibleWidth)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: collectionInset, left: collectionInset, bottom: collectionInset, right: collectionInset)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        
+        return collectionInset
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        
+        return collectionInset
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

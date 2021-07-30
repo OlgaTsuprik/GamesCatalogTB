@@ -13,6 +13,7 @@ class DevelopersViewController: UIViewController {
     @IBOutlet weak var developersTableView: UITableView!
     
     // MARK: Properties
+    var headerSize: CGFloat = 40
     var viewModel = DevelopersViewModel()
     var indicator = UIActivityIndicatorView()
     
@@ -121,7 +122,7 @@ extension DevelopersViewController:  UITableViewDataSource, UITableViewDelegate,
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 40
+        return headerSize
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
