@@ -89,7 +89,8 @@ extension FavoriteGamesViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
+       
+        return 40
     }
 }
 

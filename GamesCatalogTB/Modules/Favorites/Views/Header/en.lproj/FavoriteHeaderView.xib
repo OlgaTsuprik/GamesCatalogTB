@@ -11,26 +11,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteHeaderView" customModule="GamesCatalogTB" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FavoriteHeaderView" customModule="GamesCatalogTB" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="402" height="69"/>
+            <rect key="frame" x="0.0" y="0.0" width="402" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzi-JV-n3i">
-                    <rect key="frame" x="0.0" y="0.0" width="402" height="69"/>
+                    <rect key="frame" x="0.0" y="0.0" width="402" height="44"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nsa-b4-fXX">
-                            <rect key="frame" x="0.0" y="0.0" width="402" height="69"/>
+                            <rect key="frame" x="0.0" y="0.0" width="402" height="44"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaV-Ri-ehj">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="AIc-WK-J2a"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
+                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="19"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-sr-UdD">
-                                    <rect key="frame" x="70" y="0.0" width="30" height="69"/>
+                                    <rect key="frame" x="70" y="0.0" width="30" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="kvm-Pu-8Rb"/>
                                     </constraints>
@@ -39,33 +39,33 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrC-Qc-eIQ">
-                                    <rect key="frame" x="110" y="0.0" width="68.5" height="69"/>
-                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
+                                    <rect key="frame" x="110" y="0.0" width="59.5" height="44"/>
+                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="19"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYb-Zi-HRe">
-                                    <rect key="frame" x="188.5" y="0.0" width="148.5" height="69"/>
-                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
+                                    <rect key="frame" x="179.5" y="0.0" width="157.5" height="44"/>
+                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="19"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fmt-zp-d8S">
-                                    <rect key="frame" x="347" y="0.0" width="55" height="69"/>
+                                    <rect key="frame" x="347" y="0.0" width="55" height="44"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="K5I-cf-6pY">
-                                            <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                            <rect key="frame" x="15" y="5" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="K5I-cf-6pY" secondAttribute="height" multiplier="1:1" id="707-8y-3Kl"/>
-                                                <constraint firstAttribute="width" constant="30" id="xMi-DY-qtd"/>
+                                                <constraint firstAttribute="width" constant="25" id="xMi-DY-qtd"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="55" id="YOv-aV-y6z"/>
-                                        <constraint firstItem="K5I-cf-6pY" firstAttribute="top" secondItem="Fmt-zp-d8S" secondAttribute="top" constant="10" id="ib2-4C-nV1"/>
-                                        <constraint firstItem="K5I-cf-6pY" firstAttribute="leading" secondItem="Fmt-zp-d8S" secondAttribute="leading" constant="10" id="kLy-YO-KgE"/>
+                                        <constraint firstItem="K5I-cf-6pY" firstAttribute="top" secondItem="Fmt-zp-d8S" secondAttribute="top" constant="5" id="ib2-4C-nV1"/>
+                                        <constraint firstItem="K5I-cf-6pY" firstAttribute="leading" secondItem="Fmt-zp-d8S" secondAttribute="leading" constant="15" id="kLy-YO-KgE"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -89,7 +89,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rzi-JV-n3i" secondAttribute="trailing" id="MvU-It-8Fr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="49.275362318840585" y="-227.34375"/>
+            <point key="canvasLocation" x="49.275362318840585" y="-235.71428571428569"/>
         </view>
     </objects>
     <resources>

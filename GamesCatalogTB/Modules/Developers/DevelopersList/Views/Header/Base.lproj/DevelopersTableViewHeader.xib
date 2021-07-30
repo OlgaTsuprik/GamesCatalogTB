@@ -18,14 +18,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="366" height="59"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5X-Ih-Vil">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="59"/>
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="59"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61d-xl-pz3">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="59"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="wDh-4d-2RR"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -39,22 +39,22 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hg-9v-urB">
-                                    <rect key="frame" x="110" y="0.0" width="136" height="59"/>
-                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
+                                    <rect key="frame" x="110" y="0.0" width="141" height="59"/>
+                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXc-sX-Q2H">
-                                    <rect key="frame" x="246" y="0.0" width="50" height="59"/>
+                                    <rect key="frame" x="251" y="0.0" width="50" height="59"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="few-9q-iWk"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="19"/>
+                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games Amount" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slK-rS-0lM">
-                                    <rect key="frame" x="296" y="0.0" width="65" height="59"/>
+                                    <rect key="frame" x="301" y="0.0" width="65" height="59"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="65" id="PDl-Yh-wUM"/>
                                     </constraints>
@@ -70,7 +70,7 @@
                         <constraint firstItem="n5X-Ih-Vil" firstAttribute="top" secondItem="4fC-IT-mg0" secondAttribute="top" id="Ocx-YL-bNY"/>
                         <constraint firstItem="n5X-Ih-Vil" firstAttribute="leading" secondItem="4fC-IT-mg0" secondAttribute="leading" id="SOv-f5-nMz"/>
                         <constraint firstAttribute="bottom" secondItem="n5X-Ih-Vil" secondAttribute="bottom" id="aXy-RR-yQu"/>
-                        <constraint firstAttribute="trailing" secondItem="n5X-Ih-Vil" secondAttribute="trailing" constant="5" id="hLA-sU-gRH"/>
+                        <constraint firstAttribute="trailing" secondItem="n5X-Ih-Vil" secondAttribute="trailing" id="hLA-sU-gRH"/>
                     </constraints>
                 </view>
             </subviews>
